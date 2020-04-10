@@ -1,10 +1,15 @@
 <?php
 namespace ttungbmt\behaviors;
 
+use Imagine\Image\ManipulatorInterface;
 use yii\base\Model;
 use yii\db\BaseActiveRecord;
+use yii\helpers\ArrayHelper;
+use yii\imagine\Image;
+use yii\web\UploadedFile;
+use function _\internal\parent;
 
-class UploadBehavior extends \mohorev\file\UploadBehavior
+class UploadImageBehavior extends \mohorev\file\UploadImageBehavior
 {
     public $scenarios = [Model::SCENARIO_DEFAULT];
 
@@ -20,5 +25,20 @@ class UploadBehavior extends \mohorev\file\UploadBehavior
     {
         $attribute = $attr ? $attr : $this->attribute;
         return parent::getUploadUrl($attribute);
+    }
+
+    protected function generateImageThumb($config, $path, $thumbPath)
+    {
+        $file = UploadedFile::getInstance($this->owner, $this->attribute);
+        if(data_get($file, 'extension') === 'tif'){
+
+        } else {
+            parent::generateImageThumb($config, $path, $thumbPath);
+        }
+
+    }
+
+    protected function getExtension(){
+
     }
 }

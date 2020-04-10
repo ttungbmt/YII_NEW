@@ -46318,3 +46318,668 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1586481795.211
     'REQUEST_TIME' => 1586481795
 ]
+2020-04-10 10:27:27 [127.0.0.1][-][4o7qaktiihtskai86n4pd5b2bf][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Yêu cầu đăng nhập in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\User.php:454
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\filters\AccessControl.php(156): yii\web\User->loginRequired()
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\filters\AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(common\supports\MyUser))
+#2 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#10 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#11 {main}
+2020-04-10 10:27:27 [127.0.0.1][-][4o7qaktiihtskai86n4pd5b2bf][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => '4o7qaktiihtskai86n4pd5b2bf'
+    '_csrf-drought' => 'af12a64c75d794d17673975285bb67a2915bde15d096e305a7e168fe40310018a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"jgx1bFfVjCsVmn33_z7BXGp2AsvBqV9j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://demo.local/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=4o7qaktiihtskai86n4pd5b2bf; _csrf-drought=af12a64c75d794d17673975285bb67a2915bde15d096e305a7e168fe40310018a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22jgx1bFfVjCsVmn33_z7BXGp2AsvBqV9j%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11151'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586489247.315
+    'REQUEST_TIME' => 1586489247
+]
+2020-04-10 10:27:32 [127.0.0.1][-][4o7qaktiihtskai86n4pd5b2bf][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Yêu cầu đăng nhập in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\User.php:454
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\filters\AccessControl.php(156): yii\web\User->loginRequired()
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\filters\AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(common\supports\MyUser))
+#2 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(700): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(145): yii\base\Module->beforeAction(Object(yii\base\InlineAction))
+#7 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#10 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#11 {main}
+2020-04-10 10:27:32 [127.0.0.1][-][4o7qaktiihtskai86n4pd5b2bf][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => '4o7qaktiihtskai86n4pd5b2bf'
+    '_csrf-drought' => 'af12a64c75d794d17673975285bb67a2915bde15d096e305a7e168fe40310018a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"jgx1bFfVjCsVmn33_z7BXGp2AsvBqV9j\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://demo.local/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=4o7qaktiihtskai86n4pd5b2bf; _csrf-drought=af12a64c75d794d17673975285bb67a2915bde15d096e305a7e168fe40310018a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22jgx1bFfVjCsVmn33_z7BXGp2AsvBqV9j%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11153'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586489252.216
+    'REQUEST_TIME' => 1586489252
+]
+2020-04-10 10:31:05 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#2 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Không tìm thấy trang. in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#1 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#2 {main}
+2020-04-10 10:31:05 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/apng,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://demo.local/admin/gallery'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11203'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586489465.102
+    'REQUEST_TIME' => 1586489465
+]
+2020-04-10 10:31:58 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#2 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Không tìm thấy trang. in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#1 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#2 {main}
+2020-04-10 10:31:58 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11239'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586489518.743
+    'REQUEST_TIME' => 1586489518
+]
+2020-04-10 10:32:13 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "". in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#2 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Không tìm thấy trang. in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#1 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#2 {main}
+2020-04-10 10:32:12 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11245'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586489532.882
+    'REQUEST_TIME' => 1586489532
+]
+2020-04-10 10:43:44 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][ArgumentCountError] ArgumentCountError: Too few arguments to function mohorev\file\UploadBehavior::getUploadUrl(), 0 passed and exactly 1 expected in D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadBehavior.php:229
+Stack trace:
+#0 [internal function]: mohorev\file\UploadBehavior->getUploadUrl()
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Component.php(297): call_user_func_array(Array, Array)
+#2 D:\PROGRAM\laragon\www\YII_NEW\projects\drought\themes\admin\admin\gallery\_form.php(26): yii\base\Component->__call('getUploadUrl', Array)
+#3 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(348): require('D:\\PROGRAM\\lara...')
+#4 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\PROGRAM\\lara...', Array)
+#5 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\PROGRAM\\lara...', Array, NULL)
+#6 D:\PROGRAM\laragon\www\YII_NEW\projects\drought\themes\admin\admin\gallery\update.php(11): yii\base\View->render('_form', Array)
+#7 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(348): require('D:\\PROGRAM\\lara...')
+#8 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('D:\\PROGRAM\\lara...', Array)
+#9 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('D:\\PROGRAM\\lara...', Array, Object(drought\controllers\admin\GalleryController))
+#10 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('update', Array, Object(drought\controllers\admin\GalleryController))
+#11 D:\PROGRAM\laragon\www\YII_NEW\common\controllers\MyController.php(33): yii\base\Controller->render('update', Array)
+#12 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\Action.php(236): common\controllers\MyController->render('update', Array)
+#13 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\UpdateAction.php(123): ttungbmt\actions\Action->render('update', Array)
+#14 [internal function]: ttungbmt\actions\UpdateAction->run()
+#15 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#16 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#17 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#18 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/gallery/u...', Array)
+#19 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#20 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#21 {main}
+2020-04-10 10:43:43 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = [
+    'id' => '46'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://demo.local/admin/gallery/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11491'
+    'REDIRECT_URL' => '/admin/gallery/update'
+    'REDIRECT_QUERY_STRING' => 'id=46'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=46'
+    'REQUEST_URI' => '/admin/gallery/update?id=46'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586490223.948
+    'REQUEST_TIME' => 1586490223
+]
+2020-04-10 10:44:14 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][Imagine\Exception\RuntimeException] Imagine\Exception\RuntimeException: Unable to open image D:/PROGRAM/laragon/www/YII_NEW/public/projects/drought/uploads/ndvia_2004_035e8feb8e8fe52.tif in D:\PROGRAM\laragon\www\YII_NEW\vendor\imagine\imagine\src\Gd\Imagine.php:95
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2-imagine\src\BaseImage.php(144): Imagine\Gd\Imagine->open('D:/PROGRAM/lara...')
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2-imagine\src\BaseImage.php(219): yii\imagine\BaseImage::ensureImageInterfaceInstance('D:/PROGRAM/lara...')
+#2 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadImageBehavior.php(274): yii\imagine\BaseImage::thumbnail('D:/PROGRAM/lara...', 200, 200, 1)
+#3 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadImageBehavior.php(149): mohorev\file\UploadImageBehavior->generateImageThumb(Array, 'D:/PROGRAM/lara...', 'D:/PROGRAM/lara...')
+#4 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadImageBehavior.php(126): mohorev\file\UploadImageBehavior->createThumbs()
+#5 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadBehavior.php(188): mohorev\file\UploadImageBehavior->afterUpload()
+#6 [internal function]: mohorev\file\UploadBehavior->afterSave(Object(yii\db\AfterSaveEvent))
+#7 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\db\AfterSaveEvent))
+#8 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1000): yii\base\Component->trigger('afterUpdate', Object(yii\db\AfterSaveEvent))
+#9 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(825): yii\db\BaseActiveRecord->afterSave(false, Array)
+#10 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#11 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#12 [internal function]: yii\db\BaseActiveRecord->save()
+#13 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\CrudAction.php(86): call_user_func(Array)
+#14 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\UpdateAction.php(113): ttungbmt\actions\CrudAction->handlerSave(Object(drought\models\Gallery))
+#15 [internal function]: ttungbmt\actions\UpdateAction->run()
+#16 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#17 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#18 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#19 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/gallery/u...', Array)
+#20 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#21 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#22 {main}
+2020-04-10 10:44:14 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = [
+    'id' => '46'
+]
+
+$_POST = [
+    '_csrf-drought' => 'p1Mkeo7xMgOTWO8jdBYwMeq2oBzKorogWeR43d2nZsn-HFRX5ppxNaU6oFARY0cFnY_lMYPz-209vD2F5d8Xrw=='
+    'Gallery' => [
+        'name' => 'Reclassify_NDVIa_2004_03'
+        'code' => 'ndvia_2004_03'
+        'date' => '10/04/2020'
+        'image' => ''
+    ]
+]
+
+$_FILES = [
+    'Gallery' => [
+        'name' => [
+            'image' => 'Reclassify_NDVIa_2004_03.tif'
+        ]
+        'type' => [
+            'image' => 'image/tiff'
+        ]
+        'tmp_name' => [
+            'image' => 'C:\\Users\\ttungbmt\\AppData\\Local\\Temp\\php5E71.tmp'
+        ]
+        'error' => [
+            'image' => 0
+        ]
+        'size' => [
+            'image' => 313209
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '314057'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://demo.local'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryHkBaO9NEKccNJE1E'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://demo.local/admin/gallery/update?id=46'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11507'
+    'REDIRECT_URL' => '/admin/gallery/update'
+    'REDIRECT_QUERY_STRING' => 'id=46'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=46'
+    'REQUEST_URI' => '/admin/gallery/update?id=46'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586490254.287
+    'REQUEST_TIME' => 1586490254
+]
+2020-04-10 10:47:15 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: ttungbmt\behaviors\UploadBehavior::_file in D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\BaseObject.php:141
+Stack trace:
+#0 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\behaviors\UploadBehavior.php(31): yii\base\BaseObject->__get('_file')
+#1 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadImageBehavior.php(149): ttungbmt\behaviors\UploadBehavior->generateImageThumb(Array, 'D:/PROGRAM/lara...', 'D:/PROGRAM/lara...')
+#2 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadImageBehavior.php(126): mohorev\file\UploadImageBehavior->createThumbs()
+#3 D:\PROGRAM\laragon\www\YII_NEW\vendor\mohorev\yii2-upload-behavior\src\UploadBehavior.php(188): mohorev\file\UploadImageBehavior->afterUpload()
+#4 [internal function]: mohorev\file\UploadBehavior->afterSave(Object(yii\db\AfterSaveEvent))
+#5 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Component.php(627): call_user_func(Array, Object(yii\db\AfterSaveEvent))
+#6 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1000): yii\base\Component->trigger('afterUpdate', Object(yii\db\AfterSaveEvent))
+#7 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(825): yii\db\BaseActiveRecord->afterSave(false, Array)
+#8 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#9 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\db\BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#10 [internal function]: yii\db\BaseActiveRecord->save()
+#11 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\CrudAction.php(86): call_user_func(Array)
+#12 D:\PROGRAM\laragon\www\YII_NEW\packages\ttungbmt\yii2-core\src\actions\UpdateAction.php(113): ttungbmt\actions\CrudAction->handlerSave(Object(drought\models\Gallery))
+#13 [internal function]: ttungbmt\actions\UpdateAction->run()
+#14 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Action.php(94): call_user_func_array(Array, Array)
+#15 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\Action->runWithParams(Array)
+#16 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('update', Array)
+#17 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/gallery/u...', Array)
+#18 D:\PROGRAM\laragon\www\YII_NEW\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(ttungbmt\web\Request))
+#19 D:\PROGRAM\laragon\www\YII_NEW\public\index.php(55): yii\base\Application->run()
+#20 {main}
+2020-04-10 10:47:15 [127.0.0.1][1][eofl6lrlqqufjc363cvb49sm24][info][application] $_GET = [
+    'id' => '46'
+]
+
+$_POST = [
+    '_csrf-drought' => 'p1Mkeo7xMgOTWO8jdBYwMeq2oBzKorogWeR43d2nZsn-HFRX5ppxNaU6oFARY0cFnY_lMYPz-209vD2F5d8Xrw=='
+    'Gallery' => [
+        'name' => 'Reclassify_NDVIa_2004_03'
+        'code' => 'ndvia_2004_03'
+        'date' => '10/04/2020'
+        'image' => ''
+    ]
+]
+
+$_FILES = [
+    'Gallery' => [
+        'name' => [
+            'image' => 'Reclassify_NDVIa_2004_03.tif'
+        ]
+        'type' => [
+            'image' => 'image/tiff'
+        ]
+        'tmp_name' => [
+            'image' => 'C:\\Users\\ttungbmt\\AppData\\Local\\Temp\\php2248.tmp'
+        ]
+        'error' => [
+            'image' => 0
+        ]
+        'size' => [
+            'image' => 313209
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-drought' => 'eofl6lrlqqufjc363cvb49sm24'
+    '_csrf-drought' => 'ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a:2:{i:0;s:13:\"_csrf-drought\";i:1;s:32:\"YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://demo.local/'
+    '__id' => 1
+    'roles' => [
+        0 => 'admin'
+    ]
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'demo.local'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '314057'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://demo.local'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryHkBaO9NEKccNJE1E'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://demo.local/admin/gallery/update?id=46'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4'
+    'HTTP_COOKIE' => 'advanced-drought=eofl6lrlqqufjc363cvb49sm24; _csrf-drought=ed3541d28f6d4a3d7f0094691d44c14b96b62357c18de2bb18a4ed2c10038607a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22YOp-hkC66bOseuw4w9E-IQAMdXEX8xqf%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;D:\\PROGRAM\\Git\\cmd;D:\\PROGRAM\\nodejs\\;D:\\PROGRAM\\TortoiseSVN\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files (x86)\\Yarn\\bin\\;C:\\Users\\ttungbmt\\scoop\\shims;C:\\Users\\ttungbmt\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\ttungbmt\\AppData\\Roaming\\npm;C:\\Program Files\\JetBrains\\PhpStorm 2019.3.2\\bin;D:\\PROGRAM\\Microsoft VS Code\\bin;C:\\tools\\Cmder;C:\\Users\\ttungbmt\\AppData\\Local\\Yarn\\bin;C:\\Users\\ttungbmt\\AppData\\Local\\GitHubDesktop\\bin;C:\\Program Files\\Oracle\\VirtualBox;D:\\PROGRAM\\PostgreSQL\\12\\bin;D:\\PROGRAM\\OSGeo4W\\bin;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19'
+    'SERVER_NAME' => 'demo.local'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/PROGRAM/laragon/www/YII_NEW/public/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'D:/PROGRAM/laragon/www/YII_NEW/public/index.php'
+    'REMOTE_PORT' => '11537'
+    'REDIRECT_URL' => '/admin/gallery/update'
+    'REDIRECT_QUERY_STRING' => 'id=46'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=46'
+    'REQUEST_URI' => '/admin/gallery/update?id=46'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1586490435.489
+    'REQUEST_TIME' => 1586490435
+]

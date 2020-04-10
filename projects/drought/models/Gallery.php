@@ -66,13 +66,13 @@ class Gallery extends ActiveRecord
         ];
     }
 
-//    public function scenarios()
-//    {
-//        return array_merge(parent::scenarios(), [
-//            self::SCENARIO_UPLOAD => ['name', 'expr', 'bands', 'type'],
-//            self::SCENARIO_CALC => ['code', 'image', 'type', ],
-//        ]);
-//    }
+    public function beforeSave($insert)
+    {
+        $this->code = Str::lower($this->code);
+
+        return parent::beforeSave($insert);
+    }
+
 
     /**
      * {@inheritdoc}
