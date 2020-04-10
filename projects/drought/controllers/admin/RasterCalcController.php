@@ -37,13 +37,13 @@ class RasterCalcController extends AppController
                 'class' => CreateAction::class,
                 'modelClass' => $model,
                 'scenario' => $model::SCENARIO_CALC,
-                'handler' => [$model, 'saveRasterCalc']
+                'handler' => 'saveRasterCalc'
             ],
             'update' => [
                 'class' => UpdateAction::class,
                 'modelClass' => $model,
                 'scenario' => $model::SCENARIO_CALC,
-                'handler' => [$model, 'saveRasterCalc']
+                'handler' => 'saveRasterCalc'
             ],
             'delete' => [
                 'class' => DeleteAction::class,

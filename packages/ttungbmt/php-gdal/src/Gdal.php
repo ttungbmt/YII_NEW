@@ -33,6 +33,35 @@ class Gdal
 
     }
 
+    public function translate($src, $dst){
+        $this->command->add(
+            'gdal_translate',
+            [
+                '-of' => 'JPEG',
+                '-co' => 'JPEG_QUALITY=75',
+            ],
+            $src,
+            $dst
+        );
+        return $this;
+    }
+
+    public function o4w_env(){
+        $this->command->add(['o4w_env']);
+        $this->run();
+    }
+
+    public function calc($input, $output, $expr){
+        $this->command->add(
+            ['o4w_env', '&&'],
+            'gdal_calc',
+            $input,
+            ['--calc' => '"'.$expr.'"'],
+            ['--outfile' => $output]
+        );
+        return $this;
+    }
+
     public function getCommand(){
         return $this->command;
     }
@@ -52,7 +81,7 @@ class Gdal
 
     public function rasterToPgSQL($source, $table){
         $this->connection = trans('{{driver}} postgresql://{{username}}:{{password}}@{{host}}:{{port}}/{{db}}', [
-            'driver' => 'pgsql',
+            'driver' => 'psql',
             'username' => 'postgres',
             'password' => 'postgres',
             'host' => 'localhost',
@@ -60,7 +89,8 @@ class Gdal
             'db' => 'ql_hanhan',
         ]);
 
-        $this->command
+        $this
+            ->command
             ->clear()
             ->add('raster2pgsql', [
                 '-s' => '4326',

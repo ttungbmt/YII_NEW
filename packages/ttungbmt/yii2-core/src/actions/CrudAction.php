@@ -83,7 +83,7 @@ class CrudAction extends Action
     }
 
     protected function handlerSave($model){
-        return is_callable($this->handler) ? call_user_func($this->handler, $model) : call_user_func([$model, $this->handler]);
+        return is_callable($this->handler) ? call_user_func($this->handler) : call_user_func([$model, $this->handler]);
     }
 
 }

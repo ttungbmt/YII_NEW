@@ -15,9 +15,8 @@ use ttungbmt\map\Map;
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Xử lý ảnh';
 $items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
-$bands = array_filter(explode(',', $model->bands));
-if($model->bands) {
-    $model->bands = explode(',', $model->bands);
+if($model->bands && is_string($model->bands)) {
+    $model->bands = array_filter(explode(',', $model->bands));
 }
 ?>
 <style>
@@ -131,7 +130,7 @@ if($model->bands) {
         el: '#vue-app',
         data: {
             bands_arr: <?=json_encode($items)?>,
-            selected: <?=json_encode($bands)?>,
+            selected: <?=json_encode($model->bands)?>,
             expr: '<?=$model->expr?>',
         },
         mounted() {
