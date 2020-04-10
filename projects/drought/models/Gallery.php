@@ -2,7 +2,7 @@
 namespace drought\models;
 use drought\support\PgCommand;
 use Illuminate\Support\Str;
-use ttungbmt\behaviors\UploadBehavior;
+use ttungbmt\behaviors\UploadImageBehavior;
 use ttungbmt\db\ActiveRecord;
 use ttungbmt\gdal\Gdal;
 use Yii;
@@ -119,7 +119,7 @@ class Gallery extends ActiveRecord
     {
         return array_merge(parent::behaviors(), [
             'upload' => [
-                'class' => UploadBehavior::class,
+                'class' => UploadImageBehavior::class,
                 'attribute' => 'image',
                 'scenarios' => [self::SCENARIO_UPLOAD],
                 'path' => '@webroot/projects/drought/uploads',
@@ -130,11 +130,5 @@ class Gallery extends ActiveRecord
             ]
         ]);
     }
-
-    public function getRasterInfo(){
-
-        return viewConsole($output);
-    }
-
 
 }
