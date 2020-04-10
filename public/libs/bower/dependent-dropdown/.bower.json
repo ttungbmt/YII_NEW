@@ -1,0 +1,42 @@
+{
+  "name": "dependent-dropdown",
+  "version": "1.4.8",
+  "homepage": "https://github.com/kartik-v/dependent-dropdown",
+  "authors": [
+    "Kartik Visweswaran <kartikv2@gmail.com>"
+  ],
+  "description": "A multi level dependent dropdown JQuery plugin that allows nested dependencies.",
+  "main": [
+    "./js/dependent-dropdown.min.js",
+    "./css/dependent-dropdown.min.css"
+  ],
+  "keywords": [
+    "jquery",
+    "dependent",
+    "dropdown",
+    "select"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.9.0"
+  },
+  "license": "BSD-3-Clause",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "composer.json",
+    "examples",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "1.4.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.4.8",
+    "commit": "1349e7f5816a65e89bc227098386aac5b2c89363"
+  },
+  "_source": "https://github.com/kartik-v/dependent-dropdown.git",
+  "_target": "^1.4.8",
+  "_originalSource": "dependent-dropdown",
+  "_direct": true
+}

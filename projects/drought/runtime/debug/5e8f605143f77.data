@@ -1,0 +1,401 @@
+a:15:{s:6:"config";s:21638:"a:5:{s:10:"phpVersion";s:6:"7.2.19";s:10:"yiiVersion";s:6:"2.0.34";s:11:"application";a:8:{s:3:"yii";s:6:"2.0.34";s:4:"name";s:14:"My Application";s:7:"version";s:3:"1.0";s:8:"language";s:5:"vi-VN";s:14:"sourceLanguage";s:5:"en-US";s:7:"charset";s:5:"UTF-8";s:3:"env";s:3:"dev";s:5:"debug";b:1;}s:3:"php";a:5:{s:7:"version";s:6:"7.2.19";s:6:"xdebug";b:0;s:3:"apc";b:0;s:8:"memcache";b:0;s:9:"memcached";b:0;}s:10:"extensions";a:92:{s:22:"yiisoft/yii2-bootstrap";a:3:{s:4:"name";s:22:"yiisoft/yii2-bootstrap";s:7:"version";s:8:"2.0.10.0";s:5:"alias";a:1:{s:14:"@yii/bootstrap";s:60:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-bootstrap/src";}}s:24:"yiisoft/yii2-swiftmailer";a:3:{s:4:"name";s:24:"yiisoft/yii2-swiftmailer";s:7:"version";s:7:"2.1.2.0";s:5:"alias";a:1:{s:16:"@yii/swiftmailer";s:62:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-swiftmailer/src";}}s:18:"yiisoft/yii2-debug";a:3:{s:4:"name";s:18:"yiisoft/yii2-debug";s:7:"version";s:8:"2.1.13.0";s:5:"alias";a:1:{s:10:"@yii/debug";s:56:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-debug/src";}}s:16:"yiisoft/yii2-gii";a:3:{s:4:"name";s:16:"yiisoft/yii2-gii";s:7:"version";s:7:"2.1.4.0";s:5:"alias";a:1:{s:8:"@yii/gii";s:54:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-gii/src";}}s:18:"yiisoft/yii2-faker";a:3:{s:4:"name";s:18:"yiisoft/yii2-faker";s:7:"version";s:7:"2.0.4.0";s:5:"alias";a:1:{s:10:"@yii/faker";s:52:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-faker";}}s:33:"xtetis/yii2-bootstrap4-glyphicons";a:3:{s:4:"name";s:33:"xtetis/yii2-bootstrap4-glyphicons";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:28:"@xtetis/bootstrap4glyphicons";s:71:"D:\PROGRAM\laragon\www\YII\vendor/xtetis/yii2-bootstrap4-glyphicons/src";}}s:25:"kartik-v/yii2-krajee-base";a:3:{s:4:"name";s:25:"kartik-v/yii2-krajee-base";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:12:"@kartik/base";s:63:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-krajee-base/src";}}s:31:"kartik-v/yii2-widget-activeform";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-activeform";s:7:"version";s:7:"1.5.8.0";s:5:"alias";a:1:{s:12:"@kartik/form";s:69:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-activeform/src";}}s:20:"kartik-v/yii2-dialog";a:3:{s:4:"name";s:20:"kartik-v/yii2-dialog";s:7:"version";s:7:"1.0.5.0";s:5:"alias";a:1:{s:14:"@kartik/dialog";s:58:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-dialog/src";}}s:23:"yiisoft/yii2-bootstrap4";a:3:{s:4:"name";s:23:"yiisoft/yii2-bootstrap4";s:7:"version";s:7:"2.0.8.0";s:5:"alias";a:1:{s:15:"@yii/bootstrap4";s:61:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-bootstrap4/src";}}s:25:"kartik-v/yii2-detail-view";a:3:{s:4:"name";s:25:"kartik-v/yii2-detail-view";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:14:"@kartik/detail";s:63:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-detail-view/src";}}s:33:"kartik-v/yii2-bootstrap4-dropdown";a:3:{s:4:"name";s:33:"kartik-v/yii2-bootstrap4-dropdown";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:19:"@kartik/bs4dropdown";s:71:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-bootstrap4-dropdown/src";}}s:18:"kartik-v/yii2-grid";a:3:{s:4:"name";s:18:"kartik-v/yii2-grid";s:7:"version";s:7:"3.3.5.0";s:5:"alias";a:1:{s:12:"@kartik/grid";s:56:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-grid/src";}}s:21:"kartik-v/yii2-helpers";a:3:{s:4:"name";s:21:"kartik-v/yii2-helpers";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:15:"@kartik/helpers";s:59:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-helpers/src";}}s:21:"kartik-v/yii2-builder";a:3:{s:4:"name";s:21:"kartik-v/yii2-builder";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:15:"@kartik/builder";s:59:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-builder/src";}}s:24:"kartik-v/yii2-validators";a:4:{s:4:"name";s:24:"kartik-v/yii2-validators";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:18:"@kartik/validators";s:62:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-validators/src";}s:9:"bootstrap";s:27:"kartik\validators\Bootstrap";}s:18:"kartik-v/yii2-mpdf";a:3:{s:4:"name";s:18:"kartik-v/yii2-mpdf";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/mpdf";s:56:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-mpdf/src";}}s:22:"kartik-v/yii2-sortable";a:3:{s:4:"name";s:22:"kartik-v/yii2-sortable";s:7:"version";s:7:"1.2.2.0";s:5:"alias";a:1:{s:16:"@kartik/sortable";s:60:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-sortable/src";}}s:28:"kartik-v/yii2-widget-select2";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-select2";s:7:"version";s:7:"2.1.7.0";s:5:"alias";a:1:{s:15:"@kartik/select2";s:66:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-select2/src";}}s:22:"kartik-v/yii2-dynagrid";a:3:{s:4:"name";s:22:"kartik-v/yii2-dynagrid";s:7:"version";s:7:"1.5.1.0";s:5:"alias";a:1:{s:16:"@kartik/dynagrid";s:60:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-dynagrid/src";}}s:20:"kartik-v/yii2-export";a:3:{s:4:"name";s:20:"kartik-v/yii2-export";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:14:"@kartik/export";s:58:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-export/src";}}s:30:"kartik-v/yii2-widget-typeahead";a:3:{s:4:"name";s:30:"kartik-v/yii2-widget-typeahead";s:7:"version";s:7:"1.0.4.0";s:5:"alias";a:1:{s:17:"@kartik/typeahead";s:68:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-typeahead/src";}}s:30:"kartik-v/yii2-widget-touchspin";a:3:{s:4:"name";s:30:"kartik-v/yii2-widget-touchspin";s:7:"version";s:7:"1.2.3.0";s:5:"alias";a:1:{s:17:"@kartik/touchspin";s:68:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-touchspin/src";}}s:31:"kartik-v/yii2-widget-timepicker";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-timepicker";s:7:"version";s:7:"1.0.4.0";s:5:"alias";a:1:{s:12:"@kartik/time";s:69:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-timepicker/src";}}s:32:"kartik-v/yii2-widget-switchinput";a:3:{s:4:"name";s:32:"kartik-v/yii2-widget-switchinput";s:7:"version";s:7:"1.3.1.0";s:5:"alias";a:1:{s:19:"@kartik/switchinput";s:66:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-switchinput";}}s:28:"kartik-v/yii2-widget-spinner";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-spinner";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:15:"@kartik/spinner";s:66:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-spinner/src";}}s:28:"kartik-v/yii2-widget-sidenav";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-sidenav";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:15:"@kartik/sidenav";s:62:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-sidenav";}}s:27:"kartik-v/yii2-widget-rating";a:3:{s:4:"name";s:27:"kartik-v/yii2-widget-rating";s:7:"version";s:7:"1.0.4.0";s:5:"alias";a:1:{s:14:"@kartik/rating";s:65:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-rating/src";}}s:31:"kartik-v/yii2-widget-rangeinput";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-rangeinput";s:7:"version";s:7:"1.0.2.0";s:5:"alias";a:1:{s:13:"@kartik/range";s:69:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-rangeinput/src";}}s:26:"kartik-v/yii2-widget-growl";a:3:{s:4:"name";s:26:"kartik-v/yii2-widget-growl";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:13:"@kartik/growl";s:64:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-growl/src";}}s:28:"kartik-v/yii2-widget-depdrop";a:3:{s:4:"name";s:28:"kartik-v/yii2-widget-depdrop";s:7:"version";s:7:"1.0.6.0";s:5:"alias";a:1:{s:15:"@kartik/depdrop";s:66:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-depdrop/src";}}s:35:"kartik-v/yii2-widget-datetimepicker";a:3:{s:4:"name";s:35:"kartik-v/yii2-widget-datetimepicker";s:7:"version";s:7:"1.4.9.0";s:5:"alias";a:1:{s:16:"@kartik/datetime";s:73:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-datetimepicker/src";}}s:31:"kartik-v/yii2-widget-datepicker";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-datepicker";s:7:"version";s:7:"1.4.7.0";s:5:"alias";a:1:{s:12:"@kartik/date";s:69:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-datepicker/src";}}s:31:"kartik-v/yii2-widget-colorinput";a:3:{s:4:"name";s:31:"kartik-v/yii2-widget-colorinput";s:7:"version";s:7:"1.0.5.0";s:5:"alias";a:1:{s:13:"@kartik/color";s:69:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-colorinput/src";}}s:26:"kartik-v/yii2-widget-alert";a:3:{s:4:"name";s:26:"kartik-v/yii2-widget-alert";s:7:"version";s:7:"1.1.3.0";s:5:"alias";a:1:{s:13:"@kartik/alert";s:64:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-alert/src";}}s:26:"kartik-v/yii2-widget-affix";a:3:{s:4:"name";s:26:"kartik-v/yii2-widget-affix";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:13:"@kartik/affix";s:60:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-affix";}}s:21:"kartik-v/yii2-widgets";a:3:{s:4:"name";s:21:"kartik-v/yii2-widgets";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:15:"@kartik/widgets";s:59:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widgets/src";}}s:20:"yiisoft/yii2-imagine";a:3:{s:4:"name";s:20:"yiisoft/yii2-imagine";s:7:"version";s:7:"2.2.0.0";s:5:"alias";a:1:{s:12:"@yii/imagine";s:58:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-imagine/src";}}s:26:"yiisoft/yii2-elasticsearch";a:3:{s:4:"name";s:26:"yiisoft/yii2-elasticsearch";s:7:"version";s:7:"2.0.5.0";s:5:"alias";a:1:{s:18:"@yii/elasticsearch";s:60:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-elasticsearch";}}s:23:"yiisoft/yii2-httpclient";a:3:{s:4:"name";s:23:"yiisoft/yii2-httpclient";s:7:"version";s:8:"2.0.12.0";s:5:"alias";a:1:{s:15:"@yii/httpclient";s:61:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-httpclient/src";}}s:23:"yiisoft/yii2-authclient";a:3:{s:4:"name";s:23:"yiisoft/yii2-authclient";s:7:"version";s:7:"2.2.7.0";s:5:"alias";a:1:{s:15:"@yii/authclient";s:61:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-authclient/src";}}s:17:"yii2mod/yii2-enum";a:3:{s:4:"name";s:17:"yii2mod/yii2-enum";s:7:"version";s:7:"1.7.1.0";s:5:"alias";a:1:{s:13:"@yii2mod/enum";s:51:"D:\PROGRAM\laragon\www\YII\vendor/yii2mod/yii2-enum";}}s:21:"yii2mod/yii2-editable";a:3:{s:4:"name";s:21:"yii2mod/yii2-editable";s:7:"version";s:7:"1.5.0.0";s:5:"alias";a:1:{s:17:"@yii2mod/editable";s:55:"D:\PROGRAM\laragon\www\YII\vendor/yii2mod/yii2-editable";}}s:21:"yii2mod/yii2-settings";a:3:{s:4:"name";s:21:"yii2mod/yii2-settings";s:7:"version";s:7:"2.5.0.0";s:5:"alias";a:1:{s:17:"@yii2mod/settings";s:55:"D:\PROGRAM\laragon\www\YII\vendor/yii2mod/yii2-settings";}}s:26:"sergeymakinen/yii2-facades";a:3:{s:4:"name";s:26:"sergeymakinen/yii2-facades";s:7:"version";s:7:"1.5.3.0";s:5:"alias";a:1:{s:22:"@sergeymakinen/facades";s:64:"D:\PROGRAM\laragon\www\YII\vendor/sergeymakinen/yii2-facades/src";}}s:39:"nepstor/yii2-datetime-compare-validator";a:3:{s:4:"name";s:39:"nepstor/yii2-datetime-compare-validator";s:7:"version";s:7:"2.0.3.0";s:5:"alias";a:1:{s:19:"@nepstor/validators";s:77:"D:\PROGRAM\laragon\www\YII\vendor/nepstor/yii2-datetime-compare-validator/src";}}s:33:"codeonyii/yii2-at-least-validator";a:3:{s:4:"name";s:33:"codeonyii/yii2-at-least-validator";s:7:"version";s:7:"1.2.6.0";s:5:"alias";a:1:{s:25:"@codeonyii/yii2validators";s:67:"D:\PROGRAM\laragon\www\YII\vendor/codeonyii/yii2-at-least-validator";}}s:19:"nanson/yii2-postgis";a:3:{s:4:"name";s:19:"nanson/yii2-postgis";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:15:"@nanson/postgis";s:53:"D:\PROGRAM\laragon\www\YII\vendor/nanson/yii2-postgis";}}s:30:"kartik-v/yii2-widget-fileinput";a:3:{s:4:"name";s:30:"kartik-v/yii2-widget-fileinput";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/file";s:68:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-widget-fileinput/src";}}s:25:"kartik-v/yii2-datecontrol";a:3:{s:4:"name";s:25:"kartik-v/yii2-datecontrol";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:19:"@kartik/datecontrol";s:63:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-datecontrol/src";}}s:26:"creocoder/yii2-nested-sets";a:3:{s:4:"name";s:26:"creocoder/yii2-nested-sets";s:7:"version";s:7:"0.9.0.0";s:5:"alias";a:1:{s:21:"@creocoder/nestedsets";s:64:"D:\PROGRAM\laragon\www\YII\vendor/creocoder/yii2-nested-sets/src";}}s:26:"kartik-v/yii2-tree-manager";a:3:{s:4:"name";s:26:"kartik-v/yii2-tree-manager";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:12:"@kartik/tree";s:64:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-tree-manager/src";}}s:24:"kartik-v/yii2-date-range";a:3:{s:4:"name";s:24:"kartik-v/yii2-date-range";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:17:"@kartik/daterange";s:62:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-date-range/src";}}s:25:"kartik-v/yii2-field-range";a:3:{s:4:"name";s:25:"kartik-v/yii2-field-range";s:7:"version";s:7:"1.3.5.0";s:5:"alias";a:1:{s:13:"@kartik/field";s:63:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-field-range/src";}}s:44:"oxyaction/yii2-polymorphic-relation-behavior";a:3:{s:4:"name";s:44:"oxyaction/yii2-polymorphic-relation-behavior";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:20:"@oxyaction/behaviors";s:82:"D:\PROGRAM\laragon\www\YII\vendor/oxyaction/yii2-polymorphic-relation-behavior/src";}}s:26:"moonlandsoft/yii2-phpexcel";a:3:{s:4:"name";s:26:"moonlandsoft/yii2-phpexcel";s:7:"version";s:7:"1.1.0.0";s:5:"alias";a:1:{s:18:"@moonland/phpexcel";s:60:"D:\PROGRAM\laragon\www\YII\vendor/moonlandsoft/yii2-phpexcel";}}s:25:"softark/yii2-dual-listbox";a:3:{s:4:"name";s:25:"softark/yii2-dual-listbox";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:20:"@softark/duallistbox";s:59:"D:\PROGRAM\laragon\www\YII\vendor/softark/yii2-dual-listbox";}}s:28:"mohorev/yii2-upload-behavior";a:3:{s:4:"name";s:28:"mohorev/yii2-upload-behavior";s:7:"version";s:7:"0.2.1.0";s:5:"alias";a:1:{s:13:"@mohorev/file";s:66:"D:\PROGRAM\laragon\www\YII\vendor/mohorev/yii2-upload-behavior/src";}}s:31:"sheershoff/yii2-module-urlrules";a:4:{s:4:"name";s:31:"sheershoff/yii2-module-urlrules";s:7:"version";s:7:"1.0.2.0";s:5:"alias";a:1:{s:26:"@sheershoff/ModuleUrlRules";s:69:"D:\PROGRAM\laragon\www\YII\vendor/sheershoff/yii2-module-urlrules/src";}s:9:"bootstrap";s:40:"sheershoff\ModuleUrlRules\ModuleUrlRules";}s:29:"mootensai/yii2-relation-trait";a:3:{s:4:"name";s:29:"mootensai/yii2-relation-trait";s:7:"version";s:7:"1.1.8.0";s:5:"alias";a:1:{s:19:"@mootensai/relation";s:63:"D:\PROGRAM\laragon\www\YII\vendor/mootensai/yii2-relation-trait";}}s:23:"kartik-v/yii2-popover-x";a:3:{s:4:"name";s:23:"kartik-v/yii2-popover-x";s:7:"version";s:7:"1.3.5.0";s:5:"alias";a:1:{s:15:"@kartik/popover";s:61:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-popover-x/src";}}s:22:"kartik-v/yii2-editable";a:3:{s:4:"name";s:22:"kartik-v/yii2-editable";s:7:"version";s:7:"1.7.8.0";s:5:"alias";a:1:{s:16:"@kartik/editable";s:60:"D:\PROGRAM\laragon\www\YII\vendor/kartik-v/yii2-editable/src";}}s:22:"johnitvn/yii2-ajaxcrud";a:4:{s:4:"name";s:22:"johnitvn/yii2-ajaxcrud";s:7:"version";s:7:"2.1.3.0";s:5:"alias";a:1:{s:18:"@johnitvn/ajaxcrud";s:60:"D:\PROGRAM\laragon\www\YII\vendor/johnitvn/yii2-ajaxcrud/src";}s:9:"bootstrap";s:27:"johnitvn\ajaxcrud\Bootstrap";}s:23:"johnitvn/yii2-rbac-plus";a:4:{s:4:"name";s:23:"johnitvn/yii2-rbac-plus";s:7:"version";s:7:"1.0.6.0";s:5:"alias";a:1:{s:18:"@johnitvn/rbacplus";s:61:"D:\PROGRAM\laragon\www\YII\vendor/johnitvn/yii2-rbac-plus/src";}s:9:"bootstrap";s:27:"johnitvn\rbacplus\Bootstrap";}s:27:"dmirogin/yii2-js-urlmanager";a:3:{s:4:"name";s:27:"dmirogin/yii2-js-urlmanager";s:7:"version";s:7:"1.2.1.0";s:5:"alias";a:1:{s:23:"@dmirogin/js/urlmanager";s:65:"D:\PROGRAM\laragon\www\YII\vendor/dmirogin/yii2-js-urlmanager/src";}}s:25:"paulzi/yii2-json-behavior";a:3:{s:4:"name";s:25:"paulzi/yii2-json-behavior";s:7:"version";s:7:"1.0.7.0";s:5:"alias";a:1:{s:20:"@paulzi/jsonBehavior";s:63:"D:\PROGRAM\laragon\www\YII\vendor/paulzi/yii2-json-behavior/src";}}s:21:"kop/yii2-scroll-pager";a:3:{s:4:"name";s:21:"kop/yii2-scroll-pager";s:7:"version";s:7:"2.7.1.0";s:5:"alias";a:1:{s:9:"@kop/y2sp";s:55:"D:\PROGRAM\laragon\www\YII\vendor/kop/yii2-scroll-pager";}}s:24:"pheme/yii2-toggle-column";a:3:{s:4:"name";s:24:"pheme/yii2-toggle-column";s:7:"version";s:7:"0.7.0.0";s:5:"alias";a:1:{s:11:"@pheme/grid";s:58:"D:\PROGRAM\laragon\www\YII\vendor/pheme/yii2-toggle-column";}}s:19:"pheme/yii2-settings";a:3:{s:4:"name";s:19:"pheme/yii2-settings";s:7:"version";s:7:"0.5.0.0";s:5:"alias";a:1:{s:15:"@pheme/settings";s:53:"D:\PROGRAM\laragon\www\YII\vendor/pheme/yii2-settings";}}s:27:"nterms/yii2-pagesize-widget";a:3:{s:4:"name";s:27:"nterms/yii2-pagesize-widget";s:7:"version";s:7:"2.0.1.0";s:5:"alias";a:1:{s:16:"@nterms/pagesize";s:61:"D:\PROGRAM\laragon\www\YII\vendor/nterms/yii2-pagesize-widget";}}s:28:"2amigos/yii2-ckeditor-widget";a:3:{s:4:"name";s:28:"2amigos/yii2-ckeditor-widget";s:7:"version";s:7:"2.2.0.0";s:5:"alias";a:1:{s:19:"@dosamigos/ckeditor";s:66:"D:\PROGRAM\laragon\www\YII\vendor/2amigos/yii2-ckeditor-widget/src";}}s:20:"yii2tech/ar-position";a:3:{s:4:"name";s:20:"yii2tech/ar-position";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:21:"@yii2tech/ar/position";s:54:"D:\PROGRAM\laragon\www\YII\vendor/yii2tech/ar-position";}}s:24:"creocoder/yii2-flysystem";a:3:{s:4:"name";s:24:"creocoder/yii2-flysystem";s:7:"version";s:7:"0.9.4.0";s:5:"alias";a:1:{s:20:"@creocoder/flysystem";s:62:"D:\PROGRAM\laragon\www\YII\vendor/creocoder/yii2-flysystem/src";}}s:24:"kv4nt/yii2-owl-carousel2";a:3:{s:4:"name";s:24:"kv4nt/yii2-owl-carousel2";s:7:"version";s:7:"1.0.2.0";s:5:"alias";a:1:{s:18:"@kv4nt/owlcarousel";s:58:"D:\PROGRAM\laragon\www\YII\vendor/kv4nt/yii2-owl-carousel2";}}s:25:"webzop/yii2-notifications";a:4:{s:4:"name";s:25:"webzop/yii2-notifications";s:7:"version";s:7:"0.2.0.0";s:5:"alias";a:1:{s:21:"@webzop/notifications";s:59:"D:\PROGRAM\laragon\www\YII\vendor/webzop/yii2-notifications";}s:9:"bootstrap";s:30:"webzop\notifications\Bootstrap";}s:33:"frostealth/yii2-relation-behavior";a:3:{s:4:"name";s:33:"frostealth/yii2-relation-behavior";s:7:"version";s:7:"0.2.4.0";s:5:"alias";a:1:{s:16:"@frostealth/yii2";s:71:"D:\PROGRAM\laragon\www\YII\vendor/frostealth/yii2-relation-behavior/src";}}s:23:"cornernote/yii2-linkall";a:3:{s:4:"name";s:23:"cornernote/yii2-linkall";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:19:"@cornernote/linkall";s:61:"D:\PROGRAM\laragon\www\YII\vendor/cornernote/yii2-linkall/src";}}s:22:"yii2tech/ar-softdelete";a:3:{s:4:"name";s:22:"yii2tech/ar-softdelete";s:7:"version";s:7:"1.0.4.0";s:5:"alias";a:1:{s:23:"@yii2tech/ar/softdelete";s:60:"D:\PROGRAM\laragon\www\YII\vendor/yii2tech/ar-softdelete/src";}}s:23:"paulzi/yii2-nested-sets";a:3:{s:4:"name";s:23:"paulzi/yii2-nested-sets";s:7:"version";s:7:"1.1.0.0";s:5:"alias";a:1:{s:18:"@paulzi/nestedsets";s:57:"D:\PROGRAM\laragon\www\YII\vendor/paulzi/yii2-nested-sets";}}s:16:"yiisoft/yii2-jui";a:3:{s:4:"name";s:16:"yiisoft/yii2-jui";s:7:"version";s:7:"2.0.7.0";s:5:"alias";a:1:{s:8:"@yii/jui";s:50:"D:\PROGRAM\laragon\www\YII\vendor/yiisoft/yii2-jui";}}s:31:"wbraganca/yii2-fancytree-widget";a:3:{s:4:"name";s:31:"wbraganca/yii2-fancytree-widget";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:20:"@wbraganca/fancytree";s:69:"D:\PROGRAM\laragon\www\YII\vendor/wbraganca/yii2-fancytree-widget/src";}}s:23:"rob006/yii2-simple-auth";a:3:{s:4:"name";s:23:"rob006/yii2-simple-auth";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:18:"@rob006/simpleauth";s:61:"D:\PROGRAM\laragon\www\YII\vendor/rob006/yii2-simple-auth/src";}}s:41:"rob006/yii2-simple-auth-yii-authenticator";a:3:{s:4:"name";s:41:"rob006/yii2-simple-auth-yii-authenticator";s:7:"version";s:7:"1.0.1.0";s:5:"alias";a:1:{s:18:"@rob006/simpleauth";s:79:"D:\PROGRAM\laragon\www\YII\vendor/rob006/yii2-simple-auth-yii-authenticator/src";}}s:31:"liyunfang/yii2-widget-linkpager";a:3:{s:4:"name";s:31:"liyunfang/yii2-widget-linkpager";s:7:"version";s:7:"1.0.2.0";s:5:"alias";a:1:{s:16:"@liyunfang/pager";s:65:"D:\PROGRAM\laragon\www\YII\vendor/liyunfang/yii2-widget-linkpager";}}s:27:"tuyakhov/yii2-notifications";a:3:{s:4:"name";s:27:"tuyakhov/yii2-notifications";s:7:"version";s:7:"1.2.0.0";s:5:"alias";a:2:{s:23:"@tuyakhov/notifications";s:65:"D:\PROGRAM\laragon\www\YII\vendor/tuyakhov/yii2-notifications/src";s:29:"@tuyakhov/notifications/tests";s:67:"D:\PROGRAM\laragon\www\YII\vendor/tuyakhov/yii2-notifications/tests";}}s:24:"rmrevin/yii2-fontawesome";a:3:{s:4:"name";s:24:"rmrevin/yii2-fontawesome";s:7:"version";s:8:"2.17.1.0";s:5:"alias";a:1:{s:24:"@rmrevin/yii/fontawesome";s:58:"D:\PROGRAM\laragon\www\YII\vendor/rmrevin/yii2-fontawesome";}}s:26:"machour/yii2-notifications";a:3:{s:4:"name";s:26:"machour/yii2-notifications";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:27:"@machour/yii2/notifications";s:60:"D:\PROGRAM\laragon\www\YII\vendor/machour/yii2-notifications";}}s:20:"yii2tech/spreadsheet";a:3:{s:4:"name";s:20:"yii2tech/spreadsheet";s:7:"version";s:7:"1.0.5.0";s:5:"alias";a:1:{s:21:"@yii2tech/spreadsheet";s:58:"D:\PROGRAM\laragon\www\YII\vendor/yii2tech/spreadsheet/src";}}s:33:"kriss/yii2-link-pager-with-submit";a:3:{s:4:"name";s:33:"kriss/yii2-link-pager-with-submit";s:7:"version";s:7:"1.0.0.0";s:5:"alias";a:1:{s:14:"@kriss/widgets";s:67:"D:\PROGRAM\laragon\www\YII\vendor/kriss/yii2-link-pager-with-submit";}}s:27:"2amigos/yii2-gallery-widget";a:3:{s:4:"name";s:27:"2amigos/yii2-gallery-widget";s:7:"version";s:7:"1.1.0.0";s:5:"alias";a:1:{s:18:"@dosamigos/gallery";s:65:"D:\PROGRAM\laragon\www\YII\vendor/2amigos/yii2-gallery-widget/src";}}s:31:"2amigos/yii2-file-upload-widget";a:3:{s:4:"name";s:31:"2amigos/yii2-file-upload-widget";s:7:"version";s:7:"1.0.9.0";s:5:"alias";a:1:{s:21:"@dosamigos/fileupload";s:69:"D:\PROGRAM\laragon\www\YII\vendor/2amigos/yii2-file-upload-widget/src";}}s:18:"ttungbmt/yii2-core";a:4:{s:4:"name";s:18:"ttungbmt/yii2-core";s:7:"version";s:11:"9999999-dev";s:5:"alias";a:1:{s:9:"@ttungbmt";s:56:"D:\PROGRAM\laragon\www\YII\vendor/ttungbmt/yii2-core/src";}s:9:"bootstrap";s:23:"ttungbmt\base\Bootstrap";}}}";s:7:"request";s:4904:"a:15:{s:7:"flashes";a:0:{}s:10:"statusCode";i:200;s:14:"requestHeaders";a:9:{s:4:"host";s:10:"demo.local";s:10:"connection";s:10:"keep-alive";s:25:"upgrade-insecure-requests";s:1:"1";s:10:"user-agent";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36";s:6:"accept";s:124:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";s:7:"referer";s:18:"http://demo.local/";s:15:"accept-encoding";s:13:"gzip, deflate";s:15:"accept-language";s:62:"en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4";s:6:"cookie";s:234:"advanced-drought=9bp20s0rc8rm9t9pdbq7dod84u; _csrf-drought=df4f23d3a698207c3e1fbd2c0d83ace57018626295e3e7ceeb1630b674ee6dd7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22BX7YEK7xt9ty7PUyGLH4CCIh9nq_3iP9%22%3B%7D";}s:15:"responseHeaders";a:8:{s:12:"X-Powered-By";s:10:"PHP/7.2.19";s:7:"Expires";s:29:"Thu, 19 Nov 1981 08:52:00 GMT";s:13:"Cache-Control";s:35:"no-store, no-cache, must-revalidate";s:6:"Pragma";s:8:"no-cache";s:12:"Content-Type";s:24:"text/html; charset=UTF-8";s:11:"X-Debug-Tag";s:13:"5e8f605143f77";s:16:"X-Debug-Duration";s:3:"188";s:12:"X-Debug-Link";s:37:"/debug/default/view?tag=5e8f605143f77";}s:5:"route";s:10:"maps/index";s:6:"action";s:49:"drought\controllers\MapsController::actionIndex()";s:12:"actionParams";a:0:{}s:7:"general";a:5:{s:6:"method";s:3:"GET";s:6:"isAjax";b:0;s:6:"isPjax";b:0;s:7:"isFlash";b:0;s:18:"isSecureConnection";b:0;}s:11:"requestBody";a:0:{}s:6:"SERVER";a:38:{s:15:"REDIRECT_STATUS";s:3:"200";s:9:"HTTP_HOST";s:10:"demo.local";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:30:"HTTP_UPGRADE_INSECURE_REQUESTS";s:1:"1";s:15:"HTTP_USER_AGENT";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36";s:11:"HTTP_ACCEPT";s:124:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9";s:12:"HTTP_REFERER";s:18:"http://demo.local/";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:20:"HTTP_ACCEPT_LANGUAGE";s:62:"en-US,en;q=0.9,vi;q=0.8,uk;q=0.7,zh-CN;q=0.6,zh;q=0.5,fr;q=0.4";s:11:"HTTP_COOKIE";s:234:"advanced-drought=9bp20s0rc8rm9t9pdbq7dod84u; _csrf-drought=df4f23d3a698207c3e1fbd2c0d83ace57018626295e3e7ceeb1630b674ee6dd7a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-drought%22%3Bi%3A1%3Bs%3A32%3A%22BX7YEK7xt9ty7PUyGLH4CCIh9nq_3iP9%22%3B%7D";s:4:"PATH";s:817:"C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\PROGRAM\Git\cmd;D:\PROGRAM\nodejs\;D:\PROGRAM\TortoiseSVN\bin;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\ttungbmt\scoop\shims;C:\Users\ttungbmt\AppData\Local\Microsoft\WindowsApps;C:\Users\ttungbmt\AppData\Roaming\npm;C:\Program Files\JetBrains\PhpStorm 2019.3.2\bin;D:\PROGRAM\Microsoft VS Code\bin;C:\tools\Cmder;C:\Users\ttungbmt\AppData\Local\Yarn\bin;C:\Users\ttungbmt\AppData\Local\GitHubDesktop\bin;C:\Program Files\Oracle\VirtualBox;D:\PROGRAM\PostgreSQL\12\bin;D:\PROGRAM\OSGeo4W\bin;";s:10:"SystemRoot";s:10:"C:\WINDOWS";s:7:"COMSPEC";s:27:"C:\WINDOWS\system32\cmd.exe";s:7:"PATHEXT";s:53:".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC";s:6:"WINDIR";s:10:"C:\WINDOWS";s:16:"SERVER_SIGNATURE";s:0:"";s:15:"SERVER_SOFTWARE";s:47:"Apache/2.4.35 (Win64) OpenSSL/1.1.1b PHP/7.2.19";s:11:"SERVER_NAME";s:10:"demo.local";s:11:"SERVER_ADDR";s:9:"127.0.0.1";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:9:"127.0.0.1";s:13:"DOCUMENT_ROOT";s:34:"D:/PROGRAM/laragon/www/YII/public/";s:14:"REQUEST_SCHEME";s:4:"http";s:14:"CONTEXT_PREFIX";s:0:"";s:21:"CONTEXT_DOCUMENT_ROOT";s:34:"D:/PROGRAM/laragon/www/YII/public/";s:12:"SERVER_ADMIN";s:17:"admin@example.com";s:15:"SCRIPT_FILENAME";s:43:"D:/PROGRAM/laragon/www/YII/public/index.php";s:11:"REMOTE_PORT";s:4:"9272";s:12:"REDIRECT_URL";s:5:"/maps";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:3:"GET";s:12:"QUERY_STRING";s:0:"";s:11:"REQUEST_URI";s:5:"/maps";s:11:"SCRIPT_NAME";s:10:"/index.php";s:8:"PHP_SELF";s:10:"/index.php";s:18:"REQUEST_TIME_FLOAT";d:1586454609.077;s:12:"REQUEST_TIME";i:1586454609;}s:3:"GET";a:0:{}s:4:"POST";a:0:{}s:6:"COOKIE";a:2:{s:16:"advanced-drought";s:26:"9bp20s0rc8rm9t9pdbq7dod84u";s:13:"_csrf-drought";s:139:"df4f23d3a698207c3e1fbd2c0d83ace57018626295e3e7ceeb1630b674ee6dd7a:2:{i:0;s:13:"_csrf-drought";i:1;s:32:"BX7YEK7xt9ty7PUyGLH4CCIh9nq_3iP9";}";}s:5:"FILES";a:0:{}s:7:"SESSION";a:4:{s:7:"__flash";a:0:{}s:11:"__returnUrl";s:18:"http://demo.local/";s:4:"__id";i:1;s:5:"roles";a:1:{i:0;s:5:"admin";}}}";s:6:"router";s:2526:"a:3:{s:8:"messages";a:13:{i:24;a:6:{i:0;a:3:{s:4:"rule";s:3:"gii";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284004;i:4;a:0:{}i:5;i:11928264;}i:25;a:6:{i:0;a:3:{s:4:"rule";s:12:"gii/<id:\w+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284014;i:4;a:0:{}i:5;i:11929056;}i:26;a:6:{i:0;a:3:{s:4:"rule";s:41:"gii/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.28402;i:4;a:0:{}i:5;i:11929888;}i:27;a:6:{i:0;a:3:{s:4:"rule";s:5:"debug";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284025;i:4;a:0:{}i:5;i:11930672;}i:28;a:6:{i:0;a:3:{s:4:"rule";s:43:"debug/<controller:[\w\-]+>/<action:[\w\-]+>";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284029;i:4;a:0:{}i:5;i:11931504;}i:29;a:6:{i:0;a:3:{s:4:"rule";s:5:"login";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284033;i:4;a:0:{}i:5;i:11932288;}i:30;a:6:{i:0;a:3:{s:4:"rule";s:6:"logout";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284037;i:4;a:0:{}i:5;i:11933072;}i:31;a:6:{i:0;a:3:{s:4:"rule";s:8:"register";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284041;i:4;a:0:{}i:5;i:11933864;}i:32;a:6:{i:0;a:3:{s:4:"rule";s:15:"forget-password";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284044;i:4;a:0:{}i:5;i:11934656;}i:33;a:6:{i:0;a:3:{s:4:"rule";s:14:"reset-password";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284049;i:4;a:0:{}i:5;i:11936728;}i:34;a:6:{i:0;a:3:{s:4:"rule";s:6:"unlock";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284052;i:4;a:0:{}i:5;i:11937512;}i:35;a:6:{i:0;a:3:{s:4:"rule";s:5:"admin";s:5:"match";b:0;s:6:"parent";N;}i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284056;i:4;a:0:{}i:5;i:11938296;}i:36;a:6:{i:0;s:55:"No matching URL rules. Using default URL parsing logic.";i:1;i:8;i:2;s:32:"yii\web\UrlManager::parseRequest";i:3;d:1586454609.284059;i:4;a:0:{}i:5;i:11938672;}}s:5:"route";s:10:"maps/index";s:6:"action";s:49:"drought\controllers\MapsController::actionIndex()";}";s:3:"log";s:8018:"a:1:{s:8:"messages";a:21:{i:0;a:6:{i:0;s:55:"Bootstrap with kartik\validators\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.165573;i:4;a:0:{}i:5;i:8140520;}i:1;a:6:{i:0;s:68:"Bootstrap with sheershoff\ModuleUrlRules\ModuleUrlRules::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.167146;i:4;a:0:{}i:5;i:8254704;}i:2;a:6:{i:0;s:55:"Bootstrap with johnitvn\ajaxcrud\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.167491;i:4;a:0:{}i:5;i:8260592;}i:3;a:6:{i:0;s:19:"Loading module: gii";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1586454609.167501;i:4;a:0:{}i:5;i:8262320;}i:4;a:6:{i:0;s:55:"Bootstrap with johnitvn\rbacplus\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.168274;i:4;a:0:{}i:5;i:8291208;}i:5;a:6:{i:0;s:58:"Bootstrap with webzop\notifications\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.168974;i:4;a:0:{}i:5;i:8318560;}i:6;a:6:{i:0;s:51:"Bootstrap with ttungbmt\base\Bootstrap::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.169471;i:4;a:0:{}i:5;i:8333664;}i:7;a:6:{i:0;s:21:"Loading module: debug";i:1;i:8;i:2;s:26:"yii\base\Module::getModule";i:3;d:1586454609.171295;i:4;a:0:{}i:5;i:8488304;}i:8;a:6:{i:0;s:15:"Session started";i:1;i:4;i:2;s:21:"yii\web\Session::open";i:3;d:1586454609.180974;i:4;a:0:{}i:5;i:9214144;}i:9;a:6:{i:0;s:71:"Opening DB connection: pgsql:host=localhost;dbname=ql_hanhan;port=5432;";i:1;i:4;i:2;s:23:"yii\db\Connection::open";i:3;d:1586454609.19565;i:4;a:0:{}i:5;i:10564024;}i:12;a:6:{i:0;s:2684:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false) OR attidentity != '' AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'user'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.238796;i:4;a:0:{}i:5;i:10758080;}i:15;a:6:{i:0;s:872:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='user'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.263312;i:4;a:0:{}i:5;i:10795280;}i:18;a:6:{i:0;s:230:"SELECT "user"."id", "user"."username", "user"."auth_key", "user"."password_hash", "user"."password_reset_token", "user"."email", "user"."status", "user"."created_at", "user"."updated_at" FROM "user" WHERE ("id"=1) AND ("status"=1)";i:1;i:4;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.270378;i:4;a:0:{}i:5;i:11163504;}i:21;a:6:{i:0;s:44:"Bootstrap with yii\debug\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.276613;i:4;a:0:{}i:5;i:11336064;}i:22;a:6:{i:0;s:42:"Bootstrap with yii\gii\Module::bootstrap()";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.282047;i:4;a:0:{}i:5;i:11783704;}i:23;a:6:{i:0;s:33:"Bootstrap with yii\log\Dispatcher";i:1;i:8;i:2;s:31:"yii\base\Application::bootstrap";i:3;d:1586454609.282299;i:4;a:0:{}i:5;i:11792200;}i:37;a:6:{i:0;s:23:"Route requested: 'maps'";i:1;i:8;i:2;s:34:"yii\web\Application::handleRequest";i:3;d:1586454609.284067;i:4;a:0:{}i:5;i:11938400;}i:38;a:6:{i:0;s:24:"Route to run: maps/index";i:1;i:8;i:2;s:30:"yii\base\Controller::runAction";i:3;d:1586454609.286923;i:4;a:0:{}i:5;i:12082856;}i:39;a:6:{i:0;s:65:"Running action: drought\controllers\MapsController::actionIndex()";i:1;i:8;i:2;s:36:"yii\base\InlineAction::runWithParams";i:3;d:1586454609.289357;i:4;a:0:{}i:5;i:12218392;}i:40;a:6:{i:0;s:92:"Rendering view file: D:\PROGRAM\laragon\www\YII\projects\drought\themes\admin\maps\index.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1586454609.291362;i:4;a:2:{i:0;a:5:{s:4:"file";s:62:"D:\PROGRAM\laragon\www\YII\common\controllers\MyController.php";s:4:"line";i:33;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:74:"D:\PROGRAM\laragon\www\YII\projects\drought\controllers\MapsController.php";s:4:"line";i:29;s:8:"function";s:6:"render";s:5:"class";s:31:"common\controllers\MyController";s:4:"type";s:2:"->";}}i:5;i:12407992;}i:41;a:6:{i:0;s:85:"Rendering view file: D:\PROGRAM\laragon\www\YII\common\themes\admin\layouts\blank.php";i:1;i:8;i:2;s:25:"yii\base\View::renderFile";i:3;d:1586454609.296696;i:4;a:2:{i:0;a:5:{s:4:"file";s:62:"D:\PROGRAM\laragon\www\YII\common\controllers\MyController.php";s:4:"line";i:33;s:8:"function";s:6:"render";s:5:"class";s:19:"yii\base\Controller";s:4:"type";s:2:"->";}i:1;a:5:{s:4:"file";s:74:"D:\PROGRAM\laragon\www\YII\projects\drought\controllers\MapsController.php";s:4:"line";i:29;s:8:"function";s:6:"render";s:5:"class";s:31:"common\controllers\MyController";s:4:"type";s:2:"->";}}i:5;i:12818512;}}}";s:9:"profiling";s:8722:"a:3:{s:6:"memory";i:13031904;s:4:"time";d:0.18921399116516113;s:8:"messages";a:8:{i:10;a:6:{i:0;s:71:"Opening DB connection: pgsql:host=localhost;dbname=ql_hanhan;port=5432;";i:1;i:80;i:2;s:23:"yii\db\Connection::open";i:3;d:1586454609.195653;i:4;a:0:{}i:5;i:10564400;}i:11;a:6:{i:0;s:71:"Opening DB connection: pgsql:host=localhost;dbname=ql_hanhan;port=5432;";i:1;i:96;i:2;s:23:"yii\db\Connection::open";i:3;d:1586454609.237595;i:4;a:0:{}i:5;i:10623328;}i:13;a:6:{i:0;s:2684:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false) OR attidentity != '' AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'user'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.238824;i:4;a:0:{}i:5;i:10768256;}i:14;a:6:{i:0;s:2684:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false) OR attidentity != '' AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'user'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.262333;i:4;a:0:{}i:5;i:10784520;}i:16;a:6:{i:0;s:872:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='user'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.263329;i:4;a:0:{}i:5;i:10799032;}i:17;a:6:{i:0;s:872:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='user'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.266502;i:4;a:0:{}i:5;i:10800488;}i:19;a:6:{i:0;s:230:"SELECT "user"."id", "user"."username", "user"."auth_key", "user"."password_hash", "user"."password_reset_token", "user"."email", "user"."status", "user"."created_at", "user"."updated_at" FROM "user" WHERE ("id"=1) AND ("status"=1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.270397;i:4;a:0:{}i:5;i:11165856;}i:20;a:6:{i:0;s:230:"SELECT "user"."id", "user"."username", "user"."auth_key", "user"."password_hash", "user"."password_reset_token", "user"."email", "user"."status", "user"."created_at", "user"."updated_at" FROM "user" WHERE ("id"=1) AND ("status"=1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.272484;i:4;a:0:{}i:5;i:11167800;}}}";s:2:"db";s:8291:"a:1:{s:8:"messages";a:6:{i:13;a:6:{i:0;s:2684:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false) OR attidentity != '' AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'user'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.238824;i:4;a:0:{}i:5;i:10768256;}i:14;a:6:{i:0;s:2684:"SELECT
+    d.nspname AS table_schema,
+    c.relname AS table_name,
+    a.attname AS column_name,
+    COALESCE(td.typname, tb.typname, t.typname) AS data_type,
+    COALESCE(td.typtype, tb.typtype, t.typtype) AS type_type,
+    a.attlen AS character_maximum_length,
+    pg_catalog.col_description(c.oid, a.attnum) AS column_comment,
+    a.atttypmod AS modifier,
+    a.attnotnull = false AS is_nullable,
+    CAST(pg_get_expr(ad.adbin, ad.adrelid) AS varchar) AS column_default,
+    coalesce(pg_get_expr(ad.adbin, ad.adrelid) ~ 'nextval',false) OR attidentity != '' AS is_autoinc,
+    pg_get_serial_sequence(quote_ident(d.nspname) || '.' || quote_ident(c.relname), a.attname) AS sequence_name,
+    CASE WHEN COALESCE(td.typtype, tb.typtype, t.typtype) = 'e'::char
+        THEN array_to_string((SELECT array_agg(enumlabel) FROM pg_enum WHERE enumtypid = COALESCE(td.oid, tb.oid, a.atttypid))::varchar[], ',')
+        ELSE NULL
+    END AS enum_values,
+    CASE atttypid
+         WHEN 21 /*int2*/ THEN 16
+         WHEN 23 /*int4*/ THEN 32
+         WHEN 20 /*int8*/ THEN 64
+         WHEN 1700 /*numeric*/ THEN
+              CASE WHEN atttypmod = -1
+               THEN null
+               ELSE ((atttypmod - 4) >> 16) & 65535
+               END
+         WHEN 700 /*float4*/ THEN 24 /*FLT_MANT_DIG*/
+         WHEN 701 /*float8*/ THEN 53 /*DBL_MANT_DIG*/
+         ELSE null
+      END   AS numeric_precision,
+      CASE
+        WHEN atttypid IN (21, 23, 20) THEN 0
+        WHEN atttypid IN (1700) THEN
+        CASE
+            WHEN atttypmod = -1 THEN null
+            ELSE (atttypmod - 4) & 65535
+        END
+           ELSE null
+      END AS numeric_scale,
+    CAST(
+             information_schema._pg_char_max_length(information_schema._pg_truetypid(a, t), information_schema._pg_truetypmod(a, t))
+             AS numeric
+    ) AS size,
+    a.attnum = any (ct.conkey) as is_pkey,
+    COALESCE(NULLIF(a.attndims, 0), NULLIF(t.typndims, 0), (t.typcategory='A')::int) AS dimension
+FROM
+    pg_class c
+    LEFT JOIN pg_attribute a ON a.attrelid = c.oid
+    LEFT JOIN pg_attrdef ad ON a.attrelid = ad.adrelid AND a.attnum = ad.adnum
+    LEFT JOIN pg_type t ON a.atttypid = t.oid
+    LEFT JOIN pg_type tb ON (a.attndims > 0 OR t.typcategory='A') AND t.typelem > 0 AND t.typelem = tb.oid OR t.typbasetype > 0 AND t.typbasetype = tb.oid
+    LEFT JOIN pg_type td ON t.typndims > 0 AND t.typbasetype > 0 AND tb.typelem = td.oid
+    LEFT JOIN pg_namespace d ON d.oid = c.relnamespace
+    LEFT JOIN pg_constraint ct ON ct.conrelid = c.oid AND ct.contype = 'p'
+WHERE
+    a.attnum > 0 AND t.typname != '' AND NOT a.attisdropped
+    AND c.relname = 'user'
+    AND d.nspname = 'public'
+ORDER BY
+    a.attnum;";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.262333;i:4;a:0:{}i:5;i:10784520;}i:16;a:6:{i:0;s:872:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='user'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.263329;i:4;a:0:{}i:5;i:10799032;}i:17;a:6:{i:0;s:872:"select
+    ct.conname as constraint_name,
+    a.attname as column_name,
+    fc.relname as foreign_table_name,
+    fns.nspname as foreign_table_schema,
+    fa.attname as foreign_column_name
+from
+    (SELECT ct.conname, ct.conrelid, ct.confrelid, ct.conkey, ct.contype, ct.confkey, generate_subscripts(ct.conkey, 1) AS s
+       FROM pg_constraint ct
+    ) AS ct
+    inner join pg_class c on c.oid=ct.conrelid
+    inner join pg_namespace ns on c.relnamespace=ns.oid
+    inner join pg_attribute a on a.attrelid=ct.conrelid and a.attnum = ct.conkey[ct.s]
+    left join pg_class fc on fc.oid=ct.confrelid
+    left join pg_namespace fns on fc.relnamespace=fns.oid
+    left join pg_attribute fa on fa.attrelid=ct.confrelid and fa.attnum = ct.confkey[ct.s]
+where
+    ct.contype='f'
+    and c.relname='user'
+    and ns.nspname='public'
+order by
+    fns.nspname, fc.relname, a.attnum";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.266502;i:4;a:0:{}i:5;i:10800488;}i:19;a:6:{i:0;s:230:"SELECT "user"."id", "user"."username", "user"."auth_key", "user"."password_hash", "user"."password_reset_token", "user"."email", "user"."status", "user"."created_at", "user"."updated_at" FROM "user" WHERE ("id"=1) AND ("status"=1)";i:1;i:80;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.270397;i:4;a:0:{}i:5;i:11165856;}i:20;a:6:{i:0;s:230:"SELECT "user"."id", "user"."username", "user"."auth_key", "user"."password_hash", "user"."password_reset_token", "user"."email", "user"."status", "user"."created_at", "user"."updated_at" FROM "user" WHERE ("id"=1) AND ("status"=1)";i:1;i:96;i:2;s:21:"yii\db\Command::query";i:3;d:1586454609.272484;i:4;a:0:{}i:5;i:11167800;}}}";s:5:"event";s:4591:"a:25:{i:0;a:5:{s:4:"time";d:1586454609.237585;s:4:"name";s:9:"afterOpen";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:17:"yii\db\Connection";}i:1;a:5:{s:4:"time";d:1586454609.266668;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:21:"common\models\MyQuery";}i:2;a:5:{s:4:"time";d:1586454609.274802;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"common\models\User";}i:3;a:5:{s:4:"time";d:1586454609.274843;s:4:"name";s:9:"afterFind";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"common\models\User";}i:4;a:5:{s:4:"time";d:1586454609.275698;s:4:"name";s:4:"init";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:18:"common\models\User";}i:5;a:5:{s:4:"time";d:1586454609.283984;s:4:"name";s:13:"beforeRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:6;a:5:{s:4:"time";d:1586454609.287133;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:7;a:5:{s:4:"time";d:1586454609.289241;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:8;a:5:{s:4:"time";d:1586454609.289261;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:9;a:5:{s:4:"time";d:1586454609.289272;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:10;a:5:{s:4:"time";d:1586454609.28928;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:11;a:5:{s:4:"time";d:1586454609.289291;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:12;a:5:{s:4:"time";d:1586454609.289299;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:13;a:5:{s:4:"time";d:1586454609.289306;s:4:"name";s:18:"missingTranslation";s:5:"class";s:32:"yii\i18n\MissingTranslationEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:25:"yii\i18n\PhpMessageSource";}i:14;a:5:{s:4:"time";d:1586454609.289348;s:4:"name";s:12:"beforeAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:34:"drought\controllers\MapsController";}i:15;a:5:{s:4:"time";d:1586454609.291357;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:16;a:5:{s:4:"time";d:1586454609.296468;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:17;a:5:{s:4:"time";d:1586454609.296692;s:4:"name";s:12:"beforeRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:18;a:5:{s:4:"time";d:1586454609.296818;s:4:"name";s:11:"afterRender";s:5:"class";s:18:"yii\base\ViewEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:12:"yii\web\View";}i:19;a:5:{s:4:"time";d:1586454609.296844;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:34:"drought\controllers\MapsController";}i:20;a:5:{s:4:"time";d:1586454609.296852;s:4:"name";s:11:"afterAction";s:5:"class";s:20:"yii\base\ActionEvent";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:21;a:5:{s:4:"time";d:1586454609.296867;s:4:"name";s:12:"afterRequest";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:19:"yii\web\Application";}i:22;a:5:{s:4:"time";d:1586454609.296873;s:4:"name";s:10:"beforeSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:23;a:5:{s:4:"time";d:1586454609.297255;s:4:"name";s:12:"afterPrepare";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}i:24;a:5:{s:4:"time";d:1586454609.29729;s:4:"name";s:9:"afterSend";s:5:"class";s:14:"yii\base\Event";s:8:"isStatic";s:1:"0";s:11:"senderClass";s:16:"yii\web\Response";}}";s:6:"assets";s:6:"a:0:{}";s:4:"mail";s:6:"a:0:{}";s:8:"timeline";s:92:"a:3:{s:5:"start";d:1586454609.110569;s:3:"end";d:1586454609.299996;s:6:"memory";i:13031904;}";s:4:"user";s:2184:"a:5:{s:2:"id";i:1;s:8:"identity";a:9:{s:2:"id";s:1:"1";s:8:"username";s:7:"'admin'";s:8:"auth_key";s:4:"null";s:13:"password_hash";s:10:"'admin123'";s:20:"password_reset_token";s:4:"null";s:5:"email";s:26:"'dichte.ytdphcm@gmail.com'";s:6:"status";s:1:"1";s:10:"created_at";s:4:"null";s:10:"updated_at";s:10:"1534841965";}s:10:"attributes";a:9:{i:0;a:2:{s:9:"attribute";s:2:"id";s:5:"label";s:2:"ID";}i:1;a:2:{s:9:"attribute";s:8:"username";s:5:"label";s:18:"Tên đăng nhập";}i:2;a:2:{s:9:"attribute";s:8:"auth_key";s:5:"label";s:8:"Auth Key";}i:3;a:2:{s:9:"attribute";s:13:"password_hash";s:5:"label";s:12:"Mật khẩu";}i:4;a:2:{s:9:"attribute";s:20:"password_reset_token";s:5:"label";s:20:"Password Reset Token";}i:5;a:2:{s:9:"attribute";s:5:"email";s:5:"label";s:5:"Email";}i:6;a:2:{s:9:"attribute";s:6:"status";s:5:"label";s:13:"Tình trạng";}i:7;a:2:{s:9:"attribute";s:10:"created_at";s:5:"label";s:11:"Ngày tạo";}i:8;a:2:{s:9:"attribute";s:10:"updated_at";s:5:"label";s:18:"Ngày cập nhật";}}s:13:"rolesProvider";O:26:"yii\data\ArrayDataProvider":12:{s:3:"key";N;s:9:"allModels";a:1:{s:5:"admin";a:7:{s:4:"type";i:1;s:4:"name";s:5:"admin";s:11:"description";s:18:"Quản trị viên";s:8:"ruleName";N;s:4:"data";s:4:"null";s:9:"createdAt";i:1451432584;s:9:"updatedAt";i:1479704145;}}s:10:"modelClass";N;s:2:"id";N;s:32:" yii\data\BaseDataProvider _sort";N;s:38:" yii\data\BaseDataProvider _pagination";N;s:32:" yii\data\BaseDataProvider _keys";N;s:34:" yii\data\BaseDataProvider _models";N;s:38:" yii\data\BaseDataProvider _totalCount";N;s:27:" yii\base\Component _events";a:0:{}s:35:" yii\base\Component _eventWildcards";a:0:{}s:30:" yii\base\Component _behaviors";N;}s:19:"permissionsProvider";O:26:"yii\data\ArrayDataProvider":12:{s:3:"key";N;s:9:"allModels";a:0:{}s:10:"modelClass";N;s:2:"id";s:4:"dp-1";s:32:" yii\data\BaseDataProvider _sort";N;s:38:" yii\data\BaseDataProvider _pagination";N;s:32:" yii\data\BaseDataProvider _keys";N;s:34:" yii\data\BaseDataProvider _models";N;s:38:" yii\data\BaseDataProvider _totalCount";N;s:27:" yii\base\Component _events";a:0:{}s:35:" yii\base\Component _eventWildcards";a:0:{}s:30:" yii\base\Component _behaviors";N;}}";s:4:"dump";s:6:"a:0:{}";s:10:"httpclient";s:27:"a:1:{s:8:"messages";a:0:{}}";s:7:"summary";a:12:{s:3:"tag";s:13:"5e8f605143f77";s:3:"url";s:22:"http://demo.local/maps";s:4:"ajax";i:0;s:6:"method";s:3:"GET";s:2:"ip";s:9:"127.0.0.1";s:4:"time";d:1586454609.077;s:10:"statusCode";i:200;s:8:"sqlCount";i:3;s:9:"mailCount";i:0;s:9:"mailFiles";a:0:{}s:10:"peakMemory";i:13031904;s:14:"processingTime";d:0.18921399116516113;}s:10:"exceptions";a:0:{}}

@@ -1,0 +1,1 @@
+{"template":"default","enableI18N":"0","messageCategory":"app","ns":"drought\\models","db":"db","baseClass":"drought\\models\\App","generateRelations":"all","generateLabelsFromComments":"0","queryNs":"drought\\models","queryBaseClass":"yii\\db\\ActiveQuery","useTablePrefix":"0","generateQuery":"0"}

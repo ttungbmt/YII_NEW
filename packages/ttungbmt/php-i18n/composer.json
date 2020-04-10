@@ -1,0 +1,25 @@
+{
+    "name": "ttungbmt/php-i18n",
+    "description": "I18n",
+    "type": "php",
+    "keywords": ["php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trương Thanh Tùng",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "zordius/lightncandy": "dev-master"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "ttungbmt\\I18n\\": "src"
+        }
+    }
+
+}

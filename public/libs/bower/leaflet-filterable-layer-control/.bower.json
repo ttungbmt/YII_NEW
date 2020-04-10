@@ -1,0 +1,35 @@
+{
+  "name": "leaflet-filterable-layer-control",
+  "version": "0.1.1",
+  "homepage": "https://github.com/mikaoelitiana/leaflet-filterable-layer-control",
+  "authors": [
+    "Mika A."
+  ],
+  "description": "A Leaflet layer control with filterable layer list",
+  "main": "dist/leaflet.groupedlayercontrol.min.js",
+  "keywords": [
+    "leaflet",
+    "overlay",
+    "filter",
+    "filterable",
+    "control",
+    "plugin"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.1",
+    "commit": "1130270df0b00234bda1d328c7b6e1346f3eca74"
+  },
+  "_source": "https://github.com/mikaoelitiana/leaflet-filterable-layer-control.git",
+  "_target": "^0.1.1",
+  "_originalSource": "leaflet-filterable-layer-control"
+}

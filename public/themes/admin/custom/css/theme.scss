@@ -1,0 +1,61 @@
+body {
+  font-size: 14px;
+}
+
+.hide {
+  display: none;
+}
+
+.limited-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+  color: #D84315;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.form-control {
+  font-size: 14px;
+}
+
+.datepicker {
+  z-index: 2000!important;
+}
+
+.tooltip {
+  line-height: 10px;
+  .tooltip-inner {padding: 8px 10px;}
+  &.in {opacity: 0.8;}
+}
+
+.uploader {
+  display: inherit;
+}
+
+
+.page-header-light.has-cover {
+  background: url(/themes/admin/main/images/backgrounds/seamless.png);
+}
+
+.btn-raised {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.page-item.active .page-link {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+
+@import "gridview";
+@import "select2";
+@import "input";
+@import "notifications";
+
+
+

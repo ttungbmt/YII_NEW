@@ -1,0 +1,21 @@
+{
+    "name": "leaflet/yii2-widget-map",
+    "description": "Mini map leaflet",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttungbmt\\map\\": ""
+        }
+    }
+}

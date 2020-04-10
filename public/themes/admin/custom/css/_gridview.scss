@@ -1,0 +1,63 @@
+.grid-view {
+  background-color: white;
+
+  .card-header {
+    padding: 10px 10px;
+    background-image: url(/themes/admin/custom/img/bg-polygon.png);
+    .card-title {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+
+  .kv-grid-toolbar {
+    .btn {
+      border-bottom: 3px solid rgba(0,0,0,.15);
+      text-transform: initial;
+      padding: 7px 17px;
+      font-size: 14px;
+    }
+
+    .glyphicon.glyphicon-resize-full {
+      font-family: 'icomoon' !important;
+      font-style: normal;
+    }
+    .glyphicon.glyphicon-resize-full:before {
+      content: "\eb59";
+    }
+
+    ul.dropdown-menu > li {
+      width: 100%;
+      padding: 0.5rem 1.25rem;
+      clear: both;
+      font-weight: 400;
+      color: #333;
+      text-align: inherit;
+      white-space: nowrap;
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  .glyphicon {
+    font-size: 13px;
+  }
+
+  tbody {
+    td .list-icons{
+      .icon-eye {color: #00bcd4;}
+      .icon-pencil7 {color: #2196f3;}
+      .icon-trash {color: #f44336;}
+    }
+  }
+
+}
+
+.pagination-right .pagination {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+
+

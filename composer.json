@@ -1,0 +1,108 @@
+{
+    "name": "yiisoft/yii2-app-advanced",
+    "description": "Yii 2 Advanced Project Template",
+    "keywords": ["yii2", "framework", "advanced", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "yiisoft/yii2": "~2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "ttungbmt/yii2-core": "dev-master",
+        "ttungbmt/php-gdal": "dev-master",
+        "ttungbmt/php-geoserver": "dev-master",
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "lodash-php/lodash-php": "^0.0.6"
+
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.1.0",
+        "yiisoft/yii2-gii": "~2.1.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/codeception": "^4.0",
+        "codeception/verify": "~0.5.0 || ~1.1.0",
+        "codeception/specify": "~0.4.6",
+        "codeception/module-filesystem": "^1.0.0",
+        "codeception/module-yii2": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttungbmt\\map\\": "extensions/yii2-widget-map",
+            "ttungbmt\\amcharts\\": "extensions/yii2-amcharts",
+            "ttungbmt\\noty\\": "extensions/yii2-noty",
+            "yarisrespect\\excel\\": "extensions/yii2-excel",
+            "ttungbmt\\pager\\": "extensions/yii2-pager",
+            "ttungbmt\\datatables\\": "extensions/yii2-datatables/src",
+            "modules\\": "modules"
+        }
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        }
+    },
+    "extra": {
+        "merge-plugin": {
+            "include": [
+                "composer.dev.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "ignore-duplicates": false,
+            "merge-dev": true,
+            "merge-extra": false,
+            "merge-extra-deep": false,
+            "merge-scripts": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "path",
+            "url": "./packages/ttungbmt/yii2-core",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/ttungbmt/php-gdal",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/ttungbmt/php-i18n",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "./packages/ttungbmt/php-geoserver",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}

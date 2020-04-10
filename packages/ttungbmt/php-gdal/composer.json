@@ -1,0 +1,27 @@
+{
+    "name": "ttungbmt/php-gdal",
+    "description": "Gdal For PHP",
+    "type": "php",
+    "keywords": ["php"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trương Thanh Tùng",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "geo6/php-gdal-wrapper": "@dev",
+        "symfony/process": "@dev",
+        "ttungbmt/php-i18n": "dev-master"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "ttungbmt\\gdal\\": "src"
+        }
+    }
+
+}

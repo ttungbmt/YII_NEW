@@ -1,0 +1,28 @@
+{
+    "name": "ttungbmt/php-geoserver",
+    "description": "PHP Geoserver",
+    "type": "php",
+    "keywords": ["php", "geoserver"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Trương Thanh Tùng",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "php-http/guzzle6-adapter": "^2.0",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "oneofftech/geoserver-client-php": "^0.3.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "ttungbmt\\GeoServer\\": "src"
+        }
+    }
+
+}

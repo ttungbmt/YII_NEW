@@ -1,0 +1,34 @@
+
+#notification-box-content {
+  .dropdown-content-body {
+    max-height: 335px;
+
+    padding: 0;
+    .media-list {
+      cursor: pointer;
+      &:hover {background-color: #eaeaeab0;}
+      .media {
+        margin: 0;
+        padding: 10px;
+        &:not(:last-child){
+          border-bottom: 1px solid #e4dede;
+        }
+      }
+    }
+
+  }
+  .dropdown-content-header {
+    padding: 10px;
+    border-bottom: 1px solid #e4dfdf;
+  }
+  .dropdown-content-footer {
+    padding: 10px;
+  }
+}
+
+#notification-panel {
+  .media {
+    cursor: pointer;
+    &:hover {background-color: #eaeaeab0;}
+  }
+}
