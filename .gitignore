@@ -1,3 +1,7 @@
+projects/drought/runtime/*
+public/assets/*
+
+
 # yii console commands
 /yii
 /yii_test

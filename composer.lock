@@ -2640,7 +2640,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2684,7 +2684,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -2737,7 +2737,7 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -2789,7 +2789,7 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -2840,16 +2840,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v7.5.1",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "99b3538c63b3ce5374d5f8fad181fac07efaedec"
+                "reference": "b8d805437c075a44bf53737763c3b979932445c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/99b3538c63b3ce5374d5f8fad181fac07efaedec",
-                "reference": "99b3538c63b3ce5374d5f8fad181fac07efaedec",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/b8d805437c075a44bf53737763c3b979932445c7",
+                "reference": "b8d805437c075a44bf53737763c3b979932445c7",
                 "shasum": ""
             },
             "require": {
@@ -2898,7 +2898,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-04-06T13:34:26+00:00"
+            "time": "2020-04-08T13:18:06+00:00"
         },
         {
             "name": "imagine/imagine",
