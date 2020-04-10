@@ -1,5 +1,4 @@
-projects/drought/runtime/*
-projects/drought/runtime/debug
+projects/drought/runtime/**
 public/assets/*
 composer.lock
 
