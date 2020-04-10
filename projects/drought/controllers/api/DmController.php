@@ -59,7 +59,7 @@ class DmController extends ApiController
     {
         $data = Gallery::find()->select('code, id')->andWhere(['type' => 2])->asArray()->all();
         $data = collect($data)->map(function ($i){
-            $layers = (string)Str::of($i['code'])->slug('_')->prepend('drought:m_v_');
+            $layers = (string)Str::of($i['code'])->prepend('drought:m_');
             return array_merge($i, [
                 'layers' => $layers,
             ]);

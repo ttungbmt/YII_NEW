@@ -12,12 +12,16 @@ use ttungbmt\actions\IndexAction;
 use ttungbmt\actions\UpdateAction;
 use ttungbmt\actions\ViewAction;
 
+
+
 class RasterCalcController extends AppController
 {
     protected $modelClass = 'drought\models\Gallery';
 
     public function actions() {
         $model = $this->modelClass;
+
+
 
         return [
             'index' => [

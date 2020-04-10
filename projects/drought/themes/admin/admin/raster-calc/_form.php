@@ -18,6 +18,7 @@ $items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
 if($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
 }
+$img_url = $model->getFileCalcUrl();
 ?>
 <style>
     .btn-opr {
@@ -31,7 +32,20 @@ if($model->bands && is_string($model->bands)) {
     }
 </style>
 
+
+
 <div id="vue-app" class="gallery-form">
+    <div>
+        <div class="d-flex">
+            <div style="margin-right: 10px;">
+                <div id="preview-img"></div>
+            </div>
+            <?=$this->render('_raster_info', ['model' => $model])?>
+        </div>
+        <hr>
+
+    </div>
+
     <div class="card">
         <div class="card-body">
             <?php $form = ActiveForm::begin([
@@ -39,8 +53,8 @@ if($model->bands && is_string($model->bands)) {
                 'options' => ['enctype' => 'multipart/form-data']
             ]); ?>
 
-            <div class="row">
-                <div class="col-md-6">
+            <div class="row d-flex">
+                <div style="width: 415px">
                     <div class="d-flex">
                         <h6 class="font-weight-semibold">Raster Bands</h6>
                         <?= Html::button('+', [
@@ -54,7 +68,7 @@ if($model->bands && is_string($model->bands)) {
                         <?= $form->field($model, 'bands_str')->dropDownList([], ['multiple' => true, 'id' => 'box-band'])->label(false) ?>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div style="flex-grow: 1; padding-left: 20px">
                     <h6 class="font-weight-semibold">Result Layer</h6>
                     <?= $form->field($model, 'name')->label('Output layer name') ?>
                 </div>
@@ -123,8 +137,11 @@ if($model->bands && is_string($model->bands)) {
     </div>
 
 
-</div>
 
+</div>
+<?php
+$this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');
+?>
 <script>
     let vm = new Vue({
         el: '#vue-app',
@@ -136,7 +153,19 @@ if($model->bands && is_string($model->bands)) {
         mounted() {
             this.updateBoxBand()
 
+            let geoTIFFFile = `<?=$img_url?>`
 
+            if (geoTIFFFile) {
+                let xhr = new XMLHttpRequest();
+                xhr.responseType = 'arraybuffer';
+                xhr.open('GET', geoTIFFFile);
+                xhr.onload = function (e) {
+                    let tiff = new Tiff({buffer: xhr.response});
+                    let canvas = tiff.toCanvas();
+                    $('#preview-img').append(canvas)
+                };
+                xhr.send();
+            }
 
         },
         computed: {
@@ -166,3 +195,4 @@ if($model->bands && is_string($model->bands)) {
         }
     })
 </script>
+

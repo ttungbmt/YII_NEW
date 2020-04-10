@@ -10,6 +10,7 @@ class Http extends \yii\base\Component
         __call as macroCall;
     }
 
+
     /**
      * Execute a method against a new pending request instance.
      *
@@ -22,6 +23,7 @@ class Http extends \yii\base\Component
         if (static::hasMacro($method)) {
             return $this->macroCall($method, $parameters);
         }
+
 
         return tap(new Factory(), function ($request){
         })->{$method}(...$parameters);

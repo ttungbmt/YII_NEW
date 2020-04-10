@@ -9,6 +9,7 @@ use ttungbmt\behaviors\UploadImageBehavior;
 use ttungbmt\db\ActiveRecord;
 use ttungbmt\db\Query;
 use ttungbmt\gdal\Gdal;
+use ttungbmt\support\facades\Http;
 use Yii;
 use yii\db\Expression;
 use function Clue\StreamFilter\fun;
@@ -133,24 +134,38 @@ class Gallery extends ActiveRecord
 
         if($output){
             $table_name = $this->code;
+            $m_view_name = 'm_'.$this->code;
             $db = Yii::$app->db;
             $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
 
-            $source =  Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
+            $source = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
             $gdal->rasterToPgSQL($source, $this->code)->run();
 
             $query = (new Query())->select('x, y, val, geom')->from(['vt' => (new Query())->select(new Expression('(ST_PixelAsPolygons(rast, 1)).*'))->from($table_name)])->andWhere(['<>', 'val', 128]);
-            $viewSql = "CREATE MATERIALIZED  VIEW m_{$table_name} AS ".$query->createCommand()->getRawSql();
+            $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS ".$query->createCommand()->getRawSql();
             $db->createCommand($viewSql)->execute();
+
+            $client = Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml',]);
+            $url_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
+            $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:'.$m_view_name;
+
+            $response = $client->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
+            $response = $client->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
         }
 
         return $this->save();
     }
 
-
-
     protected function generateTiffCalc(){
 
+    }
+
+    public function getFileCalcUrl(){
+        return Yii::getAlias('@web/projects/drought/uploads/results/' . $this->image);
+    }
+
+    public function getFileCalcPath(){
+        return Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
     }
 
     public function deleteImage()
