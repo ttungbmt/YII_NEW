@@ -1,5 +1,6 @@
 projects/drought/runtime/*
 public/assets/*
+composer.lock
 
 
 # yii console commands

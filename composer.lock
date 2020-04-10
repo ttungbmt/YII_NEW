@@ -10041,7 +10041,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-gdal",
-                "reference": "2ca093128c9eb4e83a46a038f83d4cad22516c20"
+                "reference": "94ec2b8578676d70ba88ed4cdc1e6b684ee47d87"
             },
             "require": {
                 "geo6/php-gdal-wrapper": "@dev",
@@ -10080,7 +10080,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-geoserver",
-                "reference": "8bba9fad514d7c61da26fe02fec5a5f8a7b60d0a"
+                "reference": "e730fa64c2e31d8f95e4cdd48f4f401f5860be68"
             },
             "require": {
                 "guzzlehttp/psr7": "^1.6",
@@ -10121,7 +10121,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-i18n",
-                "reference": "17cc5094813c3bf261c13d0537d944b99b296652"
+                "reference": "4d254e44bd586f30c4b4943527a232f2c4b9844a"
             },
             "require": {
                 "zordius/lightncandy": "dev-master"
@@ -10158,7 +10158,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/yii2-core",
-                "reference": "473f27a1bba2d30a522914d284d478aed0e926c3"
+                "reference": "29e6c53d8d184de403aca9bdc9f7f08b822e84f6"
             },
             "require": {
                 "codeonyii/yii2-at-least-validator": "*",
