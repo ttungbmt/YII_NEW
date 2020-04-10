@@ -1,0 +1,32 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/apps/*",
+      "packages/libs/*",
+	  "packages/libs/*/*",
+	  "packages/bundlers/*",
+	  "packages/web/*"
+    ]
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap --no-ci --progress",
+    "start": "yarn workspace @project/drought-app start",
+    "start:drought": "yarn workspace @project/drought-app start",
+    "build:drought": "yarn workspace @project/drought-app build",
+    "start:bit": "yarn workspace @ttungbmt/react.app.bit start",
+    "start:metronic": "yarn workspace @ttungbmt/react.app.metronic start",
+    "start:fuse-react": "yarn workspace @ttungbmt/react.app.fuse-react start",
+    "watch": "lerna run watch --stream",
+    "build": "lerna run build --stream",
+    "clean": "lerna clean && rm -rf node_modules",
+    "lib:dev": "lerna run --scope={@ttungbmt/bundlers.rollup,@ttungbmt/redux-leaflet} dev --stream",
+    "lib:build": "lerna run --scope={@ttungbmt/bundlers.rollup,@ttungbmt/redux-leaflet} build --stream",
+    "delete:build": "rimraf packages/**/build"
+  },
+  "devDependencies": {
+
+  }
+
+}
