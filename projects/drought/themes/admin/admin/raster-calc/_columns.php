@@ -23,10 +23,14 @@ return [
     ],
     [
         'class' => 'kartik\grid\ActionColumn',
+        'visibleButtons' => [
+            'view'   => function ($model) {
+                return false;
+            },
+        ],
         'urlCreator' => function ($action, $model, $key, $index) {
             return url([$action, 'id' => $key]);
         },
-        'viewOptions' => ['role' => 'modal-remote', 'title' => lang('View'), 'data-toggle' => 'tooltip'],
         'updateOptions' => ['data-pjax' => 0, 'title' => lang('Update'), 'data-toggle' => 'tooltip'],
     ],
 
