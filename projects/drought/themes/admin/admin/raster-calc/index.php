@@ -11,7 +11,7 @@ use johnitvn\ajaxcrud\CrudAsset;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 CrudAsset::register($this);
 
-$this->title = "Xử lý ảnh";
+$this->title = "Tính toán CDI";
 
 ?>
 
@@ -40,7 +40,7 @@ $this->title = "Xử lý ảnh";
             'responsive' => true,
             'panel' => [
                 'type' => 'primary',
-                'heading' => 'Xử lý ảnh',
+                'heading' => 'Tính toán CDI',
             ]
         ]) ?>
     </div>

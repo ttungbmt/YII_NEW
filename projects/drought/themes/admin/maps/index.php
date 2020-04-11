@@ -8,7 +8,7 @@
     <meta name="description" content="Web site created using create-react-app"/>
     <link rel="apple-touch-icon" href="/logo192.png"/>
     <link rel="manifest" href="/projects/drought/app/map/manifest.json"/>
-    <title>React App</title>
+    <title>Drought Maps</title>
     <link href="/themes/admin/main/css/icons/icomoon/styles.css" rel="stylesheet">
     <link href="/themes/admin/main/css/icons/fontawesome/styles.min.css" rel="stylesheet">
     <link href="/themes/admin/main/css/bootstrap.min.css" rel="stylesheet">

@@ -22,6 +22,8 @@ $li = function ($name, $url, $icon = '', $access = null) {
         border-radius: 0;
         white-space: nowrap;
     }
+    .modal-title { position: absolute}
+
 </style>
 
 <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">

@@ -16,7 +16,7 @@ use ttungbmt\map\Map;
 /* @var $model drought\models\Gallery */
 /* @var $form yii\widgets\ActiveForm */
 
-$this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Xử lý ảnh';
+$this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Tính toán CDI';
 $items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
 if($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
@@ -117,6 +117,8 @@ $nativeBoundingBox = data_get($model->getFeatureMeta(), 'nativeBoundingBox', [])
 
 
             <h6 class="font-weight-semibold mt-2">Raster Calculator Expression</h6>
+            <span class="badge badge-light badge-striped badge-striped-left border-left-primary mb-2">CDI = NDVIa * 0.5 +SPI * 0.3333 + LSTa * 0.1667</span>
+
             <?= $form->field($model, 'expr')->textarea(['rows' => 10, 'v-model' => 'expr'])->label(false) ?>
 
 
