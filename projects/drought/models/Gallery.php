@@ -145,12 +145,17 @@ class Gallery extends ActiveRecord
             $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS ".$query->createCommand()->getRawSql();
             $db->createCommand($viewSql)->execute();
 
-            $client = Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml',]);
-            $url_feature = '/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
-            $url_style = '/geoserver/rest/layers/drought:'.$m_view_name;
+            try {
+                $client = Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml',]);
+                $url_feature = '/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
+                $url_style = '/geoserver/rest/layers/drought:'.$m_view_name;
 
-            $response = $client->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
-            $response = $client->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
+                $response = $client->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
+                $response = $client->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
+            } catch (\Exception $e){
+
+            }
+
         }
 
         return $this->save();
@@ -173,6 +178,21 @@ class Gallery extends ActiveRecord
         $file = $this->getUploadFile();
         if (file_exists($file)) {
             unlink($file);
+        }
+    }
+
+    public function tiffExists(){
+        return $this->image ? true : false;
+    }
+
+    public function getFeatureMeta(){
+        if(!$this->code) return optional([]);
+
+        try {
+            $response = Http::withBasicAuth('admin', 'geoserver')->get('http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes/m_'.$this->code.'.json');
+            return (object)data_get($response->json(), 'featureType');
+        } catch (\Exception $e){
+            dd($e);
         }
     }
 
