@@ -22,7 +22,8 @@ if($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
 }
 $img_url = $model->getFileCalcUrl();
-$statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from('m_'.$model->code)->pluck('val') : [];
+$layers = 'm_'.$model->code;
+$statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
 $nativeBoundingBox = data_get($model->getFeatureMeta(), 'nativeBoundingBox', []);
 ?>
 <style>
@@ -180,6 +181,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/geostats@1.8.0/lib/geostats.
         let vm = new Vue({
             el: '#vue-app',
             data: {
+                layers: '<?=$layers?>',
                 existFile: '<?=$model->tiffExists() ? 1 : 0?>',
                 bands_arr: <?=json_encode($items)?>,
                 selected: <?=json_encode($model->bands)?>,
@@ -237,7 +239,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/geostats@1.8.0/lib/geostats.
                         width = _.ceil($(this.$el).width())
 
                     width = width ? width-20 : 500
-                    this.srcMap = `<?=\yii\helpers\Url::base(true)?>/geoserver/drought/wms?service=WMS&version=1.1.0&request=GetMap&layers=drought%3Am_cdi_2016_03&bbox=${bbox}&width=${width}&height=662&srs=EPSG%3A4326&format=application/openlayers`
+                    this.srcMap = `/maps/preview?layers=drought:m_cdi_2016_03`
 
                 },
                 generateGradient(){

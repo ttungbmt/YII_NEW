@@ -23,6 +23,10 @@ class MapsController extends AppController {
 
     public $layout = '@common/themes/admin/layouts/blank';
 
+    public function actionPreview($layers) {
+        return $this->render('preview', compact('layers'));
+    }
+
     public function actionIndex() {
 
 
