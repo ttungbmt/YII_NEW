@@ -10,7 +10,7 @@ use johnitvn\ajaxcrud\CrudAsset;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 CrudAsset::register($this);
 
-$this->title = "Thư viện ảnh";
+$this->title = "Ảnh đầu vào";
 ?>
 <div class="gallery-index">
     <div id="ajaxCrudDatatable">
@@ -24,7 +24,7 @@ $this->title = "Thư viện ảnh";
             'toolbar' => [
                 ['content' =>
                     Html::a('Thêm mới', ['create'],
-                        ['data-pjax' => 0, 'title' => 'Thêm mới Thư viện ảnh', 'class' => 'btn btn-default',]) .
+                        ['data-pjax' => 0, 'title' => 'Thêm mới Ảnh đầu vào', 'class' => 'btn btn-default',]) .
                     Html::a('<i class="icon-reload-alt"></i>', [''],
                         ['data-pjax' => 1, 'class' => 'btn btn-default', 'title' => lang('Reset Grid')]) .
                     '{toggleData}' .
@@ -36,7 +36,7 @@ $this->title = "Thư viện ảnh";
             'responsive' => true,
             'panel' => [
                 'type' => 'primary',
-                'heading' => 'Thư viện ảnh',
+                'heading' => 'Ảnh đầu vào',
             ]
         ]) ?>
     </div>

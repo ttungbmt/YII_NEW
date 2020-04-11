@@ -10,7 +10,7 @@ use ttungbmt\map\Map;
 /* @var $model drought\models\Gallery */
 /* @var $form yii\widgets\ActiveForm */
 
-$this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Thư viện ảnh';
+$this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
 ?>
 
 
