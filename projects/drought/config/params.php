@@ -2,11 +2,11 @@
 return [
     'adminEmail'  => 'ttungbmt@gmail.com',
     'author'      => 'Trương Thanh Tùng',
-    'keywords'    => 'Maps, HCMGIS',
+    'keywords'    => 'Maps',
 
     'app_name' => 'Quản lý hạn hán',
     'description' => 'Quản lý hạn hán',
-    'copyright' => 'HCMGIS',
+    'copyright' => '',
     'loginReturnUrl' => '/maps',
     'assets' => [
 //        'logo' => '/pcd/assets/img/pcd_logo.jpg',

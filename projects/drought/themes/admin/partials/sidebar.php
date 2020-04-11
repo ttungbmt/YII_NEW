@@ -49,40 +49,12 @@ $li = function ($name, $url, $icon = '', $access = null) {
         <!-- Main navigation -->
         <div class="card card-sidebar-mobile">
             <ul class="nav nav-sidebar" data-nav-type="accordion">
-                <!-- Main -->
-                <li class="nav-item-header">
-                    <div class="text-uppercase font-size-xs line-height-xs">Bảng tin</div> <i class="icon-menu" title="Bảng tin"></i>
-                </li>
-                <?= $li(lang('Dashboard'), '/admin', 'icon-home4') ?>
-                <li class="nav-item"><a href="<?= '/admin/site/changelog' ?>" class="nav-link"><i class="icon-list-unordered"></i><span><?= lang('Changelog') ?></span><span class="badge bg-blue-400 align-self-center ml-auto">2.0</span></a></li>
-                <?= $li(lang('Contact'), '/admin/site/contact', 'icon-phone') ?>
-
                 <li class="nav-item-header">
                     <div class="text-uppercase font-size-xs line-height-xs">Quản lý</div> <i class="icon-menu" title="Quản lý"></i>
                 </li>
-                <?= $li('Thư viện ảnh', '/admin/gallery', 'icon-images2') ?>
-                <?= $li('Xử lý ảnh', '/admin/raster-calc', 'icon-image-compare') ?>
+                <?= $li('Ảnh đầu vào', '/admin/gallery', 'icon-images2') ?>
+                <?= $li('Tính toán CDI', '/admin/raster-calc', 'icon-image-compare') ?>
 
-                <?php if (role('admin')) : ?>
-                    <li class="nav-item-header">
-                        <div class="text-uppercase font-size-xs line-height-xs">Quản trị hệ thống</div> <i class="icon-menu" title="Quản trị hệ thống"></i>
-                    </li>
-                    <?= $li('Người dùng', '/auth/user', 'icon-user-tie') ?>
-                    <?= $li('Phân quyền người dùng', '/auth/role', 'icon-people') ?>
-                    <?= $li('Phân quyền truy cập', '/auth/permission', 'icon-lock') ?>
-                <?php endif; ?>
-
-                <li class="nav-item-header">
-                    <div class="text-uppercase font-size-xs line-height-xs">Khác</div> <i class="icon-menu" title="Khác"></i>
-                </li>
-                <li class="nav-item nav-item-submenu nav-item-expanded">
-                    <a href="#" class="nav-link"><i class="icon-history"></i> <span>Lược sử </span></a>
-                    <ul class="nav nav-group-sub" data-submenu-title="Lược sử">
-                        <?= $li('Truy cập', '/auth/log-auth') ?>
-                        <?= $li('Thao tác', '/auth/log-user') ?>
-                    </ul>
-                </li>
-                <!-- /main -->
 
             </ul>
         </div>
