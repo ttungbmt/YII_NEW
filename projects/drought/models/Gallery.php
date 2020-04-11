@@ -12,7 +12,6 @@ use ttungbmt\gdal\Gdal;
 use ttungbmt\support\facades\Http;
 use Yii;
 use yii\db\Expression;
-use function Clue\StreamFilter\fun;
 
 /**
  * This is the model class for table "gallery".
@@ -146,14 +145,14 @@ class Gallery extends ActiveRecord
             $db->createCommand($viewSql)->execute();
 
             try {
-                $client = Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml',]);
-                $url_feature = '/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
-                $url_style = '/geoserver/rest/layers/drought:'.$m_view_name;
+                $client = function() { return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);};
+                $url_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
+                $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:'.$m_view_name;
 
-                $response = $client->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
-                $response = $client->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
+                $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
+                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
             } catch (\Exception $e){
-
+                dd($e);
             }
 
         }
@@ -190,7 +189,8 @@ class Gallery extends ActiveRecord
 
         try {
             $response = Http::withBasicAuth('admin', 'geoserver')->get('http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes/m_'.$this->code.'.json');
-            return (object)data_get($response->json(), 'featureType');
+            $json = (object)data_get($response->json(), 'featureType');
+            return $json ? $json : optional([]);
         } catch (\Exception $e){
             dd($e);
         }

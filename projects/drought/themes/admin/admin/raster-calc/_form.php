@@ -23,8 +23,7 @@ if($model->bands && is_string($model->bands)) {
 }
 $img_url = $model->getFileCalcUrl();
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from('m_'.$model->code)->pluck('val') : [];
-$meta = $model->getFeatureMeta();
-
+$nativeBoundingBox = data_get($model->getFeatureMeta(), 'nativeBoundingBox', []);
 ?>
 <style>
     .btn-opr {
@@ -182,7 +181,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/geostats@1.8.0/lib/geostats.
                 existFile: '<?=$model->tiffExists() ? 1 : 0?>',
                 bands_arr: <?=json_encode($items)?>,
                 selected: <?=json_encode($model->bands)?>,
-                nativeBoundingBox: <?=json_encode($meta->nativeBoundingBox)?>,
+                nativeBoundingBox: <?=json_encode($nativeBoundingBox)?>,
                 expr: '<?=$model->expr?>',
 
                 gradientSelected: '',
@@ -236,7 +235,7 @@ $this->registerJsFile('https://cdn.jsdelivr.net/npm/geostats@1.8.0/lib/geostats.
                         width = _.ceil($(this.$el).width())
 
                     width = width ? width-20 : 500
-                    this.srcMap = `/geoserver/drought/wms?service=WMS&version=1.1.0&request=GetMap&layers=drought%3Am_cdi_2016_03&bbox=${bbox}&width=${width}&height=662&srs=EPSG%3A4326&format=application/openlayers`
+                    this.srcMap = `<?=\yii\helpers\Url::base(true)?>/geoserver/drought/wms?service=WMS&version=1.1.0&request=GetMap&layers=drought%3Am_cdi_2016_03&bbox=${bbox}&width=${width}&height=662&srs=EPSG%3A4326&format=application/openlayers`
 
                 },
                 generateGradient(){
