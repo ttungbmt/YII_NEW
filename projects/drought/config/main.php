@@ -7,7 +7,7 @@ $params = array_merge(
 );
 return [
     'id' => 'app-drought',
-    'defaultRoute' => 'admin/gallery/index',
+    'defaultRoute' => 'maps/index',
 
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
