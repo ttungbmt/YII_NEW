@@ -48,11 +48,6 @@ $this->title = 'Đăng nhập hệ thống';
     </div>
 
     <?=$this->render('@app/views/partials/_extra_login')?>
-
-    <div class="content-divider text-muted form-group mb-10"><span>Copyright</span></div>
-    <span class="help-block text-center no-margin">
-            <?= date('Y') ?> @ <?= params('copyright') ?>
-        </span>
 </div>
 <?php ActiveForm::end(); ?>
 <!-- /advanced login -->
