@@ -125,8 +125,7 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
 
 <?php
 $this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');
-$this->registerJsFile('/projects/drought/lerna/packages/vuexy/dist/vuexy.js');
-//$this->registerJsFile(mix('raster-calc/index.js', 'projects/drought/lerna/pages/dist'));
+$this->registerJsFile(mix('raster-calc/index.js', 'projects/drought/lerna/pages/dist'));
 
 $this->registerJsVar('globalStore', [
     'geoserver' => [

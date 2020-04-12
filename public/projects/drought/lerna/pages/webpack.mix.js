@@ -16,7 +16,7 @@ mix
     .webpackConfig({
         node: { fs: 'empty' },
         externals: {
-            '@ttungbmt/vuexy': 'Vuexy',
+            // '@ttungbmt/vuexy': 'Vuexy',
             'lodash-es': '_',
             'jquery': 'jQuery',
             'vue': 'Vue',
