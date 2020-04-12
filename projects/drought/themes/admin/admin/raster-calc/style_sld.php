@@ -11,17 +11,17 @@
                             <?php if($k === 0):?>
                                 <PropertyIsGreaterThanOrEqualTo>
                                     <PropertyName>val</PropertyName>
-                                    <Literal><?=$c['v1']?></Literal>
+                                    <Literal><?=$c['start']?></Literal>
                                 </PropertyIsGreaterThanOrEqualTo>
                             <?php else:;?>
                                 <PropertyIsGreaterThan>
                                     <PropertyName>val</PropertyName>
-                                    <Literal><?=$c['v1']?></Literal>
+                                    <Literal><?=$c['start']?></Literal>
                                 </PropertyIsGreaterThan>
                             <?php endif;?>
                             <PropertyIsLessThanOrEqualTo>
                                 <PropertyName>val</PropertyName>
-                                <Literal><?=$c['v2']?></Literal>
+                                <Literal><?=$c['end']?></Literal>
                             </PropertyIsLessThanOrEqualTo>
                         </And>
                     </Filter>

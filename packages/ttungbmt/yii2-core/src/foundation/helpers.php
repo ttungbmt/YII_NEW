@@ -1,5 +1,7 @@
 <?php
 
+use ttungbmt\foundation\Mix;
+
 if (!function_exists('app')) {
     function app($abstract = null) {
         if (is_null($abstract)) {
@@ -34,4 +36,33 @@ if (!function_exists('request')) {
     }
 }
 
+
+if (! function_exists('mix')) {
+    /**
+     * Get the path to a versioned Mix file.
+     *
+     * @param  string  $path
+     * @param  string  $manifestDirectory
+     * @return \Illuminate\Support\HtmlString|string
+     *
+     * @throws \Exception
+     */
+    function mix($path, $manifestDirectory = '')
+    {
+        return with(new Mix)(...func_get_args());
+    }
+}
+
+if (! function_exists('public_path')) {
+    /**
+     * Get the path to the public folder.
+     *
+     * @param  string  $path
+     * @return string
+     */
+    function public_path($path = '')
+    {
+        return Yii::getAlias('@webroot').($path ? DIRECTORY_SEPARATOR.ltrim($path, DIRECTORY_SEPARATOR) : $path);
+    }
+}
 

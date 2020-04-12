@@ -1,0 +1,43 @@
+{
+  "name": "@ttungbmt/vuexy",
+  "version": "0.0.1",
+  "description": "Vuexy for Vue.js 2",
+  "main": "dist/vuexy.common.js",
+  "module": "dist/vuexy.esm.js",
+  "unpkg": "dist/vuexy.js",
+  "jsdelivr": "dist/vuex.js",
+  "author": "Evan You",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "dev": "rollup -c -w",
+    "build": "yarn clean && rollup -c --environment NODE_ENV:production"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.4",
+    "es6-promise": "^4.2.8",
+    "lodash-es": "^4.17.15",
+    "portal-vue": "^2.1.7",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-async-computed": "^3.8.2",
+    "vue-router": "^3.1.6",
+    "vue-wait": "^1.4.8",
+    "vuejs-noty": "^0.1.3",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@ttungbmt/bundlers.rollup": "^0.0.1",
+    "lodash": "^4.17.15",
+    "node-sass": "^4.12.0",
+    "rollup": "^2.6.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}
