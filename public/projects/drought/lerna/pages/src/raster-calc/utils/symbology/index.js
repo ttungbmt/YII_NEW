@@ -1,4 +1,4 @@
-import {get, find, isEmpty, isUndefined, map} from 'lodash-es'
+import {get, find, isEmpty, isUndefined, map, isNil, reverse} from 'lodash-es'
 import chroma from 'chroma-js'
 import geostats from 'geostats'
 
@@ -32,7 +32,7 @@ export const geoClassify = (data, method = 'nb', nbClass = symbology.number) => 
     return stats[methodFn](nbClass)
 }
 
-export const classesToSymbols = (data) => {
+export const classesToSymbols = (data, legendFormat = '1% - 2%') => {
     return map(data, (v, k) => {
         if (!isUndefined(data[k + 1])) {
             let start = v,
@@ -41,7 +41,10 @@ export const classesToSymbols = (data) => {
             return {
                 start,
                 end,
-                legend: `${start} - ${end}`
+                legend: legendFormat
+                    .replace('1%', isNil(start)? '' : start)
+                    .replace('2%', isNil(end)? '' : end)
+                    .replace(' - ', isNil(start)? '' : ' - ')
             }
         }
 
@@ -49,11 +52,13 @@ export const classesToSymbols = (data) => {
     }).filter(v => v)
 }
 
-export const appendColorSymbols = (symbols, colors) => {
+export const appendColorSymbols = (symbols, colors, invert = false) => {
+    let _colors = isEmpty(invert) ? colors : reverse(colors)
+
     return map(symbols, (v, k) => {
         return {
             ...v,
-            color: colors[k]
+            color: _colors[k]
         }
     })
 }

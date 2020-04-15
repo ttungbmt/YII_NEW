@@ -33,13 +33,16 @@ class Gdal
 
     }
 
-    public function translate($src, $dst){
-        $this->command->add(
+    public function translate($src, $dst, $options = []){
+        $this->command
+            ->clear()
+            ->add(
             'gdal_translate',
-            [
-                '-of' => 'JPEG',
-                '-co' => 'JPEG_QUALITY=75',
-            ],
+//            [
+//                '-of' => 'JPEG',
+//                '-co' => 'JPEG_QUALITY=75',
+//            ],
+            $options,
             $src,
             $dst
         );
@@ -52,7 +55,9 @@ class Gdal
     }
 
     public function calc($input, $output, $expr){
-        $this->command->add(
+        $this->command
+            ->clear()
+            ->add(
             ['o4w_env', '&&'],
             'gdal_calc',
             $input,
@@ -71,7 +76,9 @@ class Gdal
     }
 
     public function gdalinfo(string $source, array $params = []){
-        $this->command->add(
+        $this->command
+            ->clear()
+            ->add(
             'gdalinfo',
             $params,
             $source
@@ -114,7 +121,7 @@ class Gdal
 
     public function ogrinfo(string $source, array $layers = [], array $opts = []){
         $options = $opts ? $opts : ['-al', '-so'];
-        $this->command->add(
+        $this->command->clear()->add(
             'ogrinfo',
             $opts,
             $source,

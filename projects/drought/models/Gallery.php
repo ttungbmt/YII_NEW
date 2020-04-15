@@ -5,12 +5,15 @@ namespace drought\models;
 use drought\support\PgCommand;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use mohorev\file\UploadBehavior;
 use ttungbmt\behaviors\UploadImageBehavior;
 use ttungbmt\db\ActiveRecord;
 use ttungbmt\db\Query;
 use ttungbmt\gdal\Gdal;
 use ttungbmt\support\facades\Http;
 use Yii;
+use yii\base\ModelEvent;
+use yii\db\BaseActiveRecord;
 use yii\db\Expression;
 
 /**
@@ -30,6 +33,7 @@ class Gallery extends ActiveRecord
     const SCENARIO_CALC = 'calc';
 
     public $bands_str;
+    public $dimension;
 
     protected $timestamps = true;
 
@@ -47,13 +51,20 @@ class Gallery extends ActiveRecord
         return 'gallery';
     }
 
+    public function init()
+    {
+        $this->on(UploadBehavior::EVENT_AFTER_UPLOAD, [$this, 'afterUpload']);
+
+        parent::init(); // DON'T Forget to call the parent method.
+    }
+
     /**
      * {@inheritdoc}
      */
     public function rules()
     {
         return [
-            [['bands', 'date'], 'safe'],
+            [['bands', 'date', 'dimension'], 'safe'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
             [['date'], 'date', 'format' => 'php:d/m/Y'],
@@ -61,15 +72,14 @@ class Gallery extends ActiveRecord
             ['code', 'match', 'pattern' => '/^[A-Za-z0-9_]\w*$/i'],
             ['image', 'file', 'extensions' => 'tif'],
 
-            [['name', 'expr', 'bands'], 'required', 'on' => self::SCENARIO_CALC],
+            [['name', 'expr', 'bands', 'date'], 'required', 'on' => self::SCENARIO_CALC],
             ['type', 'default', 'value' => 2, 'on' => self::SCENARIO_CALC],
             [['code'], 'required', 'on' => self::SCENARIO_UPLOAD],
+            [['code'], 'unique', 'on' => [self::SCENARIO_UPLOAD, self::SCENARIO_CALC]],
             [['image'], 'required', 'when' => function ($model) {
                 return $model->isNewRecord;
             }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 1, 'on' => self::SCENARIO_UPLOAD],
-
-
         ];
     }
 
@@ -77,9 +87,9 @@ class Gallery extends ActiveRecord
     {
         $this->code = Str::lower($this->code);
 
+
         return parent::beforeSave($insert);
     }
-
 
     /**
      * {@inheritdoc}
@@ -92,6 +102,7 @@ class Gallery extends ActiveRecord
             'name' => 'Tên ảnh',
             'code' => 'Mã ảnh',
             'date' => 'Ngày file ảnh',
+            'dimension' => 'Kích thước',
         ];
     }
 
@@ -120,7 +131,7 @@ class Gallery extends ActiveRecord
             return Str::contains($expr, $i['alpha']);
         })
             ->map(function ($i, $k) use ($alphas) {
-                return ['-'.$i['alpha'] => Yii::getAlias('@webroot/projects/drought/uploads/' . $i['image'])];
+                return ['-' . $i['alpha'] => Yii::getAlias('@webroot/projects/drought/uploads/' . $i['image'])];
             })
             ->collapse()
             ->all();
@@ -131,9 +142,9 @@ class Gallery extends ActiveRecord
         $output = $gdal->run(null);
         $output = (string)Str::of($output)->match('/0 .. 10 .. 20 .. 30 .. 40 .. 50 .. 60 .. 70 .. 80 .. 90 .. 100 - Done/');
 
-        if($output){
+        if ($output) {
             $table_name = $this->code;
-            $m_view_name = 'm_'.$this->code;
+            $m_view_name = 'm_' . $this->code;
             $db = Yii::$app->db;
             $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
 
@@ -141,17 +152,19 @@ class Gallery extends ActiveRecord
             $gdal->rasterToPgSQL($source, $this->code)->run();
 
             $query = (new Query())->select('x, y, val, geom')->from(['vt' => (new Query())->select(new Expression('(ST_PixelAsPolygons(rast, 1)).*'))->from($table_name)])->andWhere(['<>', 'val', 128]);
-            $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS ".$query->createCommand()->getRawSql();
+            $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS " . $query->createCommand()->getRawSql();
             $db->createCommand($viewSql)->execute();
 
             try {
-                $client = function() { return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);};
+                $client = function () {
+                    return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);
+                };
                 $url_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
-                $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:'.$m_view_name;
+                $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
 
-                $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>'.$m_view_name.'</name></featureType>']);
-                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
-            } catch (\Exception $e){
+                $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
+//                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
+            } catch (\Exception $e) {
                 dd($e);
             }
 
@@ -160,53 +173,55 @@ class Gallery extends ActiveRecord
         return $this->save();
     }
 
-    protected function generateTiffCalc(){
-
-    }
-
-    public function getFileCalcUrl(){
+    public function getFileCalcUrl()
+    {
         return Yii::getAlias('@web/projects/drought/uploads/results/' . $this->image);
     }
 
-    public function getFileCalcPath(){
+    public function getFileCalcPath()
+    {
         return Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
     }
 
     public function deleteImage()
     {
-        $file = $this->getUploadFile();
+        $file = $this->getUploadPath();
         if (file_exists($file)) {
             unlink($file);
         }
     }
 
-    public function tiffExists(){
+    public function tiffExists()
+    {
         return $this->image ? true : false;
     }
 
-    public function getFeatureMeta(){
-        if(!$this->code) return optional([]);
+    public function getFeatureMeta()
+    {
+        if (!$this->code) return optional([]);
 
         try {
-            $response = Http::withBasicAuth('admin', 'geoserver')->get('http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes/m_'.$this->code.'.json');
+            $response = Http::withBasicAuth('admin', 'geoserver')->get('http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes/m_' . $this->code . '.json');
             $json = (object)data_get($response->json(), 'featureType');
             return $json ? $json : optional([]);
-        } catch (\Exception $e){
+        } catch (\Exception $e) {
             dd($e);
         }
     }
 
     public function deleteAllRelated()
     {
-        $this->delete();
+        $bool = $this->delete();
         $this->deleteImage();
+
+        return $bool;
     }
 
     public function generateNewName($name, $ext = 'tif')
     {
 //        $unid = '_' . uniqid();
         $unid = '';
-        return (string)Str::of($name)->slug('_')->lower()->append($unid. '.'.$ext);
+        return (string)Str::of($name)->slug('_')->lower()->append($unid . '.' . $ext);
     }
 
     public function behaviors()
@@ -219,10 +234,37 @@ class Gallery extends ActiveRecord
                 'path' => '@webroot/projects/drought/uploads',
                 'url' => '@web/projects/drought/uploads',
                 'generateNewName' => function ($file) {
-                    return (string)Str::of($this->code)->slug('_')->lower()->append('_' . uniqid() . '.' . $file->extension);
-                }
+                    $suffix = '_' . uniqid();
+                    return (string)Str::of($this->code)->slug('_')->lower()->append($suffix . '.' . $file->extension);
+                },
             ]
         ]);
+    }
+
+    public function afterUpload($event)
+    {
+        $model = $event->sender;
+        $file0 = $model->getUploadPath();
+        $this->removeAllAuxFiles();
+        $gdal = new Gdal();
+
+        if (!$this->dimension) return null;
+
+        $name = pathinfo($file0, PATHINFO_FILENAME);
+        $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
+
+        $gdal->translate($file0, $file1, [
+            '-outsize' => $this->dimension
+        ])->run();
+
+        unlink($file0);
+        rename($file1, $file0);
+
+    }
+
+    public function removeAllAuxFiles()
+    {
+        delete_all_files(Yii::getAlias('@webroot/projects/drought/uploads/*.jpg.aux.xml'));
     }
 
 }

@@ -1,17 +1,13 @@
 <?php
 
 use drought\models\Gallery;
-use drought\support\Mix;
 use kartik\widgets\Select2;
 use ttungbmt\db\Query;
-use ttungbmt\support\facades\Http;
 use yii\bootstrap\Modal;
 use yii\db\Expression;
 use yii\helpers\Html;
 use yii\imagine\Image;
 use yii\widgets\ActiveForm;
-use kartik\widgets\DepDrop;
-use ttungbmt\map\Map;
 
 /* @var $this yii\web\View */
 /* @var $model drought\models\Gallery */
@@ -22,6 +18,7 @@ $items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
 if ($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
 }
+$model->bands = [100, 104, 108];
 $img_url = $model->getFileCalcUrl();
 $layers = 'm_' . $model->code;
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
@@ -39,15 +36,22 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
         padding: 5px 10px;
         border-radius: 5px;
     }
+    .table-symbology td {border: none; padding: 5px 0}
+    .table-symbology .form-group {margin: 0}
+    .custom-checkbox {padding: 0}
 </style>
 
 
 <div id="vue-app" class="gallery-form">
+
     <?php if ($model->tiffExists()): ?>
         <div>
             <div class="d-flex">
                 <div style="margin-right: 10px;">
                     <div id="preview-tiff"></div>
+                    <div class="text-center">
+                        <?= Html::a('Tải ảnh', $model->getFileCalcUrl(), ['class' => 'btn btn-info', 'download' => true]) ?>
+                    </div>
                 </div>
                 <?= $this->render('_raster_info', ['model' => $model]) ?>
             </div>
@@ -65,7 +69,7 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
             <div class="row d-flex">
                 <div style="width: 415px">
                     <div class="d-flex">
-                        <h6 class="font-weight-semibold">Raster Bands</h6>
+                        <h6 class="font-weight-semibold">Ảnh đầu vào</h6>
                         <?= Html::button('+', [
                             'class' => 'ml-2 btn badge bg-blue-400 align-self-start',
                             'data-toggle' => 'modal',
@@ -78,20 +82,21 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                     </div>
                 </div>
                 <div style="flex-grow: 1; padding-left: 20px">
-                    <h6 class="font-weight-semibold">Result Layer</h6>
-                    <?= $form->field($model, 'name')->label('Output layer name') ?>
+                    <h6 class="font-weight-semibold">Kết quả</h6>
+                    <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày tính toán') ?>
+                    <?= $form->field($model, 'name')->textInput()->label('Tên file xuất') ?>
                 </div>
             </div>
             <v-panel-operator :on-click="addOpr"></v-panel-operator>
 
-            <h6 class="font-weight-semibold mt-2">Raster Calculator Expression</h6>
-            <span class="badge badge-light badge-striped badge-striped-left border-left-primary mb-2">CDI = NDVIa * 0.5 +SPI * 0.3333 + LSTa * 0.1667</span>
+            <h6 class="font-weight-semibold mt-2">Công thức tính CDI</h6>
+            <span class="badge badge-light badge-striped badge-striped-left border-left-primary mb-2">NDVIa * 0.5 +SPI * 0.3333 + LSTa * 0.1667</span>
 
             <?= $form->field($model, 'expr')->textarea(['rows' => 10, 'v-model' => 'form.expr'])->label(false) ?>
 
             <?php if (!request()->isAjax): ?>
-                <div class="form-group text-right mt-2">
-                    <?= Html::submitButton($model->isNewRecord ? lang('Create') : lang('Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                <div class="form-group mt-2">
+                    <?= Html::submitButton('Calculate', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                 </div>
             <?php endif; ?>
 
@@ -125,18 +130,29 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
 
 <?php
 $this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');
+//$this->registerJsFile(url('/app/libs/vuexy/vuexy.umd.js'));
 $this->registerJsFile(mix('raster-calc/index.js', 'projects/drought/lerna/pages/dist'));
 
 $this->registerJsVar('globalStore', [
     'geoserver' => [
         'layers' => $layers ? "drought:{$layers}" : '',
     ],
-    'form' => ['expr' => $model->expr],
+    'form' => [
+        'expr' => $model->expr ? $model->expr : '',
+        'bands' => $model->bands
+    ],
+    'symForm' => [
+        'mode' => 'nb',
+        'nbClass' => 5,
+        'legendFormat' => '1% - 2%',
+        'symbols' => $model->symbology ? $model->symbology : [],
+        'invertColorRamp' => [1],
+    ],
     'existFile' => $model->tiffExists() ? 1 : 0,
     'bands_arr' => $items,
     'selected' => $model->bands,
     'tiffUrl' => $model->tiffExists() ? $img_url : '',
-    'gradientSelected' => '',
+    'gradientSelected' => 'OrRd',
     'statData' => $statData,
     'srcMap' => '',
 ])

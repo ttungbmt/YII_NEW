@@ -66,3 +66,16 @@ if (! function_exists('public_path')) {
     }
 }
 
+
+if (! function_exists('delete_all_files')) {
+    /**
+     * Get the path
+     * @param  string  $path
+     * @return void
+     */
+    function delete_all_files($path)
+    {
+        array_map( 'unlink', array_filter((array) glob($path)));
+    }
+}
+

@@ -47,9 +47,11 @@ class GallerySearch extends GalleryModel
         }
 
         $query->andFilterWhere([
-            'type' => $this->type
+            'code' => $this->code,
+            'type' => $this->type,
         ]);
 
+        $query->andFilterWhere(['ilike', 'code', trim($this->name)]);
 
         return $dataProvider;
     }

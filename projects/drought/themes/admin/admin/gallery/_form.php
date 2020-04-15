@@ -37,12 +37,15 @@ $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh 
                     </div>
                     <div class="row">
                         <div class="col-md-6">
+                            <?= $form->field($model, 'image')->fileInput() ?>
+                        </div>
+                        <div class="col-md-3">
                             <?= $form->field($model, 'date')->widget(\kartik\widgets\DatePicker::className(), [
                                 'options' => ['placeholder' => 'DD/MM/YYY']
                             ]) ?>
                         </div>
-                        <div class="col-md-6">
-                            <?= $form->field($model, 'image')->fileInput() ?>
+                        <div class="col-md-3">
+                            <?= $form->field($model, 'dimension')->textInput(['placeholder' => '370 330']) ?>
                         </div>
                     </div>
                 </div>

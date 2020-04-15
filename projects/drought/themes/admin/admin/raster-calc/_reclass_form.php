@@ -29,32 +29,40 @@ use yii\helpers\Html;
                     </div>
                 </div>
 
-                <div class="form-group mt-4">
-                    <label for="symb-mode" class="control-label">Mode</label>
-                    <select name="mode" id="symb-mode" class="form-control" v-model="symbology.mode">
-                        <option :value="m.key" v-for="m in symbology.methods">{{m.name}}</option>
-                    </select>
-                </div>
+                <v-field class="mt-4" as="select" label="Mode" v-model="symForm.mode" :items="methods"></v-field>
+                <v-field type="number" label="Classes" v-model="symForm.nbClass"></v-field>
+                <v-field label="Legend Format" v-model="symForm.legendFormat"></v-field>
+                <v-field class="m1" as="checkbox" v-model="symForm.invertColorRamp" :items="[{value: 1, text: 'Invert Color Ramp'}]"></v-field>
 
-                <div class="form-group">
-                    <label for="symb-classes" class="control-label">Classes</label>
-                    <?= Html::input('text', 'classes_num', null, ['class' => 'form-control', 'v-model' => 'symbology.number']) ?>
-                </div>
 
                 <div class="d-flex mt-2" style="justify-content: space-between;">
-                    <button type="submit" class="btn btn-sm btn-primary">Save</button>
-                    <button type="button" class="btn btn-sm btn-success" @click="generateColors">Generate colors</button>
+                    <b-button type="submit" variant="primary">Save</b-button>
+                    <b-button variant="success" @click="generateColors">Generate colors</b-button>
                 </div>
             </div>
 
 
             <div style="padding-left: 30px; flex-grow: 1">
-                <div v-for="(v, k) in symbols" class="d-flex">
-                    <?= Html::input('text', "classes", null, ['class' => 'mt-2 mr-4', 'type' => 'color', 'v-model' => 'v.color', ':name' => "'classes['+k+'][color]'"]) ?>
-                    <?= Html::input('text', "classes", null, ['class' => 'form-control', 'v-model' => 'v.start', ':name' => "'classes['+k+'][start]'"]) ?>
-                    <?= Html::input('text', "classes", null, ['class' => 'form-control', 'v-model' => 'v.end', ':name' => "'classes['+k+'][end]'"]) ?>
-                </div>
-
+                <table class="table table-symbology">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Symbol</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Legend</th>
+                    </tr>
+                    </thead>
+                    <tbody class="mt-2">
+                        <tr v-for="(v, k) in symForm.symbols">
+                            <td>{{k+1}}</td>
+                            <td><v-color-picker v-model="v.color" :name="`classes[${k}][color]`" class="mr-2 mt-1"></v-color-picker></td>
+                            <td><v-field v-model="v.start" :name="'classes['+k+'][start]'"></v-field></td>
+                            <td><v-field v-model="v.end" :name="'classes['+k+'][end]'"></v-field></td>
+                            <td><v-field v-model="v.legend" :name="'classes['+k+'][legend]'"></v-field></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 

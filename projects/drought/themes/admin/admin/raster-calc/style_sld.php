@@ -8,21 +8,27 @@
                 <Rule>
                     <Filter>
                         <And>
-                            <?php if($k === 0):?>
-                                <PropertyIsGreaterThanOrEqualTo>
-                                    <PropertyName>val</PropertyName>
-                                    <Literal><?=$c['start']?></Literal>
-                                </PropertyIsGreaterThanOrEqualTo>
-                            <?php else:;?>
-                                <PropertyIsGreaterThan>
-                                    <PropertyName>val</PropertyName>
-                                    <Literal><?=$c['start']?></Literal>
-                                </PropertyIsGreaterThan>
+                            <?php if($c['start']): ?>
+                                <?php if($k === 0):?>
+
+                                        <PropertyIsGreaterThanOrEqualTo>
+                                            <PropertyName>val</PropertyName>
+                                            <Literal><?=$c['start']?></Literal>
+                                        </PropertyIsGreaterThanOrEqualTo>
+                                <?php else:;?>
+                                    <PropertyIsGreaterThan>
+                                        <PropertyName>val</PropertyName>
+                                        <Literal><?=$c['start']?></Literal>
+                                    </PropertyIsGreaterThan>
+                                <?php endif;?>
                             <?php endif;?>
-                            <PropertyIsLessThanOrEqualTo>
-                                <PropertyName>val</PropertyName>
-                                <Literal><?=$c['end']?></Literal>
-                            </PropertyIsLessThanOrEqualTo>
+
+                            <?php if($c['end']): ?>
+                                <PropertyIsLessThanOrEqualTo>
+                                    <PropertyName>val</PropertyName>
+                                    <Literal><?=$c['end']?></Literal>
+                                </PropertyIsLessThanOrEqualTo>
+                            <?php endif;?>
                         </And>
                     </Filter>
                     <PolygonSymbolizer>

@@ -8,12 +8,16 @@
     "prod": "cross-env NODE_ENV=production webpack --no-progress --hide-modules --config=../node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "@ttungbmt/vuexy": "link:D:\\PROGRAM\\laragon\\www\\LERNA\\packages\\libs\\vuexy",
     "axios": "^0.19.2",
     "chroma-js": "^2.1.0",
     "geostats": "^1.8.0",
     "tiff.js": "^1.0.0",
     "vue": "2.6.11",
-    "@ttungbmt/vuexy": "link:D:\\PROGRAM\\laragon\\www\\LERNA\\packages\\libs\\vuexy"
+    "vue-color": "^2.7.1",
+    "vue-multiselect": "^2.1.6",
+    "vue-popperjs": "^2.3.0",
+    "vuex-map-fields": "^1.4.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",

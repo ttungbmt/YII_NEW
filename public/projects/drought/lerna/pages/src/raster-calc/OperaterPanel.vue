@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="font-medium mb-1">Operators</div>
+        <div class="font-medium mb-1">Biểu thức</div>
         <div>
             <button type="button" class="btn btn-opr" @click="onClick('+')">+</button>
             <button type="button" class="btn btn-opr" @click="onClick('sqrt')">sqrt</button>

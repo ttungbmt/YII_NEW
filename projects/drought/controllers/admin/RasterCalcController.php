@@ -58,8 +58,12 @@ class RasterCalcController extends AppController
 
     public function actionSaveClasses($id){
         $classes = request()->input('classes');
-        $name = request()->input('name');
         if(empty($classes)) return $this->redirect(['admin/raster-calc/update',  'id' => $id]);
+
+        $model = Gallery::findOne($id);
+        $name = request()->input('name');
+        $model->symbology = $classes;
+        $model->save();
 
         $sld = $this->renderPartial('style_sld', compact('classes', 'name'));
 
@@ -80,6 +84,7 @@ class RasterCalcController extends AppController
         } catch (\Exception $e){
             dd($e);
         }
+
 
         return $this->redirect(['admin/raster-calc/update',  'id' => $id]);
     }
