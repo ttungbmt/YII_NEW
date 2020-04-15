@@ -25,6 +25,7 @@ use yii\db\Expression;
  * @property string $code
  * @property string $date
  * @property string $bands
+ * @property string $folder
  * @property int $type
  */
 class Gallery extends ActiveRecord
@@ -64,7 +65,7 @@ class Gallery extends ActiveRecord
     public function rules()
     {
         return [
-            [['bands', 'date', 'dimension'], 'safe'],
+            [['bands', 'date', 'dimension', 'folder'], 'safe'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
             [['date'], 'date', 'format' => 'php:d/m/Y'],
@@ -74,12 +75,13 @@ class Gallery extends ActiveRecord
 
             [['name', 'expr', 'bands', 'date'], 'required', 'on' => self::SCENARIO_CALC],
             ['type', 'default', 'value' => 2, 'on' => self::SCENARIO_CALC],
-            [['code'], 'required', 'on' => self::SCENARIO_UPLOAD],
+
             [['code'], 'unique', 'on' => [self::SCENARIO_UPLOAD, self::SCENARIO_CALC]],
             [['image'], 'required', 'when' => function ($model) {
                 return $model->isNewRecord;
             }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 1, 'on' => self::SCENARIO_UPLOAD],
+            [['code', 'folder', 'name'], 'required', 'on' => self::SCENARIO_UPLOAD],
         ];
     }
 

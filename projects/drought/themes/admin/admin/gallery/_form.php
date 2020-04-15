@@ -11,6 +11,7 @@ use ttungbmt\map\Map;
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
+$dm_folder = api('dm_folder')
 ?>
 
 
@@ -24,15 +25,18 @@ $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh 
             ]); ?>
             <div class="d-flex">
                 <div id="preview-img" style="<?= $model->getUploadUrl() ? 'margin-right: 20px' : '' ?>">
-                    <img src="<?= $model->getThumbUploadUrl()?>" alt="">
+                    <img src="<?= $model->getThumbUploadUrl() ?>" alt="">
                 </div>
                 <div style="flex-grow: 1;">
                     <div class="row">
                         <div class="col-md-6">
                             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <?= $form->field($model, 'code')->textInput() ?>
+                        </div>
+                        <div class="col-md-3">
+                            <?= $form->field($model, 'folder')->dropDownList($dm_folder, ['prompt' => 'Chọn thư mục...']) ?>
                         </div>
                     </div>
                     <div class="row">
@@ -69,7 +73,7 @@ $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh 
 <?php
 
 ?>
-<?=$this->render('_raster_info', ['model' => $model])?>
+<?= $this->render('_raster_info', ['model' => $model]) ?>
 
 <?php
 $this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');

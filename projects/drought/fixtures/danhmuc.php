@@ -1,12 +1,10 @@
 <?php
 
-$data['dm_phanloai'] = [
-    0 => 'F0',
-    1 => 'F1',
-    2 => 'F2',
-    3 => 'F3',
-    4 => 'F4',
-    5 => 'F5',
+$data['dm_folder'] = [
+    'ndvi' => 'NDIVI',
+    'lst' => 'LST',
+    'spi' => 'SPI',
+    'other' => 'Khác'
 ];
 
 $data['dm_noi_ph'] = [
@@ -14,6 +12,8 @@ $data['dm_noi_ph'] = [
     '2' => 'Bệnh viện',
     '3' => 'Cộng đồng',
 ];
+
+
 
 $data['nav_links'] = [
     [
