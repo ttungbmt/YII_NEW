@@ -16,6 +16,8 @@ class AppAsset extends AssetBundle
     public $jsOptions = ['position' => View::POS_HEAD];
 
     public $css = [
+        'https://cdn.jsdelivr.net/npm/tailwindcss/dist/components.css',
+        'https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.css',
         'themes/admin/main/css/bootstrap.min.css',
         'themes/admin/main/css/bootstrap_limitless.min.css',
         'themes/admin/main/css/layout.min.css',
@@ -24,6 +26,7 @@ class AppAsset extends AssetBundle
         'themes/admin/main/css/extras/animate.min.css',
 
         'themes/admin/custom/css/theme.css',
+
     ];
 
     public $js = [

@@ -17,10 +17,16 @@ return [
         'class' => '\kartik\grid\DataColumn',
         'attribute' => 'image',
     ],
-
     [
         'class' => '\kartik\grid\DataColumn',
         'attribute' => 'date',
+    ],
+    [
+        'class' => '\kartik\grid\DataColumn',
+        'attribute' => 'dimension',
+        'value' => function($model){
+            return implode(' x ', data_get($model->metadata, 'size', []));
+        }
     ],
     [
         'class' => 'kartik\grid\ActionColumn',

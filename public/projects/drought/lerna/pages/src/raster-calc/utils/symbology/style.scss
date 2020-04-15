@@ -1,0 +1,13 @@
+.gradient-wrapper {
+  height: 200px; overflow: auto; width: 400px;
+}
+.gradient {display: flex; width: 300px; position: relative}
+
+.gradient-line {
+  margin: 2px 0; cursor: pointer;
+  &.active {background-color: #ddd }
+
+  .gradient-title { margin-left: 10px; }
+  .grad-step {display: inline-block;height: 20px;flex: auto 1 0;}
+}
+

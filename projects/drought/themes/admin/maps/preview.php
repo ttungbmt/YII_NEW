@@ -93,7 +93,7 @@
             position: relative;
             width: 100%;
             height: 662px;
-            border: 2px solid #ff7043;
+            border: 2px solid #2196f3;
             border-radius: 5px;
             margin-bottom: 5px;
         }

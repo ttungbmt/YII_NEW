@@ -20,11 +20,11 @@
     <link href="/themes/admin/custom/css/theme.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.development.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.development.js"></script>
-    <?=html_manifest('/projects/drought/app/map/asset-manifest.json', 'css'); ?>
+    <?=html_manifest('/projects/drought/lerna/web/map/asset-manifest.json', 'css'); ?>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
-<?=html_manifest('/projects/drought/app/map/asset-manifest.json', 'js'); ?>
+<?=html_manifest('/projects/drought/lerna/web/map/asset-manifest.json', 'js'); ?>
 </body>
 </html>
