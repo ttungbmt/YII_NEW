@@ -17,7 +17,7 @@ class GallerySearch extends GalleryModel
     {
         return [
             [['id'], 'integer'],
-            [['image', 'name', 'code', 'date', 'created_at', 'updated_at', 'type'], 'safe'],
+            [['image', 'name', 'code', 'date', 'created_at', 'updated_at', 'type', 'folder'], 'safe'],
         ];
     }
 
@@ -49,6 +49,7 @@ class GallerySearch extends GalleryModel
         $query->andFilterWhere([
             'code' => $this->code,
             'type' => $this->type,
+            'folder' => $this->folder,
         ]);
 
         $query->andFilterWhere(['ilike', 'code', trim($this->name)]);

@@ -37,6 +37,13 @@ $this->title = "Ảnh đầu vào";
             'panel' => [
                 'type' => 'primary',
                 'heading' => 'Ảnh đầu vào',
+                'before'  =>  Html::tag('div', (
+                    Html::a('Tất cả', ['/admin/gallery'], ['class' => 'btn btn-primary btn-raised']).
+                    Html::a('NDVI', ['/admin/gallery', 'folder' => 'ndvi'], ['class' => 'btn btn-success btn-raised']).
+                    Html::a('LST', ['/admin/gallery', 'folder' => 'lst'], ['class' => 'btn btn-danger btn-raised']).
+                    Html::a('SPI', ['/admin/gallery', 'folder' => 'spi'], ['class' => 'btn btn-info btn-raised']).
+                    Html::a('Khác', ['/admin/gallery', 'folder' => 'khac'], ['class' => 'btn btn-orange btn-raised'])
+                ), ['class' => 'btn-group'])
             ]
         ]) ?>
     </div>
