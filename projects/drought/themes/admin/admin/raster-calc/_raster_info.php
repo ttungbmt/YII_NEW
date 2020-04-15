@@ -4,13 +4,13 @@ use ttungbmt\gdal\Gdal;
 
 $output = null;
 $source = $model->getFileCalcPath();
-if ($source) {
+if (file_exists($source)) {
     $process = new Gdal();
     $process->gdalinfo($source);
     $output = $process->run();
 };
 ?>
-<?php if ($source): ?>
+<?php if (file_exists($source)): ?>
     <div class="card" style="width: 100%">
         <div class="badge bg-blue-400 font-weight-semibold text-uppercase" style="font-size: 15px">Thông tin ảnh
         </div>

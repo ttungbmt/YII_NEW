@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import chroma from 'chroma-js'
 import {showTiff} from './utils'
-import {pick} from 'lodash-es'
+import {get} from 'lodash-es'
 
 import './utils/symbology/style.scss'
 import {
@@ -53,8 +53,10 @@ $(function () {
             ...mapState('symbology', [
                 'symbols',
                 'colorRamp',
-                'methods',
             ]),
+            methods(){
+               return [{text: 'CDI', value: 'cdi'}].concat(get(this.$store, `state.${Sym.name}.methods`, []))
+            },
             bands() {
                 return _.map(this.selected).join(',')
             }
@@ -68,10 +70,21 @@ $(function () {
             },
             generateColors() {
                 let {nbClass, legendFormat, mode, symbols, invertColorRamp} = this.symForm,
-                    vStat = geoClassify(this.statData, mode, nbClass),
+                    vStat = mode === 'cdi' ? [null, 1, 2, 3, 4, null] :  geoClassify(this.statData, mode, nbClass),
                     colors = scaleColors(this.gradientSelected, nbClass)
 
                 this.symForm.symbols = classesToSymbols(vStat, legendFormat)
+
+
+                if(mode === 'cdi'){
+                    let legend_cdi = ['<=1 (Hạn khắc nghiệt)', '1 - <=2 (Hạn nặng)', '2 - <=3 (Hạn trung bình)', '3 - <=4 (Hạn nhẹ)', '> 4 (Không hạn)']
+                    this.symForm.symbols = this.symForm.symbols.map((v, k) => {
+                        v.legend = get(legend_cdi, k, v.legend)
+                        return v
+                    })
+
+                }
+
                 this.symForm.symbols = appendColorSymbols(this.symForm.symbols , colors, invertColorRamp)
             },
             addOpr(v) {

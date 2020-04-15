@@ -50129,9 +50129,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return this.items;
     }
   },
-  mounted: function mounted() {
-    console.log(this.value, this.innerItems);
-  },
   methods: {
     parseValue: function parseValue(input) {
       if (this.type === 'number') return parseFloat(input);
@@ -59958,7 +59955,13 @@ $(function () {
         Object(_utils__WEBPACK_IMPORTED_MODULE_2__["showTiff"])('#preview-tiff', this.tiffUrl);
       }
     },
-    computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_9__["mapState"])('symbology', ['symbols', 'colorRamp', 'methods']), {
+    computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_9__["mapState"])('symbology', ['symbols', 'colorRamp']), {
+      methods: function methods() {
+        return [{
+          text: 'CDI',
+          value: 'cdi'
+        }].concat(Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__["get"])(this.$store, "state.".concat(_modules_symbology__WEBPACK_IMPORTED_MODULE_12__["default"].name, ".methods"), []));
+      },
       bands: function bands() {
         return _.map(this.selected).join(',');
       }
@@ -59977,9 +59980,18 @@ $(function () {
             mode = _this$symForm.mode,
             symbols = _this$symForm.symbols,
             invertColorRamp = _this$symForm.invertColorRamp,
-            vStat = Object(_utils_symbology__WEBPACK_IMPORTED_MODULE_5__["geoClassify"])(this.statData, mode, nbClass),
+            vStat = mode === 'cdi' ? [null, 1, 2, 3, 4, null] : Object(_utils_symbology__WEBPACK_IMPORTED_MODULE_5__["geoClassify"])(this.statData, mode, nbClass),
             colors = Object(_utils_symbology__WEBPACK_IMPORTED_MODULE_5__["scaleColors"])(this.gradientSelected, nbClass);
         this.symForm.symbols = Object(_utils_symbology__WEBPACK_IMPORTED_MODULE_5__["classesToSymbols"])(vStat, legendFormat);
+
+        if (mode === 'cdi') {
+          var legend_cdi = ['<=1 (Hạn khắc nghiệt)', '1 - <=2 (Hạn nặng)', '2 - <=3 (Hạn trung bình)', '3 - <=4 (Hạn nhẹ)', '> 4 (Không hạn)'];
+          this.symForm.symbols = this.symForm.symbols.map(function (v, k) {
+            v.legend = Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__["get"])(legend_cdi, k, v.legend);
+            return v;
+          });
+        }
+
         this.symForm.symbols = Object(_utils_symbology__WEBPACK_IMPORTED_MODULE_5__["appendColorSymbols"])(this.symForm.symbols, colors, invertColorRamp);
       },
       addOpr: function addOpr(v) {

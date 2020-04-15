@@ -18,11 +18,9 @@ $items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
 if ($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
 }
-$model->bands = [100, 104, 108];
 $img_url = $model->getFileCalcUrl();
 $layers = 'm_' . $model->code;
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
-
 
 ?>
 <style>
@@ -139,10 +137,10 @@ $this->registerJsVar('globalStore', [
     ],
     'form' => [
         'expr' => $model->expr ? $model->expr : '',
-        'bands' => $model->bands
+        'bands' => $model->bands ? $model->bands : []
     ],
     'symForm' => [
-        'mode' => 'nb',
+        'mode' => 'cdi',
         'nbClass' => 5,
         'legendFormat' => '1% - 2%',
         'symbols' => $model->symbology ? $model->symbology : [],
@@ -150,7 +148,7 @@ $this->registerJsVar('globalStore', [
     ],
     'existFile' => $model->tiffExists() ? 1 : 0,
     'bands_arr' => $items,
-    'selected' => $model->bands,
+    'selected' => $model->bands ? $model->bands : [],
     'tiffUrl' => $model->tiffExists() ? $img_url : '',
     'gradientSelected' => 'OrRd',
     'statData' => $statData,

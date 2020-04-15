@@ -52,9 +52,7 @@
                 return this.items
             },
         },
-        mounted() {
-            console.log(this.value, this.innerItems);
-        },
+
         methods: {
             parseValue(input){
                 if(this.type === 'number') return parseFloat(input)
