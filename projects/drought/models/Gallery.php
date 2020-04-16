@@ -167,7 +167,7 @@ class Gallery extends ActiveRecord
                 $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
 
                 $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
-                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
+//                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
             } catch (\Exception $e) {
                 dd($e);
             }
