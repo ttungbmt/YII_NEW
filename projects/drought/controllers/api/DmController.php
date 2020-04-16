@@ -57,11 +57,21 @@ class DmController extends ApiController
 
     public function actionResults()
     {
-        $data = Gallery::find()->select('code, id')->andWhere(['type' => 2])->asArray()->all();
+        $data = Gallery::find()->select('code, id, date, metadata, symbology')->andWhere(['type' => 2])->asArray()->all();
+
         $data = collect($data)->map(function ($i){
             $layers = (string)Str::of($i['code'])->prepend('drought:m_');
+            $metadata = json_decode($i['metadata'], true) ?? [];
+
             return array_merge($i, [
                 'layers' => $layers,
+                'symbology' => json_decode($i['symbology']),
+                'bounds' => collect([
+                    data_get($metadata, 'cornerCoordinates.lowerLeft'),
+                    data_get($metadata, 'cornerCoordinates.upperRight')
+                ])->filter()->map(function ($i){
+                    return array_reverse($i);
+                })
             ]);
         })->all();
 
@@ -77,7 +87,7 @@ class DmController extends ApiController
         return [
             'data' => [
                 'vungs' => $vung->all(),
-                'results' => $this->parseCat($data, 'id', 'code', ['layers'])
+                'results' => $this->parseCat($data, 'id', 'code', ['layers', 'date', 'bounds', 'symbology'])
             ]
         ];
     }

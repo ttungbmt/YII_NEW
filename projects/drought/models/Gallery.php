@@ -145,6 +145,8 @@ class Gallery extends ActiveRecord
         $output = (string)Str::of($output)->match('/0 .. 10 .. 20 .. 30 .. 40 .. 50 .. 60 .. 70 .. 80 .. 90 .. 100 - Done/');
 
         if ($output) {
+            $this->metadata = json_decode($gdal->gdalinfo($file, ['-json'])->run(), true);
+
             $table_name = $this->code;
             $m_view_name = 'm_' . $this->code;
             $db = Yii::$app->db;
@@ -165,7 +167,7 @@ class Gallery extends ActiveRecord
                 $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
 
                 $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
-//                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid</name></defaultStyle></layer>']);
+                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
             } catch (\Exception $e) {
                 dd($e);
             }
