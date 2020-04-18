@@ -2,6 +2,8 @@ projects/drought/runtime/**
 public/assets/*
 composer.lock
 
+SETUP
+
 node_modules/
 
 # yii console commands

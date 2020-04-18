@@ -11,7 +11,7 @@ use ttungbmt\map\Map;
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
-$dm_folder = api('dm_folder');
+$dm_folder = api('dm_folder')
 ?>
 
 
@@ -44,8 +44,7 @@ $dm_folder = api('dm_folder');
                             <?= $form->field($model, 'image')->fileInput() ?>
                         </div>
                         <div class="col-md-6">
-                            <?= $form->field($model, 'dimension')->label('Chuyển đổi kích thước ảnh đầu vào') ?>
-                            <span class="text-muted">Vd: 370 330</span>
+                            <?= $form->field($model, 'dimension')->textInput(['placeholder' => '370 330']) ?>
                         </div>
                     </div>
                 </div>

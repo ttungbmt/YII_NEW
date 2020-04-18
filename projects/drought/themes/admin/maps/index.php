@@ -20,10 +20,6 @@
     <link href="/themes/admin/custom/css/theme.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/react@16.12.0/umd/react.development.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom@16.12.0/umd/react-dom.development.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet-src.min.js"></script>
-
     <?=html_manifest('/projects/drought/lerna/web/map/asset-manifest.json', 'css'); ?>
 </head>
 <body>

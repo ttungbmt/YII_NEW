@@ -20,6 +20,7 @@ switch ($DOMAIN){
     case 'covid':
         define('APP_FOLDER', 'projects/covid');
         break;
+    case 'drought':
     case 'demo':
         define('APP_FOLDER', 'projects/drought');
         break;

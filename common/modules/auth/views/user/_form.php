@@ -119,7 +119,7 @@ $userRoles = array_keys(auth()->getRolesByUser($model->id));
                                 </fieldset>
 
                                 <div class="form-group pull-right">
-                                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Thêm mới') : Yii::t('app', 'Cập nhật'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+                                    <?= Html::submitButton($model->isNewRecord ? Yii::t('app', trans('app', 'Create')) : Yii::t('app', trans('app', 'Update')), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                                 </div>
 
                                 <?php ActiveForm::end(); ?>

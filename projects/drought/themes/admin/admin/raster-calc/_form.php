@@ -21,6 +21,7 @@ if ($model->bands && is_string($model->bands)) {
 $img_url = $model->getFileCalcUrl();
 $layers = 'm_' . $model->code;
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
+
 ?>
 <style>
     .btn-opr {
@@ -80,7 +81,6 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                 </div>
                 <div style="flex-grow: 1; padding-left: 20px">
                     <h6 class="font-weight-semibold">Kết quả</h6>
-                    <?= $form->field($model, 'image')->fileInput() ?>
                     <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày tính toán') ?>
                     <?= $form->field($model, 'name')->textInput()->label('Tên file xuất') ?>
                 </div>
