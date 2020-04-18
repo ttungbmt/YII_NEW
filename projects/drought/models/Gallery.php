@@ -120,7 +120,7 @@ class Gallery extends ActiveRecord
 
 
         $this->type = 2;
-        $this->bands = implode($this->bands, ',');
+        $this->bands = implode(',', $this->bands);
         $this->code = $this->name;
         $this->image = $this->generateNewName($this->code);
 

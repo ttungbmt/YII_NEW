@@ -62,7 +62,8 @@ class Gdal
             'gdal_calc',
             $input,
             ['--calc' => '"'.$expr.'"'],
-            ['--outfile' => $output]
+            ['--outfile' => $output],
+            ['--type' => 'Float32']
         );
         return $this;
     }
