@@ -10,6 +10,7 @@ if (!function_exists('asset_manifest')) {
         $manifestPath = Yii::getAlias('@webroot'.$path);
         $manifest = collect(json_decode(file_get_contents($manifestPath), true));
         $filter = function ($data, $search, $reverse = false){
+            $data = $data ? $data : [];
             return array_filter($data, function ($e) use($search, $reverse){
                 return $reverse ? !Str::containsAll($e, [$search]) : Str::containsAll($e, [$search]);
             });
@@ -17,7 +18,6 @@ if (!function_exists('asset_manifest')) {
         $entrypoints = $filter($manifest->get('entrypoints'), 'runtime-main.js', true);
         $css = $filter($entrypoints, '.css');
         $js = $filter($entrypoints, '.js');
-
 
         return data_get([
             'css' => $css,
