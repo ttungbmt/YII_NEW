@@ -1,7 +1,7 @@
 <?php
 
 $data['dm_folder'] = [
-    'ndvi' => 'NDIVI',
+    'ndvi' => 'NDVI',
     'lst' => 'LST',
     'spi' => 'SPI',
     'other' => 'Khác'
