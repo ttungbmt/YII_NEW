@@ -143,6 +143,7 @@ class Gallery extends ActiveRecord
         $gdal->calc($bands, $file, $expr);
         $output = $gdal->run(null);
         $output = (string)Str::of($output)->match('/0 .. 10 .. 20 .. 30 .. 40 .. 50 .. 60 .. 70 .. 80 .. 90 .. 100 - Done/');
+        dd($output);
 
         if ($output) {
             $this->metadata = json_decode($gdal->gdalinfo($file, ['-json'])->run(), true);
