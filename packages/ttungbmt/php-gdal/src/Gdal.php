@@ -1,4 +1,5 @@
 <?php
+
 namespace ttungbmt\gdal;
 
 use Symfony\Component\Process\Exception\ProcessFailedException;
@@ -29,65 +30,73 @@ class Gdal
         $this->command = new Command();
     }
 
-    public function ogr2ogr(){
+    public function ogr2ogr()
+    {
 
     }
 
-    public function translate($src, $dst, $options = []){
+    public function translate($src, $dst, $options = [])
+    {
         $this->command
             ->clear()
             ->add(
-            'gdal_translate',
+                'gdal_translate',
 //            [
 //                '-of' => 'JPEG',
 //                '-co' => 'JPEG_QUALITY=75',
 //            ],
-            $options,
-            $src,
-            $dst
-        );
+                $options,
+                $src,
+                $dst
+            );
         return $this;
     }
 
-    public function o4w_env(){
+    public function o4w_env()
+    {
         $this->command->add(['o4w_env']);
         $this->run();
     }
 
-    public function calc($input, $output, $expr){
+    public function calc($input, $output, $expr)
+    {
         $this->command
             ->clear()
             ->add(
-            ['o4w_env', '&&'],
-            'gdal_calc',
-            $input,
-            ['--calc' => '"'.$expr.'"'],
-            ['--outfile' => $output],
-            ['--type' => 'Float32']
-        );
+                ['o4w_env', '&&'],
+                'gdal_calc',
+                $input,
+                ['--calc' => '"' . $expr . '"'],
+                ['--outfile' => $output],
+                ['--type' => 'Float32']
+            );
         return $this;
     }
 
-    public function getCommand(){
+    public function getCommand()
+    {
         return $this->command;
     }
 
-    public function setCommand($value){
+    public function setCommand($value)
+    {
         return $value;
     }
 
-    public function gdalinfo(string $source, array $params = []){
+    public function gdalinfo(string $source, array $params = [])
+    {
         $this->command
             ->clear()
             ->add(
-            'gdalinfo',
-            $params,
-            $source
-        );
+                'gdalinfo',
+                $params,
+                $source
+            );
         return $this;
     }
 
-    public function rasterToPgSQL($source, $table){
+    public function rasterToPgSQL($source, $table)
+    {
         $this->connection = trans('{{driver}} postgresql://{{username}}:{{password}}@{{host}}:{{port}}/{{db}}', [
             'driver' => 'psql',
             'username' => 'postgres',
@@ -102,25 +111,27 @@ class Gdal
             ->clear()
             ->add('raster2pgsql', [
                 '-s' => '4326',
-                '-I', '-C', '-M' => $source,'-F', '-t' => '250x250',
-                'public.'.$table,
+                '-I', '-C', '-M' => $source, '-F', '-t' => '250x250',
+                'public.' . $table,
                 '|',
                 $this->connection
-            ])
-        ;
+            ]);
 
         return $this;
     }
 
-    public function shpToPgSQL(){
+    public function shpToPgSQL()
+    {
 
     }
 
-    public function exportPgSQl(){
+    public function exportPgSQl()
+    {
 
     }
 
-    public function ogrinfo(string $source, array $layers = [], array $opts = []){
+    public function ogrinfo(string $source, array $layers = [], array $opts = [])
+    {
         $options = $opts ? $opts : ['-al', '-so'];
         $this->command->clear()->add(
             'ogrinfo',
@@ -132,11 +143,13 @@ class Gdal
         return $this;
     }
 
-    public function template(){
+    public function template()
+    {
 
     }
 
-    public function setConnection(){
+    public function setConnection()
+    {
 
     }
 //
@@ -257,8 +270,8 @@ class Gdal
 //    }
 
     /**
-     * @param string $name  Option name.
-     * @param mixed  $value Option value.
+     * @param string $name Option name.
+     * @param mixed $value Option value.
      *
      * @return void
      */
@@ -271,11 +284,11 @@ class Gdal
 
     /**
      * @param callable|null $callback
-     * @param array         $env      An array of additional env vars to set when running the process
-     *
-     * @throws ProcessFailedException if the process is not successful.
+     * @param array $env An array of additional env vars to set when running the process
      *
      * @return string
+     * @throws ProcessFailedException if the process is not successful.
+     *
      */
     public function run(?callable $callback = null, array $env = []): string
     {
