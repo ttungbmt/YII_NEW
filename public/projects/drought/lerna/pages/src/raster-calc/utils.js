@@ -3,6 +3,7 @@ export const showTiff = (selector, url) => {
 
     let xhr = new XMLHttpRequest()
     xhr.responseType = 'arraybuffer'
+
     xhr.open('GET', url);
     xhr.onload = function (e) {
         let tiff = new Tiff({buffer: xhr.response});

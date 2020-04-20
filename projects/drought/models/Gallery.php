@@ -15,6 +15,8 @@ use Yii;
 use yii\base\ModelEvent;
 use yii\db\BaseActiveRecord;
 use yii\db\Expression;
+use yii\web\UploadedFile;
+use function _\lowerCase;
 
 /**
  * This is the model class for table "gallery".
@@ -73,7 +75,10 @@ class Gallery extends ActiveRecord
             ['code', 'match', 'pattern' => '/^[A-Za-z0-9_]\w*$/i'],
             ['image', 'file', 'extensions' => 'tif'],
 
-            [['name', 'expr', 'bands', 'date'], 'required', 'on' => self::SCENARIO_CALC],
+            [['name', 'date'], 'required', 'on' => self::SCENARIO_CALC],
+            [['expr', 'bands'], 'required', 'when' => function ($model) {
+                return !UploadedFile::getInstance($this, 'image');
+            }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 2, 'on' => self::SCENARIO_CALC],
 
             [['code'], 'unique', 'on' => [self::SCENARIO_UPLOAD, self::SCENARIO_CALC]],
@@ -108,6 +113,43 @@ class Gallery extends ActiveRecord
         ];
     }
 
+    protected function getViewTb()
+    {
+        return 'm_' . $this->code;
+    }
+
+    protected function importDB($file)
+    {
+        $gdal = new Gdal();
+        $this->metadata = json_decode($gdal->gdalinfo($file, ['-json'])->run(), true);
+
+        $table_name = $this->code;
+        $m_view_name = $this->getViewTb();
+        $db = Yii::$app->db;
+        $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
+
+        $source = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
+        $gdal->rasterToPgSQL($source, $this->code)->run();
+
+        $query = (new Query())->select('x, y, val, geom')->from(['vt' => (new Query())->select(new Expression('(ST_PixelAsPolygons(rast, 1)).*'))->from($table_name)])->andWhere(['<>', 'val', 128]);
+        $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS " . $query->createCommand()->getRawSql();
+
+        $db->createCommand($viewSql)->execute();
+
+        try {
+            $client = function () {
+                return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);
+            };
+            $url_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
+            $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
+
+            $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
+            $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
+        } catch (\Exception $e) {
+            dd($e);
+        }
+    }
+
     public function saveRasterCalc()
     {
         if (!$this->validate()) return false;
@@ -118,63 +160,46 @@ class Gallery extends ActiveRecord
             })
             ->all();
 
+        $upload = UploadedFile::getInstance($this, 'image');
 
         $this->type = 2;
-        $this->bands = implode(',', $this->bands);
-        $this->code = $this->name;
+        $this->code = (string)Str::of($this->name)->slug('_')->lower();
         $this->image = $this->generateNewName($this->code);
 
-        $expr = Str::of($this->expr)->replace('[', '{{')->replace(']', '}}');
-        $messages = Arr::pluck($bands, 'alpha', 'code');
-        $expr = trans($expr, $messages);
 
-        $file = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
-        $bands = collect($bands)->filter(function ($i, $k) use ($expr) {
-            return Str::contains($expr, $i['alpha']);
-        })
-            ->map(function ($i, $k) use ($alphas) {
-                return ['-' . $i['alpha'] => Yii::getAlias('@webroot/projects/drought/uploads/' . $i['image'])];
+        if (!$upload) {
+            $this->bands = implode(',', $this->bands);
+            $expr = Str::of($this->expr)->replace('[', '{{')->replace(']', '}}');
+            $messages = Arr::pluck($bands, 'alpha', 'code');
+            $expr = trans($expr, $messages);
+
+            $file = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
+            $bands = collect($bands)->filter(function ($i, $k) use ($expr) {
+                return Str::contains($expr, $i['alpha']);
             })
-            ->collapse()
-            ->all();
+                ->map(function ($i, $k) use ($alphas) {
+                    return ['-' . $i['alpha'] => Yii::getAlias('@webroot/projects/drought/uploads/' . $i['image'])];
+                })
+                ->collapse()
+                ->all();
 
-        $gdal = new Gdal();
-        $gdal->o4w_env();
-        $gdal->calc($bands, $file, $expr);
-        if(file_exists($file)) unlink($file);
+            $gdal = new Gdal();
+            $gdal->o4w_env();
+            $gdal->calc($bands, $file, $expr);
+            if (file_exists($file)) unlink($file);
 
-        $output = $gdal->run(null);
-        $output = (string)Str::of($output)->match('/0 .. 10 .. 20 .. 30 .. 40 .. 50 .. 60 .. 70 .. 80 .. 90 .. 100 - Done/');
+            $output = $gdal->run(null);
+            $output = (string)Str::of($output)->match('/0 .. 10 .. 20 .. 30 .. 40 .. 50 .. 60 .. 70 .. 80 .. 90 .. 100 - Done/');
 
-        if ($output) {
-            $this->metadata = json_decode($gdal->gdalinfo($file, ['-json'])->run(), true);
-
-            $table_name = $this->code;
-            $m_view_name = 'm_' . $this->code;
-            $db = Yii::$app->db;
-            $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
-
-            $source = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
-            $gdal->rasterToPgSQL($source, $this->code)->run();
-
-            $query = (new Query())->select('x, y, val, geom')->from(['vt' => (new Query())->select(new Expression('(ST_PixelAsPolygons(rast, 1)).*'))->from($table_name)])->andWhere(['<>', 'val', 128]);
-            $viewSql = "CREATE MATERIALIZED  VIEW {$m_view_name} AS " . $query->createCommand()->getRawSql();
-            $db->createCommand($viewSql)->execute();
-
-            try {
-                $client = function () {
-                    return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);
-                };
-                $url_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/datastores/drought/featuretypes';
-                $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
-
-                $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
-//                $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
-            } catch (\Exception $e) {
-                dd($e);
+            if ($output) {
+                $this->importDB($file);
             }
-
+        } else {
+            $upload->saveAs(Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image));
+            $file = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
+            $this->importDB($file);
         }
+
 
         return $this->save();
     }
@@ -187,14 +212,6 @@ class Gallery extends ActiveRecord
     public function getFileCalcPath()
     {
         return Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
-    }
-
-    public function deleteImage()
-    {
-        $file = $this->getUploadPath();
-        if (file_exists($file)) {
-            unlink($file);
-        }
     }
 
     public function tiffExists()
@@ -218,14 +235,49 @@ class Gallery extends ActiveRecord
     public function deleteAllRelated()
     {
         $bool = $this->delete();
-        $this->deleteImage();
+        $file = $this->getUploadPath();
+        if (file_exists($file)) {
+            unlink($file);
+        }
 
         return $bool;
     }
 
+    public function deleteAllRelatedCalc()
+    {
+        $bool = $this->delete();
+        $file = $this->getFileCalcPath();
+
+        if (file_exists($file)) unlink($file);
+
+        $table_name = $this->code;
+        $m_view_name = $this->getViewTb();
+        $db = Yii::$app->db;
+
+        try {
+            $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
+
+            $client = function () {
+                return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);
+            };
+            $url_feature = 'http://localhost:8080/geoserver/rest/layers/drought:'.$this->getViewTb();
+            $delete_feature = 'http://localhost:8080/geoserver/rest/workspaces/drought/styles/'.$this->getViewTb();
+            
+            $response1 = $client()->send('DELETE', $url_feature);
+            $response2 = $client()->send('DELETE', $delete_feature);
+
+            return true;
+        } catch (\Exception $e) {
+            dd($e);
+            return false;
+        }
+
+        return false;
+    }
+
     public function generateNewName($name, $ext = 'tif')
     {
-//        $unid = '_' . uniqid();
+        $unid = '_' . uniqid();
         $unid = '';
         return (string)Str::of($name)->slug('_')->lower()->append($unid . '.' . $ext);
     }

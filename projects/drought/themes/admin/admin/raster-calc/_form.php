@@ -81,6 +81,7 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                 </div>
                 <div style="flex-grow: 1; padding-left: 20px">
                     <h6 class="font-weight-semibold">Kết quả</h6>
+                    <?= $form->field($model, 'image')->fileInput()->label('Upload Kết quả tính toán') ?>
                     <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày tính toán') ?>
                     <?= $form->field($model, 'name')->textInput()->label('Tên file xuất') ?>
                 </div>

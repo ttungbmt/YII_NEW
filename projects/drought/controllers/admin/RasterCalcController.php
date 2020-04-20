@@ -51,7 +51,7 @@ class RasterCalcController extends AppController
             'delete' => [
                 'class' => DeleteAction::class,
                 'modelClass' => $model,
-                'handler' => 'deleteAllRelated'
+                'handler' => 'deleteAllRelatedCalc'
             ]
         ];
     }
