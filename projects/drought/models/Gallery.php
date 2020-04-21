@@ -78,7 +78,7 @@ class Gallery extends ActiveRecord
             [['name', 'date'], 'required', 'on' => self::SCENARIO_CALC],
             [['expr', 'bands'], 'required', 'when' => function ($model) {
                 return !UploadedFile::getInstance($this, 'image');
-            }, 'on' => self::SCENARIO_UPLOAD],
+            }, 'on' => self::SCENARIO_CALC],
             ['type', 'default', 'value' => 2, 'on' => self::SCENARIO_CALC],
 
             [['code'], 'unique', 'on' => [self::SCENARIO_UPLOAD, self::SCENARIO_CALC]],
@@ -182,6 +182,7 @@ class Gallery extends ActiveRecord
                 })
                 ->collapse()
                 ->all();
+
 
             $gdal = new Gdal();
             $gdal->o4w_env();
