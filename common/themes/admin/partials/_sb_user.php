@@ -2,7 +2,7 @@
     <div class="sidebar-user-material-body">
         <div class="card-body text-center">
             <a href="#">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSG6fwgVi4FtsNNn1lXnUwBmes8PCxp3-VlukOVNjq-byO7BJxXkg" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
+                <img src="<?=params('assets.user')?>" class="img-fluid rounded-circle shadow-1 mb-3" width="80" height="80" alt="">
             </a>
             <h6 class="mb-0 text-white text-shadow-dark"><?=optional(userInfo())->fullname?></h6>
             <span class="font-size-sm text-white text-shadow-dark"><?=data_get(user(), 'identity.username')?></span>

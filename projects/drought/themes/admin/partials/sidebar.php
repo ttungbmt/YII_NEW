@@ -26,6 +26,7 @@ $li = function ($name, $url, $icon = '', $access = null) {
 
 </style>
 
+
 <div class="sidebar sidebar-light sidebar-main sidebar-expand-md">
 
     <!-- Sidebar mobile toggler -->
