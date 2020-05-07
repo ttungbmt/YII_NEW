@@ -1,0 +1,43 @@
+{
+    "name": "ttungbmt/geoserver-rest-api",
+    "description": "GeoServer REST API For Laravel/PHP",
+    "keywords": [
+        "laravel",
+        "geoserver"
+    ],
+    "homepage": "https://github.com/ttungbmt/geoserver-rest-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Truong Thanh Tung",
+            "email": "ttungbmt@gmail.com"
+        }
+    ],
+    "require": {
+        "php-http/guzzle6-adapter": "^2.0",
+        "guzzlehttp/psr7": "^1.6",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "oneofftech/geoserver-client-php": "^0.3.0",
+        "illuminate/http": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ttungbmt\\REST\\Geoserver\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ttungbmt\\REST\\Geoserver\\GeoServerServiceProvider"
+            ],
+            "aliases": {
+                "Geoserver": "ttungbmt\\REST\\Geoserver\\Facade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

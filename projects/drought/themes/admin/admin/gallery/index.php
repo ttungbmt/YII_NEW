@@ -11,8 +11,11 @@ use johnitvn\ajaxcrud\CrudAsset;
 CrudAsset::register($this);
 
 $this->title = "Ảnh đầu vào";
+$dm_year = api('dm/year?type=1');
 ?>
 <div class="gallery-index">
+    <?=Html::dropDownList('year', null,  $dm_year, ['id' => 'drop-year', 'class' => 'form-control mb-2', 'prompt' => 'Chọn năm ...'])?>
+
     <div id="ajaxCrudDatatable">
         <?= GridView::widget([
             'id' => 'crud-datatable',
@@ -55,6 +58,12 @@ $this->title = "Ảnh đầu vào";
 <?php Modal::end(); ?>
 
 
-
+<script>
+    $(function () {
+        $('#drop-year').change(function (e) {
+            $.pjax({url: `/admin/gallery?year=`+e.target.value, container: '#crud-datatable-pjax'})
+        })
+    })
+</script>
 
 

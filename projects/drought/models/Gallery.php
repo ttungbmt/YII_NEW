@@ -68,6 +68,7 @@ class Gallery extends ActiveRecord
     {
         return [
             [['bands', 'date', 'dimension', 'folder'], 'safe'],
+            [['year'], 'date', 'format' => 'php:Y'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
             [['date'], 'date', 'format' => 'php:d/m/Y'],
@@ -75,7 +76,7 @@ class Gallery extends ActiveRecord
             ['code', 'match', 'pattern' => '/^[A-Za-z0-9_]\w*$/i'],
             ['image', 'file', 'extensions' => 'tif'],
 
-            [['name', 'date'], 'required', 'on' => self::SCENARIO_CALC],
+            [['name', 'date', 'year'], 'required', 'on' => self::SCENARIO_CALC],
             [['expr', 'bands'], 'required', 'when' => function ($model) {
                 return !UploadedFile::getInstance($this, 'image');
             }, 'on' => self::SCENARIO_CALC],
@@ -86,7 +87,7 @@ class Gallery extends ActiveRecord
                 return $model->isNewRecord;
             }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 1, 'on' => self::SCENARIO_UPLOAD],
-            [['code', 'folder', 'name'], 'required', 'on' => self::SCENARIO_UPLOAD],
+            [['code', 'folder', 'name', 'year'], 'required', 'on' => self::SCENARIO_UPLOAD],
         ];
     }
 
@@ -110,6 +111,7 @@ class Gallery extends ActiveRecord
             'code' => 'Mã ảnh',
             'date' => 'Ngày file ảnh',
             'dimension' => 'Kích thước',
+            'year' => 'Năm',
         ];
     }
 
@@ -201,6 +203,7 @@ class Gallery extends ActiveRecord
             $this->importDB($file);
         }
 
+        $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"1","legend":"<=1 (Hạn khắc nghiệt)"},{"color":"#d7301f","start":"1","end":"2","legend":"1 - <=2 (Hạn nặng)"},{"color":"#fc8d59","start":"2","end":"3","legend":"2 - <=3 (Hạn trung bình)"},{"color":"#fdd49e","start":"3","end":"4","legend":"3 - <=4 (Hạn nhẹ)"},{"color":"#fff7ec","start":"4","end":"","legend":"> 4 (Không hạn)"}]', true);
 
         return $this->save();
     }

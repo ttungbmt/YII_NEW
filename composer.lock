@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa4edb9932b83ec4e7252e2a6e8dd387",
+    "content-hash": "94ff36844ab55acb7307546b63a16f64",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -186,16 +186,16 @@
         },
         {
             "name": "bower-asset/blueimp-canvas-to-blob",
-            "version": "v3.18.0",
+            "version": "v3.20.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:blueimp/JavaScript-Canvas-to-Blob.git",
-                "reference": "ae2d7c39ffd1d3178439bcafb0416838af1ccc63"
+                "reference": "7110667d8bbe3c92d86a3d96c4ccdddec8837e1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/JavaScript-Canvas-to-Blob/zipball/ae2d7c39ffd1d3178439bcafb0416838af1ccc63",
-                "reference": "ae2d7c39ffd1d3178439bcafb0416838af1ccc63"
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Canvas-to-Blob/zipball/7110667d8bbe3c92d86a3d96c4ccdddec8837e1a",
+                "reference": "7110667d8bbe3c92d86a3d96c4ccdddec8837e1a"
             },
             "type": "bower-asset"
         },
@@ -240,16 +240,16 @@
         },
         {
             "name": "bower-asset/blueimp-load-image",
-            "version": "v2.28.0",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:blueimp/JavaScript-Load-Image.git",
-                "reference": "452adbfc9f4980e0bed0d97d19fc2343475c447f"
+                "reference": "ff22e11daa25d0cff328124abf1cca22ffaa4be5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/452adbfc9f4980e0bed0d97d19fc2343475c447f",
-                "reference": "452adbfc9f4980e0bed0d97d19fc2343475c447f"
+                "url": "https://api.github.com/repos/blueimp/JavaScript-Load-Image/zipball/ff22e11daa25d0cff328124abf1cca22ffaa4be5",
+                "reference": "ff22e11daa25d0cff328124abf1cca22ffaa4be5"
             },
             "type": "bower-asset"
         },
@@ -273,7 +273,7 @@
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
+                "url": "https://github.com/twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -881,16 +881,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb"
+                "reference": "b9d758e831c70751155c698c2f7df4665314a1cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
-                "reference": "5eb79f3dbdffed6544e1fc287572c0f462bd29bb",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/b9d758e831c70751155c698c2f7df4665314a1cb",
+                "reference": "b9d758e831c70751155c698c2f7df4665314a1cb",
                 "shasum": ""
             },
             "require": {
@@ -946,7 +946,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2020-04-02T12:33:25+00:00"
+            "time": "2020-04-20T09:18:32+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1501,16 +1501,16 @@
         },
         {
             "name": "giggsey/libphonenumber-for-php",
-            "version": "8.12.1",
+            "version": "8.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giggsey/libphonenumber-for-php.git",
-                "reference": "198dffa12831e17320207ce1bd3b121402d2cc8d"
+                "reference": "030682bc4fcdc0c6fb85b68aec2ffeff6978768a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/198dffa12831e17320207ce1bd3b121402d2cc8d",
-                "reference": "198dffa12831e17320207ce1bd3b121402d2cc8d",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/030682bc4fcdc0c6fb85b68aec2ffeff6978768a",
+                "reference": "030682bc4fcdc0c6fb85b68aec2ffeff6978768a",
                 "shasum": ""
             },
             "require": {
@@ -1565,7 +1565,7 @@
                 "phonenumber",
                 "validation"
             ],
-            "time": "2020-03-30T08:29:12+00:00"
+            "time": "2020-04-22T19:37:04+00:00"
         },
         {
             "name": "giggsey/locale",
@@ -1618,23 +1618,24 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.11"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -1642,7 +1643,6 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
@@ -1681,7 +1681,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-23T11:57:10+00:00"
+            "time": "2020-04-18T10:38:46+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2640,16 +2640,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v7.5.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "2db7e8a936cc09e396d14902178ea177f4dc42ac"
+                "reference": "69a40779d8fc43e3f43da973b9c0c20bdbd81203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/2db7e8a936cc09e396d14902178ea177f4dc42ac",
-                "reference": "2db7e8a936cc09e396d14902178ea177f4dc42ac",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/69a40779d8fc43e3f43da973b9c0c20bdbd81203",
+                "reference": "69a40779d8fc43e3f43da973b9c0c20bdbd81203",
                 "shasum": ""
             },
             "require": {
@@ -2680,11 +2680,11 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2020-04-04T15:13:36+00:00"
+            "time": "2020-04-09T15:01:22+00:00"
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v7.5.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -2737,16 +2737,16 @@
         },
         {
             "name": "illuminate/http",
-            "version": "v7.5.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
-                "reference": "8387bb84aa635b58a96b6da263094d68b3666ec0"
+                "reference": "d9f6088b0296fa41c0a4afa6a2ec27a156d4917e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/http/zipball/8387bb84aa635b58a96b6da263094d68b3666ec0",
-                "reference": "8387bb84aa635b58a96b6da263094d68b3666ec0",
+                "url": "https://api.github.com/repos/illuminate/http/zipball/d9f6088b0296fa41c0a4afa6a2ec27a156d4917e",
+                "reference": "d9f6088b0296fa41c0a4afa6a2ec27a156d4917e",
                 "shasum": ""
             },
             "require": {
@@ -2785,11 +2785,11 @@
             ],
             "description": "The Illuminate Http package.",
             "homepage": "https://laravel.com",
-            "time": "2020-04-07T17:10:31+00:00"
+            "time": "2020-04-24T17:19:43+00:00"
         },
         {
             "name": "illuminate/session",
-            "version": "v7.5.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -2840,16 +2840,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v7.5.2",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "b8d805437c075a44bf53737763c3b979932445c7"
+                "reference": "8cf661b620279503f2ca64447de04a34624a7d5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b8d805437c075a44bf53737763c3b979932445c7",
-                "reference": "b8d805437c075a44bf53737763c3b979932445c7",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/8cf661b620279503f2ca64447de04a34624a7d5a",
+                "reference": "8cf661b620279503f2ca64447de04a34624a7d5a",
                 "shasum": ""
             },
             "require": {
@@ -2898,7 +2898,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-04-08T13:18:06+00:00"
+            "time": "2020-04-23T17:41:14+00:00"
         },
         {
             "name": "imagine/imagine",
@@ -3479,16 +3479,16 @@
         },
         {
             "name": "kartik-v/php-date-formatter",
-            "version": "v1.3.5",
+            "version": "v1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/php-date-formatter.git",
-                "reference": "d842e1c4e6a8d6108017b726321c305bb5ae4fb5"
+                "reference": "514a53660b0d69439236fd3cbc3f41512adb00a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/php-date-formatter/zipball/d842e1c4e6a8d6108017b726321c305bb5ae4fb5",
-                "reference": "d842e1c4e6a8d6108017b726321c305bb5ae4fb5",
+                "url": "https://api.github.com/repos/kartik-v/php-date-formatter/zipball/514a53660b0d69439236fd3cbc3f41512adb00a0",
+                "reference": "514a53660b0d69439236fd3cbc3f41512adb00a0",
                 "shasum": ""
             },
             "type": "library",
@@ -3524,7 +3524,7 @@
                 "php-date-formatter.js",
                 "time"
             ],
-            "time": "2018-07-13T06:56:46+00:00"
+            "time": "2020-04-14T10:16:32+00:00"
         },
         {
             "name": "kartik-v/yii2-bootstrap4-dropdown",
@@ -4235,12 +4235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-mpdf.git",
-                "reference": "e513d17e8b1a5e063475f332e726845dba8f32b5"
+                "reference": "7ea3a5f9bcf5bcf6d681bd82cbe843c356d1428c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-mpdf/zipball/e513d17e8b1a5e063475f332e726845dba8f32b5",
-                "reference": "e513d17e8b1a5e063475f332e726845dba8f32b5",
+                "url": "https://api.github.com/repos/kartik-v/yii2-mpdf/zipball/7ea3a5f9bcf5bcf6d681bd82cbe843c356d1428c",
+                "reference": "7ea3a5f9bcf5bcf6d681bd82cbe843c356d1428c",
                 "shasum": ""
             },
             "require": {
@@ -4279,7 +4279,7 @@
                 "utf8",
                 "yii2"
             ],
-            "time": "2019-09-03T03:11:44+00:00"
+            "time": "2020-04-14T08:55:18+00:00"
         },
         {
             "name": "kartik-v/yii2-popover-x",
@@ -5666,16 +5666,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.66",
+            "version": "1.0.67",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21"
+                "reference": "5b1f36c75c4bdde981294c2a0ebdb437ee6f275e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/021569195e15f8209b1c4bebb78bd66aa4f08c21",
-                "reference": "021569195e15f8209b1c4bebb78bd66aa4f08c21",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
+                "reference": "5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
                 "shasum": ""
             },
             "require": {
@@ -5746,7 +5746,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2020-03-17T18:58:12+00:00"
+            "time": "2020-04-16T13:21:26+00:00"
         },
         {
             "name": "liyunfang/yii2-widget-linkpager",
@@ -7421,16 +7421,16 @@
         },
         {
             "name": "phpoffice/phpspreadsheet",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPOffice/PhpSpreadsheet.git",
-                "reference": "c2a205e82f9cf1cc9fab86b79e808d86dd680470"
+                "reference": "f79611d6dc1f6b7e8e30b738fc371b392001dbfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/c2a205e82f9cf1cc9fab86b79e808d86dd680470",
-                "reference": "c2a205e82f9cf1cc9fab86b79e808d86dd680470",
+                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/f79611d6dc1f6b7e8e30b738fc371b392001dbfd",
+                "reference": "f79611d6dc1f6b7e8e30b738fc371b392001dbfd",
                 "shasum": ""
             },
             "require": {
@@ -7510,7 +7510,7 @@
                 "xls",
                 "xlsx"
             ],
-            "time": "2020-03-02T13:09:03+00:00"
+            "time": "2020-04-27T08:12:48+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -10036,12 +10036,62 @@
             "time": "2020-03-27T16:56:45+00:00"
         },
         {
+            "name": "ttungbmt/geoserver-rest-api",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./packages/ttungbmt/geoserver-rest-api",
+                "reference": "df92c8e32c7f73e96a653421f6412241d38cfdeb"
+            },
+            "require": {
+                "guzzlehttp/psr7": "^1.6",
+                "http-interop/http-factory-guzzle": "^1.0",
+                "illuminate/http": "*",
+                "oneofftech/geoserver-client-php": "^0.3.0",
+                "php-http/guzzle6-adapter": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ttungbmt\\REST\\Geoserver\\GeoServerServiceProvider"
+                    ],
+                    "aliases": {
+                        "Geoserver": "ttungbmt\\REST\\Geoserver\\Facade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ttungbmt\\REST\\Geoserver\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Truong Thanh Tung",
+                    "email": "ttungbmt@gmail.com"
+                }
+            ],
+            "description": "GeoServer REST API For Laravel/PHP",
+            "homepage": "https://github.com/ttungbmt/geoserver-rest-api",
+            "keywords": [
+                "geoserver",
+                "laravel"
+            ],
+            "transport-options": {
+                "symlink": true
+            }
+        },
+        {
             "name": "ttungbmt/php-gdal",
             "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-gdal",
-                "reference": "94ec2b8578676d70ba88ed4cdc1e6b684ee47d87"
+                "reference": "2ca093128c9eb4e83a46a038f83d4cad22516c20"
             },
             "require": {
                 "geo6/php-gdal-wrapper": "@dev",
@@ -10080,7 +10130,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-geoserver",
-                "reference": "e730fa64c2e31d8f95e4cdd48f4f401f5860be68"
+                "reference": "8bba9fad514d7c61da26fe02fec5a5f8a7b60d0a"
             },
             "require": {
                 "guzzlehttp/psr7": "^1.6",
@@ -10121,7 +10171,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/php-i18n",
-                "reference": "4d254e44bd586f30c4b4943527a232f2c4b9844a"
+                "reference": "17cc5094813c3bf261c13d0537d944b99b296652"
             },
             "require": {
                 "zordius/lightncandy": "dev-master"
@@ -10158,7 +10208,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ttungbmt/yii2-core",
-                "reference": "29e6c53d8d184de403aca9bdc9f7f08b822e84f6"
+                "reference": "473f27a1bba2d30a522914d284d478aed0e926c3"
             },
             "require": {
                 "codeonyii/yii2-at-least-validator": "*",
@@ -10275,16 +10325,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2"
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/88f7acc95150bca002a498899f8b52f318e444c2",
-                "reference": "88f7acc95150bca002a498899f8b52f318e444c2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/feb6dad5ae24b1380827aee1629b730080fde500",
+                "reference": "feb6dad5ae24b1380827aee1629b730080fde500",
                 "shasum": ""
             },
             "require": {
@@ -10335,7 +10385,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-27T23:37:15+00:00"
+            "time": "2020-04-12T15:20:09+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -11261,23 +11311,23 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.8",
+            "version": "2.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9"
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
-                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d191176c4f8372e397a9e3df27360dca6a70efaa",
+                "reference": "d191176c4f8372e397a9e3df27360dca6a70efaa",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 | ^2.0"
             },
             "require-dev": {
-                "composer/composer": "^1.0",
+                "composer/composer": "^1.0 | ^2.0@dev",
                 "phpunit/phpunit": "<7"
             },
             "type": "composer-plugin",
@@ -11312,7 +11362,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2019-07-16T13:22:30+00:00"
+            "time": "2020-04-20T18:47:46+00:00"
         },
         {
             "name": "yiisoft/yii2-elasticsearch",
@@ -11811,21 +11861,21 @@
         },
         {
             "name": "codeception/lib-asserts",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/lib-asserts.git",
-                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab"
+                "reference": "acd0dc8b394595a74b58dcc889f72569ff7d8e71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/1fdc310bf857c11d3703ae02689a2e482c71c5ab",
-                "reference": "1fdc310bf857c11d3703ae02689a2e482c71c5ab",
+                "url": "https://api.github.com/repos/Codeception/lib-asserts/zipball/acd0dc8b394595a74b58dcc889f72569ff7d8e71",
+                "reference": "acd0dc8b394595a74b58dcc889f72569ff7d8e71",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2.0 <8.0",
-                "phpunit/phpunit": "^8.4 | ^9.0"
+                "codeception/phpunit-wrapper": ">6.0.15 <6.1.0 | ^6.6.1 | ^7.7.1 | ^8.0.3 | ^9.0",
+                "php": ">=5.6.0 <8.0"
             },
             "type": "library",
             "autoload": {
@@ -11852,7 +11902,7 @@
             "keywords": [
                 "codeception"
             ],
-            "time": "2020-02-11T10:45:21+00:00"
+            "time": "2020-04-17T18:20:46+00:00"
         },
         {
             "name": "codeception/lib-innerbrowser",
@@ -11909,21 +11959,21 @@
         },
         {
             "name": "codeception/module-asserts",
-            "version": "1.1.1",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/module-asserts.git",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e"
+                "reference": "79f13d05b63f2fceba4d0e78044bab668c9b2a6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
-                "reference": "87c83ca3ccfbc0d79f5effb57e1f82eeaab0cb3e",
+                "url": "https://api.github.com/repos/Codeception/module-asserts/zipball/79f13d05b63f2fceba4d0e78044bab668c9b2a6b",
+                "reference": "79f13d05b63f2fceba4d0e78044bab668c9b2a6b",
                 "shasum": ""
             },
             "require": {
                 "codeception/codeception": "*@dev",
-                "codeception/lib-asserts": "^1.0.0",
+                "codeception/lib-asserts": "^1.12.0",
                 "php": ">=5.6.0 <8.0"
             },
             "conflict": {
@@ -11957,7 +12007,7 @@
                 "asserts",
                 "codeception"
             ],
-            "time": "2019-11-13T17:32:27+00:00"
+            "time": "2020-04-20T07:26:11+00:00"
         },
         {
             "name": "codeception/module-filesystem",
@@ -12063,16 +12113,16 @@
         },
         {
             "name": "codeception/phpunit-wrapper",
-            "version": "8.1.1",
+            "version": "8.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/phpunit-wrapper.git",
-                "reference": "f1370a15e5fe60e7347b1c60642479b923a7ceef"
+                "reference": "e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/f1370a15e5fe60e7347b1c60642479b923a7ceef",
-                "reference": "f1370a15e5fe60e7347b1c60642479b923a7ceef",
+                "url": "https://api.github.com/repos/Codeception/phpunit-wrapper/zipball/e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc",
+                "reference": "e610200adf75ebc1ea7cf10d7cdb43e0f5fff3cc",
                 "shasum": ""
             },
             "require": {
@@ -12089,7 +12139,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Codeception\\PHPUnit\\": "src\\"
+                    "Codeception\\PHPUnit\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -12103,7 +12153,7 @@
                 }
             ],
             "description": "PHPUnit classes used by Codeception",
-            "time": "2019-12-21T16:08:14+00:00"
+            "time": "2020-04-17T18:30:51+00:00"
         },
         {
             "name": "codeception/specify",
@@ -12431,23 +12481,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -12479,7 +12526,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -12897,16 +12944,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.5.3",
+            "version": "8.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf"
+                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/67750516bc02f300e2742fed2f50177f8f37bedf",
-                "reference": "67750516bc02f300e2742fed2f50177f8f37bedf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/8474e22d7d642f665084ba5ec780626cbd1efd23",
+                "reference": "8474e22d7d642f665084ba5ec780626cbd1efd23",
                 "shasum": ""
             },
             "require": {
@@ -12976,7 +13023,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-03-31T08:52:04+00:00"
+            "time": "2020-04-23T04:39:42+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -13761,16 +13808,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598"
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/aed98a490f9a8f78468232db345ab9cf606cf598",
-                "reference": "aed98a490f9a8f78468232db345ab9cf606cf598",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
+                "reference": "ab2cb0b3b559010b75981b1bdce728da3ee90ad6",
                 "shasum": ""
             },
             "require": {
@@ -13778,7 +13825,7 @@
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "vimeo/psalm": "<3.6.0"
+                "vimeo/psalm": "<3.9.1"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
@@ -13805,7 +13852,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2020-02-14T12:15:55+00:00"
+            "time": "2020-04-18T12:12:48+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
@@ -13917,6 +13964,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "ttungbmt/yii2-core": 20,
+        "ttungbmt/geoserver-rest-api": 20,
         "ttungbmt/php-gdal": 20,
         "ttungbmt/php-geoserver": 20,
         "wikimedia/composer-merge-plugin": 20,

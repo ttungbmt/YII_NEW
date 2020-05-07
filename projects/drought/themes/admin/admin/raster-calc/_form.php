@@ -21,7 +21,7 @@ if ($model->bands && is_string($model->bands)) {
 $img_url = $model->getFileCalcUrl();
 $layers = 'm_' . $model->code;
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
-
+$dm_year = api('dm/year?type=1');
 ?>
 <style>
     .btn-opr {
@@ -73,6 +73,8 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                             'data-toggle' => 'modal',
                             'data-target' => '#modal-bands',
                         ]) ?>
+
+                        <?=Html::dropDownList('year', null,  $dm_year, ['id' => 'drop-year', 'class' => 'form-control', 'prompt' => 'Chọn năm ...',  'style' => 'width: 100px;margin: -10px 0 0 10px;', 'v-model' => 'inpYear'])?>
                     </div>
 
                     <div>
@@ -82,6 +84,7 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                 <div style="flex-grow: 1; padding-left: 20px">
                     <h6 class="font-weight-semibold">Kết quả</h6>
                     <?= $form->field($model, 'image')->fileInput()->label('Upload Kết quả tính toán') ?>
+                    <?= $form->field($model, 'year')->textInput(['type' => 'number']) ?>
                     <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày tính toán') ?>
                     <?= $form->field($model, 'name')->textInput()->label('Tên file xuất') ?>
                 </div>
@@ -154,6 +157,7 @@ $this->registerJsVar('globalStore', [
     'gradientSelected' => 'OrRd',
     'statData' => $statData,
     'srcMap' => '',
+    'inpYear' => '',
 ])
 ?>
 

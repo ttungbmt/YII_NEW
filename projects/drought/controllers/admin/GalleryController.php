@@ -10,6 +10,7 @@ use ttungbmt\actions\IndexAction;
 use ttungbmt\actions\UpdateAction;
 use ttungbmt\actions\ViewAction;
 use ttungbmt\gdal\Gdal;
+use ttungbmt\REST\Geoserver\Yii2\Facade\Geoserver;
 
 class GalleryController extends AppController
 {

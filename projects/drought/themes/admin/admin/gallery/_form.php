@@ -43,7 +43,10 @@ $dm_folder = api('dm_folder')
                         <div class="col-md-6">
                             <?= $form->field($model, 'image')->fileInput() ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
+                            <?= $form->field($model, 'year')->textInput(['type' => 'number']) ?>
+                        </div>
+                        <div class="col-md-3">
                             <?= $form->field($model, 'dimension')->textInput()->label('Chuyển đổi kích thước ảnh') ?>
                             <div class="text-muted">Vd: 370 330</div>
                         </div>

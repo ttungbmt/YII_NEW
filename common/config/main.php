@@ -59,6 +59,13 @@ $config = [
     ],
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
+        'geoserver' => [
+            'class' => \ttungbmt\REST\Geoserver\Yii2\Geoserver::className(),
+            'url' => 'http://localhost:8080/geoserver/',
+            'username' => 'admin',
+            'password' => 'geoserver',
+            'workspace' => 'drought'
+        ],
 
 //        'yee' => [
 //            'class' => 'yeesoft\Yee',
