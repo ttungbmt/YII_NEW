@@ -37,13 +37,15 @@ class GalleryController extends AppController
                 'class' => CreateAction::class,
                 'modelClass' => $model,
                 'scenario' => $model::SCENARIO_UPLOAD,
-                'redirectUrl' => ['update-meta', 'id' => ':primaryKey']
+                'redirectUrl' => ['update-meta', 'id' => ':primaryKey'],
+                'handler' => 'saveImg'
             ],
             'update' => [
                 'class' => UpdateAction::class,
                 'modelClass' => $model,
                 'scenario' => $model::SCENARIO_UPLOAD,
-                'redirectUrl' => ['update-meta', 'id' => ':primaryKey']
+                'redirectUrl' => ['update-meta', 'id' => ':primaryKey'],
+                'handler' => 'saveImg'
             ],
             'delete' => [
                 'class' => DeleteAction::class,

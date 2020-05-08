@@ -37,6 +37,7 @@ class Gallery extends ActiveRecord
 
     public $bands_str;
     public $dimension;
+    public $resampling_img;
 
     protected $timestamps = true;
 
@@ -67,7 +68,7 @@ class Gallery extends ActiveRecord
     public function rules()
     {
         return [
-            [['bands', 'date', 'dimension', 'folder'], 'safe'],
+            [['bands', 'date', 'dimension', 'folder', 'resampling_img'], 'safe'],
             [['year'], 'date', 'format' => 'php:Y'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
@@ -303,6 +304,33 @@ class Gallery extends ActiveRecord
         ]);
     }
 
+    public function saveImg(){
+        if (!$this->validate()) return false;
+        $bool = $this->save();
+
+        if($this->resampling_img){
+            $img = Gallery::findOne($this->resampling_img);
+            $x_res = data_get($img, 'metadata.geoTransform.1');
+            $y_res = data_get($img, 'metadata.geoTransform.5');
+            if($x_res && $y_res){
+                $gdal = new Gdal();
+                $file0 = Yii::getAlias('@webroot/projects/drought/uploads/'.data_get($this, 'oldAttributes.image'));
+                $name = pathinfo($file0, PATHINFO_FILENAME);
+                $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
+
+                $gdal->translate($file0, $file1, [
+                    '-tr' => "$x_res $y_res"
+                ])->run();
+
+                unlink($file0);
+                rename($file1, $file0);
+            }
+        }
+
+
+        return $bool;
+    }
+
     public function afterUpload($event)
     {
         $model = $event->sender;
@@ -310,7 +338,7 @@ class Gallery extends ActiveRecord
         $this->removeAllAuxFiles();
         $gdal = new Gdal();
 
-        if (!$this->dimension) return null;
+         if (!$this->dimension) return null;
 
         $name = pathinfo($file0, PATHINFO_FILENAME);
         $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');

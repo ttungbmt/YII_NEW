@@ -1,19 +1,17 @@
 <?php
 
+use kartik\widgets\Select2;
 use yii\helpers\Html;
-use yii\imagine\Image;
 use yii\widgets\ActiveForm;
-use kartik\widgets\DepDrop;
-use ttungbmt\map\Map;
 
 /* @var $this yii\web\View */
 /* @var $model drought\models\Gallery */
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
-$dm_folder = api('dm_folder')
+$dm_folder = api('dm_folder');
+$imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1])->pluck('code', 'id');
 ?>
-
 
 <div class="gallery-form">
     <!--    <div id="mapid" style="width:100%; height:500px"></div>-->
@@ -43,16 +41,30 @@ $dm_folder = api('dm_folder')
                         <div class="col-md-6">
                             <?= $form->field($model, 'image')->fileInput() ?>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
                             <?= $form->field($model, 'year')->textInput(['type' => 'number']) ?>
                         </div>
-                        <div class="col-md-3">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
                             <?= $form->field($model, 'dimension')->textInput()->label('Chuyển đổi kích thước ảnh') ?>
                             <div class="text-muted">Vd: 370 330</div>
+                        </div>
+                        <div class="col-md-6">
+                            <?= $form->field($model, 'resampling_img')
+                                ->widget(Select2::classname(), [
+                                    'data' => $imgs,
+                                    'options' => ['placeholder' => 'Chọn hình ảnh ...'],
+                                    'pluginOptions' => [
+                                        'allowClear' => true
+                                    ],
+                                ])
+                                ->label('Resampling from image') ?>
                         </div>
                     </div>
                 </div>
             </div>
+
 
 
             <?php if (!request()->isAjax): ?>
