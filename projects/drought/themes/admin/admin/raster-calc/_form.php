@@ -6,6 +6,7 @@ use ttungbmt\db\Query;
 use yii\bootstrap\Modal;
 use yii\db\Expression;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\imagine\Image;
 use yii\widgets\ActiveForm;
 
@@ -14,7 +15,8 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Tính toán CDI';
-$items = Gallery::find()->andWhere(['type' => 1])->pluck('code', 'id');
+$year = $model->isNewRecord ? request()->get('year') :  null;
+$items = Gallery::find()->andFilterWhere(['type' => 1, 'year' => request()->get('year')])->pluck('code', 'id');
 if ($model->bands && is_string($model->bands)) {
     $model->bands = array_filter(explode(',', $model->bands));
 }
@@ -22,6 +24,7 @@ $img_url = $model->getFileCalcUrl();
 $layers = 'm_' . $model->code;
 $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
 $dm_year = api('dm/year?type=1');
+$year = request()->get('year', '');
 ?>
 <style>
     .btn-opr {
@@ -74,7 +77,7 @@ $dm_year = api('dm/year?type=1');
                             'data-target' => '#modal-bands',
                         ]) ?>
 
-                        <?=Html::dropDownList('year', null,  $dm_year, ['id' => 'drop-year', 'class' => 'form-control', 'prompt' => 'Chọn năm ...',  'style' => 'width: 100px;margin: -10px 0 0 10px;', 'v-model' => 'inpYear'])?>
+                        <?=Html::dropDownList('redirectYear', request()->get('year'),  $dm_year, ['id' => 'drop-year', 'class' => 'form-control', 'prompt' => 'Chọn năm ...',  'style' => 'width: 100px;margin: -10px 0 0 10px;'])?>
                     </div>
 
                     <div>
@@ -101,7 +104,6 @@ $dm_year = api('dm/year?type=1');
                     <?= Html::submitButton('Calculate', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
                 </div>
             <?php endif; ?>
-
 
 
             <?php Modal::begin([
@@ -158,6 +160,8 @@ $this->registerJsVar('globalStore', [
     'statData' => $statData,
     'srcMap' => '',
     'inpYear' => '',
+    'redirectYear' => $model->isNewRecord ? Url::to(['create']).'?{year}' : Url::to(['update', 'id' => $model->id]).'&{year}',
 ])
 ?>
+
 

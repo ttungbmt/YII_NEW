@@ -42,6 +42,10 @@ $(function () {
         },
         mounted() {
             $('#btnChoseImg').change(this.onChangeBand)
+            $('#drop-year').change((e) => {
+                window.location.href = this.redirectYear.replace('{year}', 'year='+e.target.value)
+            })
+
             this.updateBoxBand()
 
             if (this.existFile) {
