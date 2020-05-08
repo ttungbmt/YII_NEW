@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
 $dm_folder = api('dm_folder');
-$imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1])->pluck('code', 'id');
+$imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1, 'folder' => 'ndvi'])->pluck('code', 'id');
 ?>
 
 <div class="gallery-form">
@@ -59,7 +59,7 @@ $imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1])->pluck('c
                                         'allowClear' => true
                                     ],
                                 ])
-                                ->label('Resampling from image') ?>
+                                ->label('Ảnh tham chiếu') ?>
                         </div>
                     </div>
                 </div>
