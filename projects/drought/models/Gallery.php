@@ -2,6 +2,7 @@
 
 namespace drought\models;
 
+use Carbon\Carbon;
 use drought\support\PgCommand;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -88,7 +89,7 @@ class Gallery extends ActiveRecord
                 return $model->isNewRecord;
             }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 1, 'on' => self::SCENARIO_UPLOAD],
-            [['code', 'folder', 'name', 'year', 'date'], 'required', 'on' => self::SCENARIO_UPLOAD],
+            [['code', 'folder', 'name', 'date'], 'required', 'on' => self::SCENARIO_UPLOAD],
         ];
     }
 
@@ -310,7 +311,9 @@ class Gallery extends ActiveRecord
     }
 
     public function saveImg(){
+
         if (!$this->validate()) return false;
+        $this->year = Carbon::createFromFormat('d/m/Y', $this->date)->format('Y');
         $bool = $this->save();
 
         $file0 = $this->getUploadPath('image', true);
@@ -324,7 +327,8 @@ class Gallery extends ActiveRecord
                 $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
 
                 $gdal->translate($file0, $file1, [
-                    '-tr' => "$x_res $y_res"
+                    '-tr' => "$x_res $y_res",
+                    '-r' => 'bilinear',
                 ])->run();
 
                 unlink($file0);
@@ -332,7 +336,23 @@ class Gallery extends ActiveRecord
             }
         }
 
+
+        if ($this->dimension) {
+            $gdal = new Gdal();
+            $name = pathinfo($file0, PATHINFO_FILENAME);
+            $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
+
+            $gdal->translate($file0, $file1, [
+                '-outsize' => $this->dimension
+            ])->run();
+
+            unlink($file0);
+            rename($file1, $file0);
+
+        };
+
         $this->importDB($file0);
+        $this->removeAllAuxFiles();
 
         return $bool;
     }

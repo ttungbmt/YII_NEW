@@ -14,8 +14,7 @@ $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh 
 $dm_folder = api('dm_folder');
 $imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1, 'folder' => 'ndvi'])->pluck('code', 'id');
 $layers = $model->getViewTb();
-
-$statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
+$statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layers) ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
 ?>
 <style>
     .btn-opr {
@@ -68,14 +67,13 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                             <?= $form->field($model, 'folder')->dropDownList($dm_folder, ['prompt' => 'Chọn thư mục...']) ?>
                         </div>
                     </div>
-                    <?= $form->field($model, 'image')->fileInput() ?>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày') ?>
+                            <?= $form->field($model, 'image')->fileInput() ?>
                         </div>
                         <div class="col-md-6">
-                            <?= $form->field($model, 'year')->textInput(['type' => 'number']) ?>
+                            <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày') ?>
                         </div>
                     </div>
                     <div class="row">
