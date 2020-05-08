@@ -2,6 +2,7 @@
 namespace drought\controllers\admin;
 
 use drought\controllers\AppController;
+use drought\models\Gallery;
 use drought\models\search\GallerySearch;
 use Illuminate\Support\Str;
 use ttungbmt\actions\CreateAction;
@@ -11,6 +12,7 @@ use ttungbmt\actions\UpdateAction;
 use ttungbmt\actions\ViewAction;
 use ttungbmt\gdal\Gdal;
 use ttungbmt\REST\Geoserver\Yii2\Facade\Geoserver;
+use ttungbmt\support\facades\Http;
 
 class GalleryController extends AppController
 {
@@ -68,4 +70,5 @@ class GalleryController extends AppController
 
         return $this->redirect(['index']);
     }
+
 }

@@ -18,6 +18,7 @@ use yii\helpers\Html;
             'options' => ['enctype' => 'multipart/form-data']
         ]); ?>
         <?= Html::hiddenInput('name', $name) ?>
+        <?= Html::hiddenInput('redirectUrl', $redirectUrl) ?>
         <div class="d-flex" style="width: 100%">
             <div>
                 <div class="gradient-wrapper">
@@ -70,6 +71,7 @@ use yii\helpers\Html;
         <?php ActiveForm::end(); ?>
     </div>
 </div>
+
 <div class="card card-map" v-if="geoserver.layers">
     <div class="card-header">
         <span class="badge badge-light badge-striped badge-striped-left border-left-primary" style="font-size: 16px">Bản đồ</span>

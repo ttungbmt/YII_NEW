@@ -116,22 +116,22 @@ class Gallery extends ActiveRecord
         ];
     }
 
-    protected function getViewTb()
+    public function getViewTb()
     {
         return 'm_' . $this->code;
     }
 
-    protected function importDB($file)
+    protected function importDB($source)
     {
         $gdal = new Gdal();
-        $this->metadata = json_decode($gdal->gdalinfo($file, ['-json'])->run(), true);
+        $this->metadata = json_decode($gdal->gdalinfo($source, ['-json'])->run(), true);
 
         $table_name = $this->code;
         $m_view_name = $this->getViewTb();
         $db = Yii::$app->db;
         $db->createCommand("DROP TABLE IF EXISTS {$table_name} CASCADE")->execute();
 
-        $source = Yii::getAlias('@webroot/projects/drought/uploads/results/' . $this->image);
+
         $gdal->rasterToPgSQL($source, $this->code)->run();
 
         $query = (new Query())->select('x, y, val, geom')->from(['vt' => (new Query())->select(new Expression('(ST_PixelAsPolygons(rast, 1)).*'))->from($table_name)])->andWhere(['<>', 'val', 128]);
@@ -224,6 +224,10 @@ class Gallery extends ActiveRecord
         return $this->image ? true : false;
     }
 
+    public function getMVLayers(){
+
+    }
+
     public function getFeatureMeta()
     {
         if (!$this->code) return optional([]);
@@ -308,13 +312,13 @@ class Gallery extends ActiveRecord
         if (!$this->validate()) return false;
         $bool = $this->save();
 
+        $file0 = $this->getUploadPath('image', true);
         if($this->resampling_img){
             $img = Gallery::findOne($this->resampling_img);
             $x_res = data_get($img, 'metadata.geoTransform.1');
             $y_res = data_get($img, 'metadata.geoTransform.5');
             if($x_res && $y_res){
                 $gdal = new Gdal();
-                $file0 = Yii::getAlias('@webroot/projects/drought/uploads/'.data_get($this, 'oldAttributes.image'));
                 $name = pathinfo($file0, PATHINFO_FILENAME);
                 $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
 
@@ -327,6 +331,7 @@ class Gallery extends ActiveRecord
             }
         }
 
+        $this->importDB($file0);
 
         return $bool;
     }

@@ -1,6 +1,8 @@
 <?php
 
 use kartik\widgets\Select2;
+use ttungbmt\db\Query;
+use yii\db\Expression;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -11,8 +13,36 @@ use yii\widgets\ActiveForm;
 $this->title = ($model->isNewRecord ? 'Thêm mới' : 'Cập nhật') . ' Ảnh đầu vào';
 $dm_folder = api('dm_folder');
 $imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1, 'folder' => 'ndvi'])->pluck('code', 'id');
+$layers = $model->getViewTb();
 
+$statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINCT val::int'))->from($layers)->pluck('val') : [];
 ?>
+<style>
+    .btn-opr {
+        width: 100px;
+        margin-bottom: 3px;
+    }
+
+    .select2-selection--multiple {
+        border: 2px solid #2196f3;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .table-symbology td {
+        border: none;
+        padding: 5px 0
+    }
+
+    .table-symbology .form-group {
+        margin: 0
+    }
+
+    .custom-checkbox {
+        padding: 0
+    }
+</style>
+
 
 <div class="gallery-form">
     <!--    <div id="mapid" style="width:100%; height:500px"></div>-->
@@ -67,7 +97,6 @@ $imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1, 'folder' =
             </div>
 
 
-
             <?php if (!request()->isAjax): ?>
                 <div class="form-group text-right mt-2">
                     <?php if ($model->getUploadPath()): ?>
@@ -82,28 +111,41 @@ $imgs = \drought\models\Gallery::find()->andFilterWhere(['type' => 1, 'folder' =
         </div>
     </div>
 </div>
-<?php
 
-?>
+<div id="vue-app">
+    <?php if ($model->tiffExists()): ?>
+        <?= $this->render('../raster-calc/_reclass_form', [
+            'model' => $model, 'name' => 'm_' . $model->code,
+             'redirectUrl' => '/admin/gallery/update?id='.$model->id
+        ]) ?>
+    <?php endif; ?>
+</div>
+
+
 <?= $this->render('_raster_info', ['model' => $model]) ?>
-
 <?php
 $this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');
+$this->registerJsFile(mix('raster-calc/index.js', 'projects/drought/lerna/pages/dist'));
+$this->registerJsVar('globalStore', [
+    'geoserver' => [
+        'layers' => $layers ? "drought:{$layers}" : '',
+    ],
+    'form' => [
+        'expr' => $model->expr ? $model->expr : '',
+        'bands' => $model->bands ? $model->bands : []
+    ],
+    'symForm' => [
+        'mode' => 'nb',
+        'nbClass' => 5,
+        'legendFormat' => '1% - 2%',
+        'symbols' => $model->symbology ? $model->symbology : [],
+        'invertColorRamp' => [1],
+    ],
+    'existFile' => $model->tiffExists() ? 1 : 0,
+    'bands_arr' => [],
+    'selected' => $model->bands ? $model->bands : [],
+    'gradientSelected' => 'OrRd',
+    'statData' => $statData,
+    'srcMap' => '',
+])
 ?>
-<script>
-    //let geoTIFFFile = `<?//=$model->getUploadUrl()?>//`
-    //$(function () {
-    //    if (geoTIFFFile) {
-    //        let xhr = new XMLHttpRequest();
-    //        xhr.responseType = 'arraybuffer';
-    //        xhr.open('GET', geoTIFFFile);
-    //        xhr.onload = function (e) {
-    //            let tiff = new Tiff({buffer: xhr.response});
-    //            let canvas = tiff.toCanvas();
-    //            $('#preview-img').append(canvas)
-    //        };
-    //        xhr.send();
-    //    }
-    //
-    //})
-</script>

@@ -62,6 +62,7 @@ class RasterCalcController extends AppController
 
         $model = Gallery::findOne($id);
         $name = request()->input('name');
+        $redirectUrl = request()->input('redirectUrl');
         $model->symbology = $classes;
         $model->save();
 
@@ -86,6 +87,6 @@ class RasterCalcController extends AppController
         }
 
 
-        return $this->redirect(['admin/raster-calc/update',  'id' => $id]);
+        return $this->redirect($redirectUrl);
     }
 }
