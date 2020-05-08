@@ -8,6 +8,8 @@ use drought\models\HcTinh;
 use drought\models\HcVung;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
+use ttungbmt\db\Query;
+use yii\db\Expression;
 use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBasicAuth;
 use yii\filters\auth\HttpBearerAuth;
@@ -69,10 +71,28 @@ class DmController extends ApiController
         return $query->pluck('tenvung', 'mavung');
     }
 
-    public function actionResults($year)
+    public function actionDmFolderAll(){
+//        SELECT folder, year FROM gallery GROUP BY 1, 2 ORDER BY 2 DESC
+        $data = collect((new Query)->select('folder, year')
+            ->from('gallery')
+            ->orderBy(new Expression('2 DESC'))
+            ->groupBy(new Expression('1, 2'))->all());
+
+        $dm_folder = array_merge(api('dm_folder'), ['cdi' => 'CDI']);
+
+        return $data->groupBy('folder')->map(function ($i, $k) use($dm_folder){
+            return [
+                'label' => data_get($dm_folder, $k),
+                'value' => $k,
+                'years' => $i->pluck('year')
+            ];
+        })->values();
+    }
+
+    public function actionResults($year, $folder)
     {
         $data = Gallery::find()->select('code, id, date, metadata, symbology')
-            ->andWhere(['type' => 2, 'year' => $year])
+            ->andWhere(['year' => $year, 'folder' => $folder])
             ->asArray()->all();
 
         $data = collect($data)->map(function ($i){

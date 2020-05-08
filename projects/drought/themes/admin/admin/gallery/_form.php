@@ -68,9 +68,11 @@ $statData = $model->tiffExists() ? (new Query())->select(new Expression('DISTINC
                             <?= $form->field($model, 'folder')->dropDownList($dm_folder, ['prompt' => 'Chọn thư mục...']) ?>
                         </div>
                     </div>
+                    <?= $form->field($model, 'image')->fileInput() ?>
+
                     <div class="row">
                         <div class="col-md-6">
-                            <?= $form->field($model, 'image')->fileInput() ?>
+                            <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày') ?>
                         </div>
                         <div class="col-md-6">
                             <?= $form->field($model, 'year')->textInput(['type' => 'number']) ?>

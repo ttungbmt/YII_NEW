@@ -88,7 +88,7 @@ class Gallery extends ActiveRecord
                 return $model->isNewRecord;
             }, 'on' => self::SCENARIO_UPLOAD],
             ['type', 'default', 'value' => 1, 'on' => self::SCENARIO_UPLOAD],
-            [['code', 'folder', 'name', 'year'], 'required', 'on' => self::SCENARIO_UPLOAD],
+            [['code', 'folder', 'name', 'year', 'date'], 'required', 'on' => self::SCENARIO_UPLOAD],
         ];
     }
 
@@ -156,6 +156,7 @@ class Gallery extends ActiveRecord
     public function saveRasterCalc()
     {
         if (!$this->validate()) return false;
+        $this->folder = 'cdi';
         $alphas = range('A', 'Z');
         $bands = collect(Gallery::find()->select('id, code, image')->andFilterWhere(['id' => $this->bands])->asArray()->all())
             ->map(function ($i, $k) use ($alphas) {
