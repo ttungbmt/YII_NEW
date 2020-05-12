@@ -135,7 +135,7 @@ $this->registerJsVar('globalStore', [
         'bands' => $model->bands ? $model->bands : []
     ],
     'symForm' => [
-        'mode' => 'nb',
+        'mode' => $model->folder,
         'nbClass' => 5,
         'legendFormat' => '1% - 2%',
         'symbols' => $model->symbology ? $model->symbology : [],

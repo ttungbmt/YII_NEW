@@ -18,6 +18,7 @@ use yii\db\BaseActiveRecord;
 use yii\db\Expression;
 use yii\web\UploadedFile;
 use function _\lowerCase;
+use function _\upperCase;
 
 /**
  * This is the model class for table "gallery".
@@ -70,7 +71,6 @@ class Gallery extends ActiveRecord
     {
         return [
             [['bands', 'date', 'dimension', 'folder', 'resampling_img'], 'safe'],
-            [['year'], 'date', 'format' => 'php:Y'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
             [['date'], 'date', 'format' => 'php:d/m/Y'],
@@ -78,7 +78,7 @@ class Gallery extends ActiveRecord
             ['code', 'match', 'pattern' => '/^[A-Za-z0-9_]\w*$/i'],
             ['image', 'file', 'extensions' => 'tif'],
 
-            [['name', 'date', 'year'], 'required', 'on' => self::SCENARIO_CALC],
+            [['name', 'date'], 'required', 'on' => self::SCENARIO_CALC],
             [['expr', 'bands'], 'required', 'when' => function ($model) {
                 return !UploadedFile::getInstance($this, 'image');
             }, 'on' => self::SCENARIO_CALC],
@@ -140,6 +140,15 @@ class Gallery extends ActiveRecord
 
         $db->createCommand($viewSql)->execute();
 
+        $style = 'grid_drought';
+        if($this->folder == 'spi'){
+            $style = 'grid_spi';
+        } elseif ($this->folder == 'lst'){
+            $style = 'grid_lst';
+        } elseif ($this->folder == 'ndvi'){
+            $style = 'grid_ndvi';
+        }
+
         try {
             $client = function () {
                 return Http::withBasicAuth('admin', 'geoserver')->withHeaders(['Content-Type' => 'application/xml']);
@@ -148,7 +157,7 @@ class Gallery extends ActiveRecord
             $url_style = 'http://localhost:8080/geoserver/rest/layers/drought:' . $m_view_name;
 
             $response = $client()->send('POST', $url_feature, ['body' => '<featureType><name>' . $m_view_name . '</name></featureType>']);
-            $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>grid_drought</name></defaultStyle></layer>']);
+            $response = $client()->send('PUT', $url_style, ['body' => '<layer><defaultStyle><name>'.$style.'</name></defaultStyle></layer>']);
         } catch (\Exception $e) {
             dd($e);
         }
@@ -158,6 +167,7 @@ class Gallery extends ActiveRecord
     {
         if (!$this->validate()) return false;
         $this->folder = 'cdi';
+        $this->year = Carbon::createFromFormat('d/m/Y', $this->date)->format('Y');
         $alphas = range('A', 'Z');
         $bands = collect(Gallery::find()->select('id, code, image')->andFilterWhere(['id' => $this->bands])->asArray()->all())
             ->map(function ($i, $k) use ($alphas) {
@@ -314,6 +324,16 @@ class Gallery extends ActiveRecord
 
         if (!$this->validate()) return false;
         $this->year = Carbon::createFromFormat('d/m/Y', $this->date)->format('Y');
+        switch ($this->folder){
+            case 'spi':
+                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"2","legend":"<=2 (Hạn cực nặng)"},{"color":"#d7301f","start":"-2","end":"-1.5","legend":"-2 < SPI <= -1.5 (Hạn nặng)"},{"color":"#fc8d59","start":"-1.5","end":"-1","legend":"-1.5 < SPI <= -1 (Hạn vừa)"},{"color":"#fdd49e","start":"-1","end":"0","legend":"-1 < SPI <=0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"SPI > 4 (Không hạn)"}]', true);
+                break;
+            case 'ndvi':
+            case 'lst':
+                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"-50","legend":"<=50 (Hạn rất nặng)"},{"color":"#d7301f","start":"-50","end":"-25","legend":"-50 : <= -25 (Hạn nặng)"},{"color":"#fc8d59","start":"-25","end":"-10","legend":"-25 : <= -10 (Hạn vừa)"},{"color":"#fdd49e","start":"-10","end":"0","legend":"-10 : <= 0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"> 0 (Không hạn)"}]', true);
+                break;
+        }
+
         $bool = $this->save();
 
         $file0 = $this->getUploadPath('image', true);
@@ -353,6 +373,7 @@ class Gallery extends ActiveRecord
 
         $this->importDB($file0);
         $this->removeAllAuxFiles();
+
 
         return $bool;
     }
