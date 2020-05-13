@@ -76,23 +76,15 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
                             <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày') ?>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <?= $form->field($model, 'dimension')->textInput()->label('Chuyển đổi kích thước ảnh') ?>
-                            <div class="text-muted">Vd: 370 330</div>
-                        </div>
-                        <div class="col-md-6">
-                            <?= $form->field($model, 'resampling_img')
-                                ->widget(Select2::classname(), [
-                                    'data' => $imgs,
-                                    'options' => ['placeholder' => 'Chọn hình ảnh ...'],
-                                    'pluginOptions' => [
-                                        'allowClear' => true
-                                    ],
-                                ])
-                                ->label('Ảnh tham chiếu') ?>
-                        </div>
-                    </div>
+                    <?= $form->field($model, 'resampling_img')
+                        ->widget(Select2::classname(), [
+                            'data' => $imgs,
+                            'options' => ['placeholder' => 'Chọn hình ảnh ...'],
+                            'pluginOptions' => [
+                                'allowClear' => true
+                            ],
+                        ])
+                        ->label('Ảnh tham chiếu') ?>
                 </div>
             </div>
 

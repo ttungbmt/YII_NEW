@@ -341,39 +341,31 @@ class Gallery extends ActiveRecord
             $img = Gallery::findOne($this->resampling_img);
             $x_res = data_get($img, 'metadata.geoTransform.1');
             $y_res = data_get($img, 'metadata.geoTransform.5');
+            $x_size = data_get($img, 'metadata.size.0');
+            $y_size = data_get($img, 'metadata.size.1');
             if($x_res && $y_res){
                 $gdal = new Gdal();
                 $name = pathinfo($file0, PATHINFO_FILENAME);
-                $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
+                $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp1');
+                $file2 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp2');
 
                 $gdal->translate($file0, $file1, [
                     '-tr' => "$x_res $y_res",
                     '-r' => 'bilinear',
                 ])->run();
 
+                $gdal->translate($file1, $file2, [
+                    '-outsize' => "$x_size $y_size"
+                ])->run();
+
                 unlink($file0);
-                rename($file1, $file0);
+                unlink($file1);
+                rename($file2, $file0);
             }
         }
 
-
-        if ($this->dimension) {
-            $gdal = new Gdal();
-            $name = pathinfo($file0, PATHINFO_FILENAME);
-            $file1 = (string)Str::of($file0)->replaceLast($name, $name . '_tmp');
-
-            $gdal->translate($file0, $file1, [
-                '-outsize' => $this->dimension
-            ])->run();
-
-            unlink($file0);
-            rename($file1, $file0);
-
-        };
-
         $this->importDB($file0);
         $this->removeAllAuxFiles();
-
 
         return $bool;
     }
