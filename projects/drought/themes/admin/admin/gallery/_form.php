@@ -80,8 +80,8 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <label for="">Ảnh tham chiếu resample</label>
-                            <?=Html::radioList('shownResample', 0, [1 => 'Có', 0 => 'Không'], ['itemOptions' => ['v-model' => 'shownResample']])?>
+                            <label for="">Resampling</label>
+                            <?=Html::checkbox('shownResample', $model->resample_id, ['v-model' => 'shownResample'])?>
                         </div>
                       <div class="col-md-6" v-show="shownResample==1">
                           <?= $form->field($model, 'resample_id')
@@ -92,7 +92,7 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
                                       'allowClear' => true
                                   ],
                               ])
-                              ->label('Nguồn ảnh') ?>
+                              ->label('Chọn ảnh tham chiếu resampling') ?>
                       </div>
                     </div>
 
