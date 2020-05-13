@@ -40,10 +40,12 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
     .custom-checkbox {
         padding: 0
     }
+    label {margin-right: 5px;}
 </style>
 
+<div id="vue-app">
 
-<div class="gallery-form">
+<div class="gallery-form" >
     <!--    <div id="mapid" style="width:100%; height:500px"></div>-->
     <div class="card">
         <div class="card-body">
@@ -76,15 +78,24 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
                             <?= $form->field($model, 'date')->widget(\kartik\date\DatePicker::className(), ['options' => ['placeholder' => 'DD/MM/YYY']])->label('Ngày') ?>
                         </div>
                     </div>
-                    <?= $form->field($model, 'resampling_img')
-                        ->widget(Select2::classname(), [
-                            'data' => $imgs,
-                            'options' => ['placeholder' => 'Chọn hình ảnh ...'],
-                            'pluginOptions' => [
-                                'allowClear' => true
-                            ],
-                        ])
-                        ->label('Ảnh tham chiếu') ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Ảnh tham chiếu resample</label>
+                            <?=Html::radioList('shownResample', 0, [1 => 'Có', 0 => 'Không'], ['itemOptions' => ['v-model' => 'shownResample']])?>
+                        </div>
+                      <div class="col-md-6" v-show="shownResample==1">
+                          <?= $form->field($model, 'resample_id')
+                              ->widget(Select2::classname(), [
+                                  'data' => $imgs,
+                                  'options' => ['placeholder' => 'Chọn hình ảnh ...'],
+                                  'pluginOptions' => [
+                                      'allowClear' => true
+                                  ],
+                              ])
+                              ->label('Nguồn ảnh') ?>
+                      </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -92,7 +103,7 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
             <?php if (!request()->isAjax): ?>
                 <div class="form-group text-right mt-2">
                     <?php if ($model->getUploadPath()): ?>
-                        <?= Html::a('Tải ảnh', $model->getUploadUrl(), ['class' => 'btn btn-info', 'download']) ?>
+                        <?= Html::a('Tải ảnh', $model->getUploadUrl(), ['class' => 'btn btn-info', 'download' => true]) ?>
                     <?php endif; ?>
 
                     <?= Html::submitButton($model->isNewRecord ? lang('Create') : lang('Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -103,8 +114,6 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
         </div>
     </div>
 </div>
-
-<div id="vue-app">
     <?php if ($model->tiffExists()): ?>
         <?= $this->render('../raster-calc/_reclass_form', [
             'model' => $model, 'name' => 'm_' . $model->code,
@@ -119,6 +128,7 @@ $statData = $model->tiffExists() && Yii::$app->db->schema->getTableSchema($layer
 $this->registerJsFile('http://seikichi.github.io/tiff.js/tiff.min.js');
 $this->registerJsFile(mix('raster-calc/index.js', 'projects/drought/lerna/pages/dist'));
 $this->registerJsVar('globalStore', [
+    'shownResample' => $model->resample_id ? 1 : 0,
     'geoserver' => [
         'layers' => $layers ? "drought:{$layers}" : '',
     ],
@@ -141,3 +151,4 @@ $this->registerJsVar('globalStore', [
     'srcMap' => '',
 ])
 ?>
+

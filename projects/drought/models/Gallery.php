@@ -39,7 +39,7 @@ class Gallery extends ActiveRecord
 
     public $bands_str;
     public $dimension;
-    public $resampling_img;
+
 
     protected $timestamps = true;
 
@@ -70,7 +70,7 @@ class Gallery extends ActiveRecord
     public function rules()
     {
         return [
-            [['bands', 'date', 'dimension', 'folder', 'resampling_img'], 'safe'],
+            [['bands', 'date', 'dimension', 'folder', 'resample_id'], 'safe'],
             [['type'], 'integer'],
             [['name', 'code'], 'string', 'max' => 255],
             [['date'], 'date', 'format' => 'php:d/m/Y'],
@@ -337,8 +337,8 @@ class Gallery extends ActiveRecord
         $bool = $this->save();
 
         $file0 = $this->getUploadPath('image', true);
-        if($this->resampling_img){
-            $img = Gallery::findOne($this->resampling_img);
+        if($this->resample_id){
+            $img = Gallery::findOne($this->resample_id);
             $x_res = data_get($img, 'metadata.geoTransform.1');
             $y_res = data_get($img, 'metadata.geoTransform.5');
             $x_size = data_get($img, 'metadata.size.0');
