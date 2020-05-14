@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/projects/drought/app/map/precache-manifest.3a899bd2a740409611e2d4397b211fcb.js"
+  "/projects/drought/app/map/precache-manifest.ae059132d983aea537c287a09adbc2ae.js"
 );
 
 self.addEventListener('message', (event) => {

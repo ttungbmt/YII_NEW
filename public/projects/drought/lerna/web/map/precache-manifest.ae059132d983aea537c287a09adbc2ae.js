@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "69080aa0241fcd9d95f8ad393bc8505f",
+    "revision": "da6047bd36ced1d33aa1e25d59450680",
     "url": "/projects/drought/app/map/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/drought/app/map/static/css/2.eb68b527.chunk.css"
   },
   {
-    "revision": "2891cf6bb65eda37ec8f",
+    "revision": "6609c21c3021e07751d7",
     "url": "/projects/drought/app/map/static/css/main.786108bc.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/projects/drought/app/map/static/js/2.ed9bedc4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2891cf6bb65eda37ec8f",
-    "url": "/projects/drought/app/map/static/js/main.679db58a.chunk.js"
+    "revision": "6609c21c3021e07751d7",
+    "url": "/projects/drought/app/map/static/js/main.d1b83509.chunk.js"
   },
   {
     "revision": "6d8e7f61e7ac37106599",
