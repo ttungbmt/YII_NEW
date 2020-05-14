@@ -326,11 +326,11 @@ class Gallery extends ActiveRecord
         $this->year = Carbon::createFromFormat('d/m/Y', $this->date)->format('Y');
         switch ($this->folder){
             case 'spi':
-                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"2","legend":"<=2 (Hạn cực nặng)"},{"color":"#d7301f","start":"-2","end":"-1.5","legend":"-2 < SPI <= -1.5 (Hạn nặng)"},{"color":"#fc8d59","start":"-1.5","end":"-1","legend":"-1.5 < SPI <= -1 (Hạn vừa)"},{"color":"#fdd49e","start":"-1","end":"0","legend":"-1 < SPI <=0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"SPI > 4 (Không hạn)"}]', true);
+                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"2","legend":"<=-2 (Hạn cực nặng)"},{"color":"#d7301f","start":"-2","end":"-1.5","legend":"-2 < SPI <= -1.5 (Hạn nặng)"},{"color":"#fc8d59","start":"-1.5","end":"-1","legend":"-1.5 < SPI <= -1 (Hạn vừa)"},{"color":"#fdd49e","start":"-1","end":"0","legend":"-1 < SPI <=0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"SPI > 4 (Không hạn)"}]', true);
                 break;
             case 'ndvi':
             case 'lst':
-                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"-50","legend":"<=50 (Hạn rất nặng)"},{"color":"#d7301f","start":"-50","end":"-25","legend":"-50 : <= -25 (Hạn nặng)"},{"color":"#fc8d59","start":"-25","end":"-10","legend":"-25 : <= -10 (Hạn vừa)"},{"color":"#fdd49e","start":"-10","end":"0","legend":"-10 : <= 0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"> 0 (Không hạn)"}]', true);
+                $this->symbology = $this->symbology ? $this->symbology : json_decode('[{"color":"#7f0000","start":"","end":"-50","legend":"<=-50 (Hạn rất nặng)"},{"color":"#d7301f","start":"-50","end":"-25","legend":"-50 : <= -25 (Hạn nặng)"},{"color":"#fc8d59","start":"-25","end":"-10","legend":"-25 : <= -10 (Hạn vừa)"},{"color":"#fdd49e","start":"-10","end":"0","legend":"-10 : <= 0 (Hạn nhẹ)"},{"color":"#fff7ec","start":"0","end":"","legend":"> 0 (Không hạn)"}]', true);
                 break;
         }
 
